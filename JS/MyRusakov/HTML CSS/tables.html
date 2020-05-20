@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- ============== Вставка favicon ==================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+
+	<!-- ============== Адаптация к различным устройствам == -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- ============== Bootstrap ========================== -->
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+	<!-- ============== Настройки внешнего вида ============ -->
+	<link rel="stylesheet" href="css/main.css" />
+	<!-- <link rel="stylesheet" href="css/skins/appearance.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/media.css" /> -->
+
+	<title>ТАБЛИЦЫ</title>
+</head>
+
+<body>
+	<!-- ================== Таблицы ========================  -->
+	<header>
+		<section class="main-menu">
+			<div>
+				<!-- <h1>Шапка сайта</h1> -->
+				<!-- <img src="img/header_1.jpg" alt="header_1"> -->
+				<!-- <h3>Меню сайта</h3> -->
+				<nav class="line-gradient">
+					<ul>
+						<li><a id="index" href="index.html">На главную</a></li>
+						<li><a id="list" href="list.html">Списки</a></li>
+						<li><a id="pc" href="pc.html">Компьютеры</a></li>
+						<li><a id="tables" href="tables.html">Таблицы</a></li>
+						<li><a id="forms" href="forms.html">Формы</a></li>
+						<li><a id="media" href="media.html">Медиа</a></li>
+						<li><a id="favic" href="favic.html">Мнемоники</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	</header>
+	
+	<section>
+		<table>
+			<caption>Таблица 1</caption>
+			<tr> <!-- Строка 1 -->
+				<th>1 столбец</th> <!-- Заголовок столбца 1 -->
+				<th>2 столбец</th> <!-- Заголовок столбца 2 -->
+			</tr>
+			<tr> <!-- Строка 2 -->
+				<td>1 1</td>
+				<td>1 2</td>
+			</tr>
+			<tr> <!-- Строка 3 -->
+				<td>2 1</td>
+				<td>2 2</td>
+			</tr>
+		</table>	
+		<br>
+
+		<table>
+			<caption>Таблица 2</caption>
+			<tr>
+				<th colspan="2">Животные</th>
+				<th>Растения</th>
+			</tr>
+			<tr>
+				<th>Млекопитающие</th>
+				<th>Насекомые</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>Кошки</td>
+				<td>Пауки</td>
+				<td>Береза</td>
+			</tr>
+		</table>	
+		<br>
+
+		<figure>
+			<table>
+				<caption>Таблица 3</caption>
+				<tr>
+					<th rowspan="4">Списки</th>
+				</tr>
+				<tr>
+					<td>Маркированный ul</td>
+				</tr>
+				<tr>
+					<td>Нумерованный ol</td>
+				</tr>
+				<tr>
+					<td>Список определений dd</td>
+				</tr>
+			</table>
+		</figure>
+		
+		<table class="galery">
+			<caption>Галерея</caption>
+			<tr>
+				<td>
+					<img src="img/pumps.jpg" alt="">
+					<p>Тект</p>
+				</td>
+
+				<td><img src="img/pumps.jpg" alt=""></td>
+			</tr>
+			<tr>
+				<td><img src="img/pumps.jpg" alt=""></td>
+				<td><img src="img/pumps.jpg" alt=""></td>
+			</tr>
+		</table>
+
+		<h2><u>Домашнее задание</u></h2>
+		<table>
+			<article>Таблица 1</article>
+			<tr> <!-- Строка заголовков -->
+				<th>№</th>
+				<th>Наименование</th>
+				<th>Цена, руб.</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Помидоры</td>
+				<td>150</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Огурцы</td>
+				<td>110</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Лук</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Картофель</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Свекла</td>
+				<td>50</td>
+			</tr>
+		</table>
+		<br>
+
+		<table>
+			<article>Таблица 2</article>
+			<tr>
+				<th colspan="2">Ячейка</th>
+				<th>Ячейка</th>
+			</tr>
+			<tr>
+				<td>Ячейка</td>
+				<td>Ячейка</td>
+				<td>Ячейка</td>
+			</tr>
+			<tr>
+				<td>Ячейка</td>
+				<td>Ячейка</td>
+				<td></td>
+			</tr>
+		</table>
+		<br>
+		
+		<table>
+			<article>Таблица 3</article>
+			<tr>
+				<th rowspan="2">№</th>
+				<th rowspan="2">Наименование</th>
+				<th colspan="2">Материал</th>
+				<th rowspan="2">Стоимость, руб</th>
+			</tr>
+			<tr>
+				<td>Дерево</td>
+				<td>Металл</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Стол</td>
+				<td>Да</td>
+				<td>Да</td>
+				<td>1000</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Стул</td>
+				<td>Да</td>
+				<td>Нет</td>
+				<td>500</td>
+			</tr>
+		</table>
+	</section>
+
+	
+	<footer class="line-gradient">
+		<p>Подвал сайта</p>
+		<p>Все права защищены &copy;</p>
+	</footer>
+
+<!-- ================== БЛОК СКРИПТОВ ====================== -->
+<div class="hidden"></div>
+	<!--
+		[if lt IE 9]>
+		<script src="libs/html5shiv/es5-shim.min.js"></script>
+		<script src="libs/html5shiv/html5shiv.min.js"></script>
+		<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+		<script src="libs/respond/respond.min.js"></script>
+		<![endif]
+	-->
+		
+	<!-- 
+		jQuery (necessary for Bootstrap's JavaScript plugins) 
+	-->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
+	<!-- 
+		Include all compiled plugins (below), or include individual files as needed 
+	-->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+.page {
+	background: #ddd;
+
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: -8px;
+}
+.lesson {
+	flex-basis: 45%;
+	min-width: calc(1240px / 2);
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+}
+
+td {
+	border: 1px solid #000;
+}

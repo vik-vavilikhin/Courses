@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <label for="theme">Выберите тему: </label>
+  <select id="theme">
+    <option value="white">Белая</option>
+    <option value="black">Черная</option>
+    <option value="purple">Лиловая</option>
+    <option value="yellow">Желтая</option>
+    <option value="psychedelic">Психоделическая</option>
+  </select>
+
+  <h1>Это мой веб-сайт</h1>
+
+
+  <hr>
+  <label for="weather">Выберите тип погоды сегодня: </label>
+  <select name="" id="weather">
+    <option value="">-- Сделайте выбор --</option>
+    <option value="sunny">Солнечно</option>
+    <option value="rainy">Дождливо</option>
+    <option value="snowing">Снежно</option>
+    <option value="overcast">Облачно</option>
+  </select>
+
+  <p></p>
+
+  <hr>
+  <h2>Практическое упражнение: простой календарь</h2>
+  <ol>Необходимо написать условную конструкцию в функции обработчика onchange. Конструкция должна:
+    <li>
+      Проверить выбранный месяц (хранящийся в переменной choice. Это будет значение элемента < select > после изменения
+      значения, например, "Январь".)
+    </li>
+    <li>
+      Задать переменную, скажем, days, равную количеству дней в выбранном месяце. Для этого нужно будет проверить
+      количество дней в каждом месяце. Високосный год можно не учитывать.
+    </li>
+  </ol>
+
+  <ul>Советы:
+    <li>
+      Советуемоиспользовать логический оператор OR для группировки нескольких месяцев в рамках одного условия; многие
+      месяцы имеют одинаковое количество дней.
+    </li>
+    <li>
+      Подумайте, какое количество дней в месяце встречается чаще всего и используйте его в качестве варианта по
+      умолчанию.
+    </li>
+  </ul>
+
+
+  <div class="calendar">
+    <label for="monthList">Выберите месяц: </label>
+    <select class="monthList" name="" id="monthList">
+      <!-- Здесь будут вставлены элементы списка -->
+    </select>
+    <h2 class="monthNow"></h2>
+
+    <ul class="days"></ul>
+  </div>
+
+<script src="common.js"></script>
+
+</body>
+</html>

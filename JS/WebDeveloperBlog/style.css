@@ -1,0 +1,236 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #333333;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+code {
+  padding: 0 3px;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #cccccc;
+}
+
+.container {
+  width: 1200px;
+  margin: 10px auto;
+  padding-bottom: 150px;
+}
+
+.condition {
+  display: block;
+  margin: 5px -10px;
+  padding: 0 10px;
+  background-color: #f5ab65;
+}
+
+.example {
+  padding: 15px 10px;
+  width: 70%;
+  margin: 5px auto;
+  border: 1px solid #000;
+  -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.exampleHeader {
+  text-align: center;
+}
+
+.exampleHeader span {
+  display: block;
+}
+
+.exampleHeader span a {
+  display: none !important;
+}
+
+.exampleHeaderLink {
+  color: #333;
+  text-decoration: none;
+}
+
+.exampleHeaderLink:hover {
+  color: #000000;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4), -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.example hr {
+  margin: 10px 0;
+}
+
+#widthDivRange {
+  background-color: green;
+  height: 10px;
+  width: 0;
+}
+
+#generatorResult {
+  margin: 5px auto;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.generator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.generatorRegulator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 45%;
+  border-bottom: 1px dashed #000;
+  padding: 5px 0;
+}
+
+.generatorRegulator span {
+  display: inline-block;
+}
+
+.generatorRegulator:nth-child(2), .generatorRegulator:nth-child(5) {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.generatorRegulator:nth-child(2) .generatorRegulatorValue, .generatorRegulator:nth-child(5) .generatorRegulatorValue {
+  margin: 0;
+}
+
+.generatorRegulatorValue {
+  margin-left: 5px;
+  width: 50px;
+}
+
+.generatorResult {
+  width: 100%;
+}
+
+#nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#nav .menu-item {
+  width: 120px;
+  text-align: center;
+  border: 2px solid #66ccaa;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+#nav .menu-item:hover {
+  background-color: rgba(102, 204, 170, 0.5);
+}
+
+#nav .menu-item .submenu {
+  display: none;
+  width: 120px;
+  background: green;
+  position: absolute;
+  cursor: pointer;
+}
+
+#nav .menu-item .submenu-item {
+  display: block;
+  color: #000000;
+}
+
+#nav .menu-item .submenu-item:hover {
+  color: #00ff00;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#tabs .tab {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+#tabs .whiteBorder {
+  border: 1px solid #707070;
+  border-bottom: 1px solid #fff;
+  border-radius: 3px 3px 0 0;
+}
+
+#tabs .tabContent {
+  width: 300px;
+  height: 60px;
+  border: 1px solid #707070;
+  position: relative;
+  top: -1px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+}
+
+#tabs .hide {
+  display: none;
+}
+
+#tabs .show {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 80%;
+}
+
+.modalClose {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}

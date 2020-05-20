@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <p>Другая важная концепция в кодировании - это функции, которые позволяют вам хранить фрагмент кода, который выполняет
+    одну задачу внутри определенного блока, а затем вызывать этот код всякий раз, когда вам это нужно, используя одну
+    короткую команду, - вместо того, чтобы вводить один и тот же код несколько раз. В этой статье мы рассмотрим
+    фундаментальные концепции тиких функций, как базовый синтаксис, способы вызова и их определения,область действия и
+    параметры.</p>
+
+    <blockquote>
+      <table>
+        <tr>
+          <th>Предпосылки:</th>
+          <td>Начальная компьютерная грамотность HTML и CSS, <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps" target="_blank">первые шаги JavaScript.</a></td>
+        </tr>
+
+        <tr>
+          <th>Цель:</th>
+          <td>Понять фундаментальные основы функций языка JavaScript.</td>
+        </tr>
+      </table>
+    </blockquote>
+
+    <section>
+      <h2 class="headerSection">Где можно встретить функции?</h2>
+      <p>В JavaScript, Вы везде увидите функции. На самом деле, мы пользовались функциями на протяжении всего курса; только мы не говорили об этом слишком часто. Теперь наступило время, чтобы поговорить о функциях более конкретно и разобрать их синтаксис.</p>
+  
+      <p>В значительном количестве случаев, когда вы пользуетесь структурой JavaScript, в которой есть пара обычных скобок - () - и при этом, это не является структурой типа <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop" target="_blank">цикл for</a>, <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while" target="_blank">while, или do...while цикл</a>, или <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements" target="_blank">if...else конструкция</a>, Вы используете фцнкцию.</p>
+    </section>
+
+    <section>
+      <h2 class="headerSection">Встроенные функции браузера</h2>
+      <p>В этом курсе мы использовали функции, встроенные в браузер. Каждый раз, когда мы манипулировали текстовой строкой:</p>
+        <blockquote class="codeText">
+          <pre>var myText = 'Я строка';</pre>
+          <pre>var newString = myText.replace('строка', 'сосиска');</pre>
+          <pre>console.log(newString);</pre>
+          <pre>// Функция строки replace() принимает строку,</pre>
+          <pre>// заменяет одну строку на другую, и возвращает</pre>
+          <pre>// новую строку с замененным содержимым</pre>
+        </blockquote>
+
+      <p>Или каждый раз, когда мы манипулировали массивом:</p>
+        <blockquote class="codeText">
+          <pre>var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];</pre>
+          <pre>var madeAString = myArray.join(' ');</pre>
+          <pre>console.log(madeAString);</pre>
+          <pre>// Функция join() принимает массив, соединяет</pre>
+          <pre>// все элементы массива вместе в одну строку,</pre>
+          <pre>// и возвращает эту новую строку</pre>
+        </blockquote>
+
+      <p>Или каждый раз, когда мы генерировали случайное число:</p>
+        <blockquote class="codeText">
+          <pre>var myNumber = Math.random()</pre>
+          <pre>// Функция random() генерирует случайное число от 0 до 1,</pre>
+          <pre>// и возвращает это число</pre>
+        </blockquote>
+      <p>...мы использовали функции!</p>
+  
+      <blockquote class="notice">
+        <p><strong>Примечание: </strong>Вы можете встраивать эти строки в консоль вашего броузера, чтобы посмотреть, как работают эти функции.</p>
+      </blockquote>
+  
+      <p>Язык JavaScript имеет множество встроенных функций, позволяющих вам делать полезные вещи, не записывая сам этот код. Факитически, некоторый код, который вы используете при <strong> вызове</strong> (Воображаемое слово для запуска или выполнения) встроенный в функции браузера, не могут быть написаны на JavaScript - многие из них вызывают части броузерного кода, который написан в основном на низкоуровневых системных языках, таких как С++, а не на веб-языках, таких как JavaScript.</p>
+      <p>Имейте в виду, что некоторые встроенные функции браузера не являются частью основного языка JavaScript - некоторые из них являются частью API броузера, которые основываются на языке по умолчанию, чтобы обеспечивать еще большую функциональность (подробнее см. <a href="https://developer.mozilla.org/ru/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do">один из предыдущих разделов этого курса</a>). Более подробно рассмотрим использование API браузера в более позднем модуле курса.</p>
+    </section>
+
+    <section>
+      <h2 class="headerSection">Функции или методы</h2>
+
+      <p>Одну вещь, которую нам нужно прояснить, прежде чем двигаться дальше - технически, встроенные функции браузера не являются функциями - это <strong>методы</strong>. Это звучит немого страшно и запутанно, но не волнуйтесь - функции и методы слова во многом взаимозаменяемы, по крайней мере для наших целей, на данном этапе вашего обучения</p>
+
+      <p>Разница между методом и функцией лишь в том, что методы - это функции, определенные внутри объектов. Встроенные функции (методы) браузера и переменные (так называемые <strong>свойства</strong>) хранятся внутри структурированных объектов, чтобы сделать код более эффективным и блее простым в использовании.</p>
+
+      <p>Вам пока не нужно изучать внутреннюю работу структурированных объектов JavaScript - вы можете подождать, пока наш более поздний модуль не научит вас внутренним работам объектов и тому, как создавать свои собственные. На данный момент мы просто хотим устранить любую возможную путаницу метода, в сравнении с функциями - вы, вероятно, встретите оба термина, когда будете смотреть на доступные связанные ресурсы через Инетрнет.</p>
+    </section>
+
+    <section>
+      <h2 class="headerSection">Пользовательские функции</h2>
+
+      <p>Вы также видели множество пользовательских функций до сих пор в курсе - это функции, которые определены в коде, а не внутри браузера. Каждый раз, когда вы видели пользовательские названия с круглыми скобками прямо после него, мы использовали пользовательскую функцию. В нашем примере <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> (подробнее см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">исходный код</a> из нашей <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Building_blocks/Looping_code"></a>статьи о циклах</a> мы включили пользовательскую функцию <code>draw()</code>, которая выглядит так:</p>
+
+      <blockquote class="codeText">
+        <pre>function draw() {</pre>
+        <pre>  ctx.clearRect(0,0,WIDTH,HEIGHT);</pre>
+        <pre>  for (var i = 0; i < 100; i++) { </pre>
+        <pre>    ctx.beginPath(); </pre>
+        <pre>    ctx.fillStyle='rgba(255,0,0,0.5)' ; </pre>
+        <pre>    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI); </pre>
+        <pre>    ctx.fill(); </pre>
+        <pre>  } </pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Эта функция рисует 100 случайных кругов внутри элемента <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/canvas" title="HTML <canvas> Элемент может быть использован для отрисовки графики через скрипты (обычно используется JavaScript). На пример, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внури блока <canvas>. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript."><code>&lt;canvas&gt;</code></a>. Каждый раз, когда мы хотим это сделать, мы можем вызвать эту функцию слкдующим образом</p>
+
+      <blockquote class="codeText">
+        <pre>draw();</pre>
+      </blockquote>
+
+      <p>вместо того, чтобы каждый раз, когда мы хотим повторить этот код, не писать его заново. И функции могут содержать любой код, который вам нравится - вы можете даже вызывать другие функции внутри своих функций. Вышеупомянутая функция, например, вызывать функцию <code>random()</code> три раза, которая выглядит следующим образом:</p>
+
+      <blockquote class="codeText">
+        <pre>function random(number) {</pre>
+        <pre> return Math.floor(Math.random()*number);</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Нам понадоблась эта функция, потому что встроенная в браузер функция <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> генерирует случайное дробное число от 0 до 1. Но мы хотим случайное целое число от 0 до указанног числа.</p>
+
+    </section>
+
+    <section>
+      <h2 class="headerSection">Вызов функций</h2>
+
+      <p>Скорее всего, вы уже поняли это, но на всякий случай... чтобы использовать функцию после того, как она была определена, вам нужно запустить или вызвать ее. Это делается путем включения имени функции в код где-нибудь, за которым следуют скобки.</p>
+
+      <blockquote class="codeText">
+        <pre>function myFunction() {</pre>
+        <pre> alert('привет');</pre>
+        <pre>}</pre>
+        <br>
+        <pre>myFunction()</pre>
+        <pre>// Единовременный вызов функции</pre>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2 class="headerSection">Безымянные функции</h2>
+
+      <p>Вы можете видеть функции, определенные и вызываемые несколькими разными способами. До этого мы создавали функции такими способом:</p>
+
+      <blockquote class="codeText">
+        <pre>function myFunction() {</pre>
+        <pre>  alert('привет');</pre>
+        <pre>}</pre>
+      </blockquote>
+      
+      <p>Но вы также можете создавать функции без имени:</p>
+      
+      <blockquote class="codeText">
+        <pre>function()) {</pre>
+        <pre>  alert('привет');</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Такая функция называется <strong>безымянная функция</strong> (или анонимная) - она не имеет имени! Она сама по себе ничего не делает. Обычно такие функции используются вместе с обработчиком событий, например, следующее будет вызывать код внутри функции каждый раз, по нажатию соответствующей кнопки:</p>
+
+      <blockquote class="codeText">
+        <pre>var myButton = document.querySelector('button');</pre>
+        <br>
+        <pre>myButton.onclick = function() {</pre>
+        <pre>  alert('привет');</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>В приведенном примере требуется, чтобы на странице был элемент <a class="element" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0"><code>&lt;button&gt;</code></a> (кнопка), которую нужно нажать. Вы уже видели такую структуру несколько раз на протяжении всего курса, подробнее о ней, вы узнаете из следующей статьи.</p>
+      <p>Вы также можете присвоить к переменной анонимную функцию, например:</p>
+
+      <blockquote class="codeText">
+        <pre>var myGreeting = function() {</pre>
+        <pre>  alert('привет');</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Теперь эту функцию можно вызвать, используя:</p>
+
+      <blockquote class="codeText">
+        <pre>myGreeting();</pre>
+      </blockquote>
+
+      <p>Фактически такой способ присваивает переменной имя; вы также можете присвоить функцию значением нескольких переменных, например:</p>
+
+      <blockquote class="codeText">
+        <pre>var anotherGreeting = function() {</pre>
+        <pre>  alert('привет');</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Теперь функцию можно вызывать, используя любую из переменных</p>
+
+      <blockquote class="codeText">
+        <pre>myGreeting();</pre>
+        <pre>anotherGreeting();</pre>
+      </blockquote>
+
+      <p>Но это может ввести в заблуждение, так что не стоит так делать! При создании функций лучше всего придерживаться следующего вида:</p>
+
+      <blockquote class="codeText">
+        <pre>function myGreeting() {</pre>
+        <pre> alert('привет');</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Чаще всего вы будете использовать анонимные функции, чтобы просто запускать код при срабатывании события - например, нажатие кнопки - с помощью события. Опять же, это выглядит примерно так:</p>
+
+      <blockquote class="codeText">
+        <pre>myButton.onclick = function() {</pre>
+        <pre>  alert('привет');</pre>
+        <pre>  // При желании, внутри этой функции</pre>
+        <pre>  // можно написать много кода.</pre>
+        <pre>}</pre>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2 class="headerSection">Параметры функции</h2>
+      
+      <p>Некоторые функции при их вызове требуют указание параметров - это значения, которые должны быть вставлены в круглые скобки функции, необходимые для корректной работы функции.</p>
+
+      <blockquote class="notice">
+        <p><strong>Примечание: </strong>Параметры иногда называются аргументами, свойствами или атрибутами.</p>
+      </blockquote>
+
+      <p>Например встроенная в браузер функция <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> не требует параметров. При вызове, она всегда возвращает случайное число от 0 до 1:</p>
+
+      <blockquote class="codeText">
+        <pre>var myNumber = Math.random();</pre>
+      </blockquote>
+
+      <p>Браузерная встроенная функция, работающая со строкой, <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> ожидает два параметра - это подстрока для поиска и строка, на которую происходит замена в основной строке:</p>
+      <blockquote class="codeText">
+        <pre>var myText = 'Я строка';</pre>
+        <pre>var newString = myText.replace('строка', 'сосиска');</pre>
+      </blockquote>
+      <blockquote class="notice">
+        <p><strong>Примечание: </strong>Если необходимо указать несколько параметров, их разделяют запятыми.</p>
+      </blockquote>
+
+      <p>Следует также отметить, что иногда параметры являются необязательными - вам не нужно их указывать. Если вы этого не сделаете, функция, как правило, примет какое-то поведение по умолчанию. В качестве примера параметр функции массива <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join()</a> необязателен:</p>
+
+      <blockquote class="codeText">
+        <pre>var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];</pre>
+        <pre>var madeAString = myArray.join(' ');</pre>
+        <pre>// Вернет 'Я люблю шоколадных лягушек'</pre>
+        <pre>var madeAString = myArray.join();</pre>
+        <pre>// Вернет 'Я,люблю,шоколадных,лягушек'</pre>
+      </blockquote>
+
+      <p>Если не указан параметр для символа соединения/разграничения, по умолчанию используется запятая.</p>
+    </section>
+
+    <section>
+      <h2 class="headerSection">Область видимости функции и конфликты</h2>
+
+      <p>Давайте немного поговорим о <a class="element" href="https://developer.mozilla.org/ru/docs/Glossary/scope">scope</a> - очень важная концепция при работе с функциями. Когда вы создаете функцию, переменные и другие вещи, определенные внутри функции, нахрдятся внутри их отдельной <strong>области (scope) </strong>, что означает, что они заперты в своих отдельных отсеках, недоступных из других функций или из кода вне функций.</p>
+
+      <p>Верхний уровень за пределами всех ваших функций называется <strong>горбальной областью (global scope)</strong>. Значения, определенные в глобальном масштабе, доступны извне в коде.</p>
+
+      <p>JavaScript настроен таким образом по разным причинам - но главным образом из-за безопасности и организации. Иногда вы не хотите, чтобы переменные были доступны извне в коде - внешние скрипты, которые вы вызывали из других источников, могут начать работать с вашим кодом и вызывать проблемы, потому что они используют одни и те же имена переменных, как и другие части кода, вызывают конфликты. Это может быть сделано злонамеренно или просто случайно.</p>
+
+      <p>Например, скажем у вас есть файл HTML который вызывается в двух внешних файлах JavaScript, и оба они имеют переменную и определенную функцию, которые используют одно и то же имя:</p>
+
+      <blockquote class="codeText">
+        <pre>&lt;!-- Excerpt from my HTML --&gt;</pre>
+        <pre>&lt;script src=&quot;first.js&quot;&gt;&lt;/script&gt;</pre>
+        <pre>&lt;script src=&quot;second.js&quot;&gt;&lt;/script&gt;</pre>
+        <pre>&lt;script&gt;</pre>
+        <pre> greeting();</pre>
+        <pre>&lt;/script&gt;</pre>
+      </blockquote>
+      <br>
+      <blockquote class="codeText">
+        <pre>// first.js</pre>
+        <pre>var name = 'Chris';</pre>
+        <pre>function greeting() {</pre>
+          <pre>  alert('Hello ' + name + ': welcome to our company.');</pre>
+          <pre>}</pre>
+        </blockquote>
+      <br>
+      <blockquote class="codeText">
+        <pre>// second.js</pre>
+        <pre>var name = 'Zaptec';</pre>
+        <pre>function greeting() {</pre>
+        <pre>  alert('Our company is called ' + name + '.');</pre>
+        <pre>}</pre>
+      </blockquote>
+
+      <p>Обе функции, которые вы хотите вызвать, называются <code>greeting()</code>, но вы можете получать доступ только к функции <code>greeting()</code> файла <code>second.js</code> - она применяется к HTML позже в исходном коде, поэтому его переменная и функция перезаписывают те, <code>first.js</code>.</p>
+
+      <blockquote class="notice">
+        <p><strong>Примечание: </strong>Этот пример можно увидеть в режиме <a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">Live на GitHub</a> (см. также <a href="https://developer.mozilla.org/ru/docs/https:_github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions" class="element">исходный код</a>).</p>
+      </blockquote>
+      
+    </section>
+  </div> <!-- container -->
+
+  <!-- ========= SCRIPTS ========= -->
+  <script src="./script.js"></script>
+
+</body>
+</html>

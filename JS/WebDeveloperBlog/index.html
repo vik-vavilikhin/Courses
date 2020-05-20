@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="style.css">
+  <title>JavaScript практика</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="example exampleOne">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink" 
+           href="https://www.youtube.com/watch?v=JISFx18J7nc&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki&index=1" 
+           target="_blank">
+          <span>JavaScript практика #1.</span>
+          <span><code>checkbox</code> и <code>radiobutton</code></span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+      
+      <div class="exampleBody">
+        <div class="exCheckBox">
+          <label for="myChBox">Пример checkbox</label>
+          <input type="checkbox" id="myChBox">
+        </div>
+  
+        <hr>
+  
+        <div class="exRadio">
+          <input type="radio" name="r1" value="0" >0
+          <input type="radio" name="r1" value="1" >1
+          <input type="radio" name="r1" value="2" >2
+        </div>
+      </div>
+    </div> <!-- example -->
+
+    <div class="example exampleTwo">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink" 
+           href="https://www.youtube.com/watch?v=RubiMKfSDvw&index=2&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki" 
+           target="_blank">
+          <span>JavaScript практика #2.</span>
+          <span>Селекторы</span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+
+      <div class="exampleBody">
+        <div class="exSelect">
+          <select id="mySelect">
+            <option value="">Apple</option>
+            <option value="">Orange</option>
+            <option value="">Pineapple</option>
+            <option value="">Banana</option>
+          </select>
+        </div>
+  
+        <hr>
+        
+        <div class="exRange">
+          <input type="range" min="0" max="100" step="2" id="myRange">
+          <input type="text" id="outputRange">
+          <div id="widthDivRange"></div>
+        </div>
+      </div>
+
+    </div> <!-- example -->
+
+    <div class="example exampleThree">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink"
+          href="https://www.youtube.com/watch?v=Iutk7AboLZI&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki&index=3" target="_blank">
+          <span>JavaScript практика #3.</span>
+          <span>CSS генератор</span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+
+      <div class="exampleBody">
+        <div class="generator" id="generator">
+          <p class="generatorRegulator"><span>Левый верхний угол:</span>
+            <input class="generatorRegulatorRange" type="range" id="rtl" min="0" max="100" value="0">
+            <input class="generatorRegulatorValue" type="text" id="ttl" value="0">
+          </p>
+  
+          <p class="generatorRegulator"><span>Правый верхний угол:</span>
+            <input class="generatorRegulatorRange" type="range" id="rtr" min="0" max="100" value="0">
+            <input class="generatorRegulatorValue" type="text" id="ttr" value="0">
+          </p>
+          
+          <div class="generatorResult"><div id="generatorResult"></div></div>
+          
+          <p class="generatorRegulator"><span>Левый нижний угол:</span>
+            <input class="generatorRegulatorRange" type="range" id="rbl" min="0" max="100" value="0">
+            <input class="generatorRegulatorValue" type="text" id="tbl" value="0">
+          </p>
+  
+          <p class="generatorRegulator"><span>Правый нижний угол:</span>
+            <input class="generatorRegulatorRange" type="range" id="rbr" min="0" max="100" value="0">
+            <input class="generatorRegulatorValue" type="text" id="tbr" value="0">
+          </p>
+        </div>
+  
+      </div>
+
+    </div> <!-- example -->
+
+    <div class="example exampleFour">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink"
+          href="https://www.youtube.com/watch?v=H_UiIfgNDPE&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki&index=4" target="_blank">
+          <span>JavaScript практика #4.</span>
+          <span>Выпадающее меню</span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+
+      <div class="exampleBody">
+        <nav id="nav">
+          <li class="menu-item">Меню 1
+            <ul class="submenu">
+              <li class="submenu-item">Пункт 1</li>
+              <li class="submenu-item">Пункт 2</li>
+            </ul>
+          </li>
+          <li class="menu-item">Меню 2
+            <ul class="submenu">
+              <li class="submenu-item">Пункт 1</li>
+              <li class="submenu-item">Пункт 2</li>
+            </ul>
+          </li>
+          <li class="menu-item">Меню 3
+            <ul class="submenu">
+              <li class="submenu-item">Пункт 1</li>
+              <li class="submenu-item">Пункт 2</li>
+            </ul>
+          </li>
+        </nav>
+      </div>
+    </div> <!-- example -->
+
+    <div class="example exampleFive">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink"
+          href="https://www.youtube.com/watch?v=wePps7o4ajs&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki&index=5"
+          target="_blank">
+          <span>JavaScript практика #5.</span>
+          <span>Вкладки табы (Tabs)</span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+    
+      <div class="exampleBody">
+        <div id="tabs">
+          <div class="tab whiteBorder">Tab 1</div>
+          <div class="tab">Tab 2</div>
+          <div class="tab">Tab 3</div>
+
+          <div class="tabContent">Modi, sit.</div>
+          <div class="tabContent">Est reiciendis accusantium nam molestias delectus facilis!</div>
+          <div class="tabContent">Culpa, architecto! Illum temporibus id excepturi amet?</div>
+        </div>
+      </div>
+
+    </div> <!-- example -->
+
+    <div class="example exampleSix">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink"
+          href="https://www.youtube.com/watch?v=R2Es_mbSva0&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki&index=6"
+          target="_blank">
+          <span>JavaScript практика #6.</span>
+          <span>Модальные окна</span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+    
+      <div class="exampleBody">
+        <button id="myButton">Open modal</button>
+
+        <div id="myModal" class="modal">
+          <div class="modalContent">
+            <span class="modalClose">&times;</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, velit.</p>
+          </div>
+        </div>
+      </div> <!-- exampleBody -->
+    
+    </div> <!-- example -->
+
+    <div class="example exampleSeven">
+      <h4 class="exampleHeader">
+        <a class="exampleHeaderLink"
+          href="https://www.youtube.com/watch?v=nub1KpCQmWk&index=7&list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki"
+          target="_blank">
+          <span>JavaScript практика #7.</span>
+          <span>Анимация в js</span>
+          <!-- Видео урока на YouTube -->
+        </a>
+      </h4>
+      <hr>
+    
+      <div class="exampleBody">
+        
+      </div> <!-- exampleBody -->
+    
+    </div> <!-- example -->
+
+  </div> <!-- container -->
+  <script src="./common.js"></script>
+</body>
+</html>

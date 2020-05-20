@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AA4BE,0CAA+B,CClBrB,iCAAE,CACA,SAAS,CAAE,GAAG,CACd,OAAO,CAAE,GAAG,EDgBxB,yCAA+B,CCArB,iCAAE,CACA,SAAS,CAAE,GAAG,CACd,OAAO,CAAE,GAAG",
+"sources": ["../libs/Sass/mediaqueries/_media-queries.scss","scss/media.scss"],
+"names": [],
+"file": "media.css"
+}

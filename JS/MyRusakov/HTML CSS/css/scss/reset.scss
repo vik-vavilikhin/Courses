@@ -1,0 +1,33 @@
+@import "../../libs/Sass/bourbon/bourbon";
+
+/* =========================== */
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.hidden {
+	display: none;
+}
+
+.claer {
+	clear: both;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	@extend .claer;
+}
+
+body, ul, li, p, h1, h2, h3, a {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none;
+}

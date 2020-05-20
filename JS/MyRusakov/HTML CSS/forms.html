@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- ============== Вставка favicon ==================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+
+	<!-- ============== Адаптация к различным устройствам == -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- ============== Bootstrap ========================== -->
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+	<!-- ============== Настройки внешнего вида ============ -->
+	<link rel="stylesheet" href="css/main.css" />
+	<!-- <link rel="stylesheet" href="css/skins/appearance.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/media.css" /> -->
+
+	<title>ФОРМЫ</title>
+</head>
+
+<body>
+	<!-- ================== ФОРМЫ ==========================  -->
+	<header>
+		<section class="main-menu">
+			<div>
+				<!-- <h1>Шапка сайта</h1> -->
+				<!-- <img src="img/header_1.jpg" alt="header_1"> -->
+				<!-- <h3>Меню сайта</h3> -->
+				<nav class="line-gradient">
+					<ul>
+						<li><a id="index" href="index.html">На главную</a></li>
+						<li><a id="list" href="list.html">Списки</a></li>
+						<li><a id="pc" href="pc.html">Компьютеры</a></li>
+						<li><a id="tables" href="tables.html">Таблицы</a></li>
+						<li><a id="forms" href="forms.html">Формы</a></li>
+						<li><a id="media" href="media.html">Медиа</a></li>
+						<li><a id="favic" href="favic.html">Мнемоники</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	</header>
+	
+	<section>
+		<form name="main-form" action="script.php" method="post" enctype="multipart/from-data">
+			<fieldset>
+				<legend>Основные данные</legend>
+		<!--  -->
+				<div>
+					<label for="firstname">Ваше имя:</label>
+					<input id="firstname" type="text" name="firstname" value="Имя" ><!-- disabled -->
+				</div>
+		<!--  -->
+				<div>
+					<label for="surtname">Вашу фамилию:</label>
+					<input id="surtname" type="text" name="surtname" placeholder="Фамилия">
+				</div>
+		<!--  -->
+				<div>
+					<label for="main-mail">Ваш e-mail:</label>
+					<input id="main-mail" type="email" name="main-mail" placeholder="e-mail">
+				</div>
+		<!--  -->
+				<div>
+					<label for="phone">Ваш телефон:</label>
+					<input id="phone" type="tel" name="phone">
+				</div>
+		<!--  -->
+				<div>
+					<label for="url">Ваш сайт:</label>
+					<input id="url" type="url" name="url">
+				</div>
+		<!--  -->
+				<div>
+					<label for="main-password">Пароль:</label>
+					<input id="main-password" type="password" name="main-password">
+				</div>
+			</fieldset>
+			<fieldset>
+		<!--  -->
+				<div>
+					<label for="#">Любимый цвет:</label>
+					<input type="radio" name="color" value="1">Красный
+					<input type="radio" name="color" value="2">Желтый
+					<input type="radio" name="color" value="3">Зеленый
+				</div>
+		<!--  -->
+				<div>
+					<label for="#">Любимое блюдо:</label>
+					<input type="radio" name="food" value="1">Супчик
+					<input type="radio" name="food" value="2">Пельмешки
+					<input type="radio" name="food" value="3">Салатик
+				</div>
+		<!--  -->
+				<div>
+					<label for="#">Заказать:</label>
+					<input type="checkbox" name="order" value="1">Супчик
+					<input type="checkbox" name="order" value="2">Пельмешки
+					<input type="checkbox" name="order" value="3">Салатик
+				</div>
+			</fieldset>
+			<fieldset>
+		<!--  -->
+				<div>
+					<label for="search">Поисковик:</label>
+					<input id="search" type="text" name="search" list="search-list">
+					<datalist id="search-list">
+						<option value="Opera"></option>
+						<option value="Google chrome"></option>
+						<option value="Explorer"></option>
+						<option value="Edge"></option>
+					</datalist>
+				</div>
+		<!--  -->
+				<div>
+					<label for="file">Файл:</label>
+					<input id="file" type="file" name="file">
+				</div>
+		<!--  -->
+				<div>
+					<label for="count">Количество:</label>
+					<input id="count" type="number" name="count" min="1" max="10">
+				</div>
+		<!--  -->
+				<div>
+					<label for="range">Диапазон:</label>
+					<input id="range" type="range" name="range" min="1" max="50" step="2">
+				</div>
+		<!--  -->
+				<div>
+					<label for="date">Дата:</label>
+					<input id="date" type="date" name="date">
+				</div>
+		<!--  -->
+				<div>
+					<label for="color">Цвет:</label>
+					<input id="color" type="color" name="color">
+				</div>
+			</fieldset>
+		<!--  -->
+			<fieldset>
+				<div>
+					<label for="massage">Сообщение:</label>
+					<textarea name="massage" id="massage" cols="30" rows="10">Сообщение</textarea>
+					<!-- <input id="massage" type="texteria" name="massage"> -->
+				</div>
+		<!--  -->
+				<div>
+					<label for="sity">Город:</label>
+					<select name="sity" id="sity">
+						<optgroup label="-------">
+							<option value="1">Москва</option>
+							<option value="2">Ленинград</option>
+							<option value="3">Омск</option>
+							<option value="4">Орск</option>
+						</optgroup>
+						<optgroup label="-------">
+							<option value="5" selected>Астана</option>
+						</optgroup>
+					</select>
+				</div>
+		<!--  -->
+			</fieldset>
+			<div>
+				<input type="reset" name="reset" value="Сбросить">
+				<input type="submit" name="submit" value="Отправить">
+			</div>
+		</form>
+	</section>
+
+	<section>
+		<h2><u>Домашнее задание</u></h2>
+		<form name="my-form" action="script.php" method="post">
+			<fieldset>
+				<legend>Основные данные</legend>
+				<div>
+					<label for="firstname">Имя:</label>
+					<input id="firstname" type="firstname"  name="firstname" placeholder="Имя" >
+				</div>
+				<div>
+					<label for="email">e-mail:</label>
+					<input id="email" type="email"  name="email" placeholder="e-mail" >
+				</div>
+				<div>
+					<label for="phone">Телефон:</label>
+					<input id="phone" type="tel"  name="phone" >
+				</div>
+				<div>
+					<label for="password">Пароль:</label>
+					<input id="password" type="password"  name="password" >
+				</div>
+				<div>
+					<label for="prepass">Еще раз:</label>
+					<input id="prepass" type="password"  name="prepass" >
+				</div>
+			</fieldset>
+			<fieldset>
+				<div>
+					<label for="sity">Город:</label>
+					<select id="sity">
+						<option value="1">Уренгой</option>
+						<option value="2">Улан-Уде</option>
+						<option value="3">Ейск</option>
+						<option value="4">Копейск</option>
+					</select>
+				</div>
+				<div>
+					<label for="wishes">Пожелания:</label>
+					<textarea name="wishes" id="wishes" cols="30" rows="2"></textarea>
+				</div>
+				<div>
+					<label for="news">Подписаться на новости:</label>
+					<input type="checkbox" name="order" value="1">
+				</div>
+			</fieldset>
+			<input type="submit" value="Отправить" name="my-sub">
+		</form>
+	</section>
+	
+	<footer class="line-gradient">
+		<p>Подвал сайта</p>
+		<p>Все права защищены &copy;</p>
+	</footer>
+
+<!-- ================== БЛОК СКРИПТОВ ====================== -->
+<div class="hidden"></div>
+	<!--
+		[if lt IE 9]>
+		<script src="libs/html5shiv/es5-shim.min.js"></script>
+		<script src="libs/html5shiv/html5shiv.min.js"></script>
+		<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+		<script src="libs/respond/respond.min.js"></script>
+		<![endif]
+	-->
+		
+	<!-- 
+		jQuery (necessary for Bootstrap's JavaScript plugins) 
+	-->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
+	<!-- 
+		Include all compiled plugins (below), or include individual files as needed 
+	-->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>JS jQuery Ajax</title>
+</head>
+<body class="page" onload="CountTime()">
+	<div class="content">
+		<div class="lesson lesson-03">
+			<script type="text/javascript">
+			document.write("<h3><u>Lesson #3: 'First program on JS'</u></h3>");
+			document.write("Hello World!");
+			document.write("<h3><u>HW #3</u></h3>");
+			document.write("<i>Я учусь программировать на языке <b>JavaScript</b></i>");
+
+			</script>
+		</div>
+
+		<div class="lesson lesson-04">
+			<script type="text/javascript">
+			document.write("<h3><u>Lesson #4: 'Переменные'</u></h3>");
+			var x           = 5;
+			var y           = 7;
+			var abc         = 7.5;
+			var hello_world = -5.1;
+			document.write(
+				'x   = ' + x + '<br/>' +
+				'y   = ' + y + '<br/>' +
+				'abc = ' + abc
+			);
+			document.write("<h3><u>HW #4</u></h3>");
+			var strAge = 41;
+			document.write('Мне ' + strAge + 'год<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-05">
+			<script type="text/javascript">
+			document.write("<h3><u>Lesson #5: 'Типы переменных'</u></h3>");
+			var int          = 5;
+			var dbl          = 7.5;
+			var str          = 'Hello';
+			var bln_true     = true;
+			var bln_false    = false;
+			var arr          = [1,2,3,4,5,6,7,8,9]
+			document.write(
+				'Integer: int       = ' + int + '<br/>' +
+				'Double : dbl       = ' + dbl + '<br/>' +
+				'String : str       = ' + str + '<br/>' +
+				'Boolean: bln_true  = ' + bln_true + '<br/>' +
+				'Boolean: bln_false = ' + bln_false + '<br/>' +
+				'Array  : arr       = ' + arr
+			);
+			document.write("<h3><u>HW #5</u></h3>");
+			var strName = 'Виктор';
+			var blnMale = true;
+			document.write('Меня зовут ' + strName + '<br />');
+			document.write('я мужчина? ' + blnMale + '<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-06">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #6: 'Операции'</u></h3>");
+				var x = 15;
+				var y = 2.75;
+				var sum = x + y;
+				document.write('<u>Арифметические операции:</u>');
+				document.write('<br/>');
+				document.write('Сложение: ' + x + ' + ' + y + ' = ' + sum);
+				document.write('<br/>');
+				document.write('Вычитание: ' + x + ' - ' + y + ' = ' + (x - y));
+				document.write('<br/>');
+				document.write('Умножение: ' + x + ' * ' + y + ' = ' + (x * y));
+				document.write('<br/>');
+				document.write('Деление: ' + x + ' / ' + y + ' = ' + (x / y));
+				document.write('<br/>');
+				document.write('Остаток от деления: ' + x + ' % ' + y + ' = ' + (x % y));
+				document.write('<br/>');
+				document.write('Инкремент: ++х = ' + (++x));
+				document.write('<br/>');
+				document.write('Декремент: --х = ' + (--x));
+
+				/* Операции с текстом*/
+				document.write('<br/>');
+				document.write('<br/>');
+				document.write('<u>Операции с текстом:</u>');
+				document.write('<br/>');
+				document.write('Конкатенация: ' + x + ' + ' + y + ' = ' + x + y);
+
+				/* Логические операции*/
+				document.write('<br/>');
+				document.write('<br/>');
+				document.write('<u>Логические операции:</u>');
+				var b = x > y;
+				document.write('<br/>');
+				document.write(x + ' > ' + y + ' = ' + b);
+				var b = x < y;
+				document.write('<br/>');
+				document.write(x + ' < ' + y + ' = ' + b);
+
+				document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'><tr><td>B1</td><td>B2</td><td>Отрицание B1</td><td>B1 и B2</td><td>B1 или B2</td><td>B1 исключающее или B2</td></tr>');
+
+					var b_1 = false;
+					var b_2 = false;
+					document.write('<tr><td>' + b_1 + '</td><td>' + b_2 + '</td><td>' + (!b_1) + '</td><td>' + (b_1 && b_2) + '</td><td>' + (b_1 || b_2) + '</td><td>' + (b_1 ^ b_2) + '</td></tr>');
+
+					var b_2 = true;
+					document.write('<tr><td>' + b_1 + '</td><td>' + b_2 + '</td><td>' + (!b_1) + '</td><td>' + (b_1 && b_2) + '</td><td>' + (b_1 || b_2) + '</td><td>' + (b_1 ^ b_2) + '</td></tr>');
+
+					var b_1 = true;
+					var b_2 = false;
+					document.write('<tr><td>' + b_1 + '</td><td>' + b_2 + '</td><td>' + (!b_1) + '</td><td>' + (b_1 && b_2) + '</td><td>' + (b_1 || b_2) + '</td><td>' + (b_1 ^ b_2) + '</td></tr>');
+
+					var b_1 = true;
+					var b_2 = true;
+					document.write('<tr><td>' + b_1 + '</td><td>' + b_2 + '</td><td>' + (!b_1) + '</td><td>' + (b_1 && b_2) + '</td><td>' + (b_1 || b_2) + '</td><td>' + (b_1 ^ b_2) + '</td></tr>');
+				document.write('</table>');
+
+				document.write("<h3><u>HW #6</u></h3>");
+				var var_1 = 5;
+				var var_2 = 7;
+				var var_3 = 12;
+				var var_4 = 5.5;
+				var var_6 = 8;
+
+				var str_1 = '17';
+				var str_2 = '5';
+
+				document.write( (var_1 + var_2) / ((var_3 - var_4) * (var_1 - var_6 * var_3)) );
+				document.write('<br/>');
+				document.write( str_1 + str_2 );
+				document.write('<br/>');
+				document.write( Number(str_1) + Number(str_2) );
+			</script>
+		</div>
+
+		<div class="lesson lesson-07">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #7: 'Условные операторы'</u></h3>");
+
+				var tires = 3;
+				if (tires == 0)
+					document.write('Шин нет');
+				else
+					document.write('Шины в наличии');
+
+				document.write('<br />');;
+				if (tires == 0)
+					document.write('Шин нет');
+				else
+					if (tires < 4)
+						document.write('Не комплект');
+					else
+						document.write('Комплект');
+
+				document.write('<br />');
+				switch (tires) {
+					case 0:
+						document.write('Шин нет');
+						break;
+					case 1:
+						document.write('В наличии одна шина');
+						break;
+					case 2:
+						document.write('В наличии две шины');
+						break;
+					case 3:
+						document.write('В наличии три шины');
+						break;
+					case 4:
+						document.write('В наличии комплект шин');
+						break;
+					default:
+						document.write('В наличии достаточно шин');
+				}
+
+				document.write("<h3><u>HW #7</u></h3>");
+				document.write('<br />');
+				var blnMale = true;
+
+				if (blnMale) document.write('Я мужчина');
+				else document.write('Я женщина');
+
+				var intAge = 41;
+
+				document.write('<br />');
+				if (intAge < 18)                document.write('У меня юный возраст');
+				if (intAge > 18 && intAge < 30) document.write('Я молодой');
+				if (intAge > 31 && intAge < 50) document.write('Я взрослый');
+				if (intAge > 51 && intAge < 80) document.write('Я зрелый');
+				if (intAge > 80)                document.write('Я старый');
+			</script>
+		</div>
+
+		<div class="lesson lesson-08">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #8: 'Операторы цикла'</u></h3>");
+				for (var i = 0; i < 10; i++) {
+					document.write(i + ': Hello<br />');
+				}
+
+				var i = 1;
+				var sum = 0;
+				while (i <= 100) {
+					sum = sum + i;
+					i++;
+				}
+				document.write('summ: ' + sum);
+
+				i = 1000;
+				do {
+					document.write('<br />Мы в цикле');
+
+				} while (i < 100);
+
+				document.write('<br />');
+				for (var i = 0; i < 10; i++) {
+					if ((i%3 == 0) && (i != 0)) continue;
+					if (i == 8) break;
+					document.write(i + ' ');
+				}
+
+				document.write("<h3><u>HW #8</u></h3>");
+
+				document.write('<br />');
+				// ===================================================
+				document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'>');
+				for (var row = 1; row <= 10; row++) {
+					document.write('<tr><td>#');
+					for (var col = 1; col <= 10; col++) {
+						var res = row * col;
+						document.write('<td>' + res + '</td>');
+					}
+					document.write('</td></tr>');
+				}
+				document.write('</table>');
+
+				// ===================================================
+				document.write('<br />');
+				var row = 0;
+				var col = 0;
+				document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'>');
+				while (row < 10) {
+					row++;
+					document.write('<tr>');
+					while (col < 10) {
+						col++;
+						var res = row * col;
+						document.write('<td>' + res + '</td>');
+					}
+					document.write('</tr>');
+				}
+				document.write('</table>');
+
+			</script>
+		</div>
+
+		<div class="lesson lesson-09">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #9: 'Методы alert(), confirm() и prompt()'</u></h3>");
+				document.write('alert()    - системное сообщение');
+				document.write('<br />');
+				document.write('confirm()  - ветвление в системном сообщении (Да, Нет)');
+				document.write('<br />');
+				document.write('prompt()   - запрос данных от пользователя');
+				document.write('<br />');
+				/*var var_1 = 'peoples!';
+				alert('Hello,' + var_1);
+
+				if (confirm('Вы уверены?')) alert('Пользователь уверен');
+				else alert('Пользователь не уверен');
+				*/
+				// var x = Number(prompt('Введите 1-е число: '));
+				// var y = Number(prompt('Введите 2-е число: '));
+				// alert('Сумма чисел ' + x + ' и ' + y + ' равна ' + (x + y))
+
+				document.write("<h3><u>HW #9</u></h3>");
+
+				document.write('<br />');
+				// var sum = 0;
+				// do {
+				//    var num = prompt('Введите число больше 0: ');
+				//    if (num <= 0 ) alert('Введенное число не соответствует. Попробуйте еще раз...');
+				// } while (num <= 0);
+				// for (var i = 1; i <= num; i++) {
+				//    sum = sum + i;
+				// }
+				// alert('Сумма числе от 1 до ' + num + ' равна ' + sum);
+				// document.write('<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-10">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #10: 'Массивы'</u></h3>");
+					var arr = new Array(-7.5, 5, 'str', false);
+
+					document.write('Элемент с индексом 0 равен: ' + arr[0]);
+					document.write('<br />');
+
+					for (var i = 0; i < arr.length; i++) {
+						document.write('Элемент с индексом ' + i +' равен: ' + arr[i] + '<br />');
+					}
+
+					var arr = new Array();
+					var k = 0;
+					// alert('1');
+					for (var i = 0; i < 10; i++) {
+						for (var j = 0; j < 5; j++) {
+							arr[k] = i * j;
+							k++;
+						}
+					}
+					document.write('<br />');
+					var sum = 0;
+					for (i = 0; i < arr.length; i++) {
+						document.write(arr[i] + ', ');
+						sum += arr[i];
+					}
+					document.write('<br />Сумма всех элементов: ' + sum);
+					document.write('<br />Среднее арифметическое всех элементов: ' + (sum / arr.length));
+
+				document.write("<h3><u>HW #10</u></h3>");
+				var arr = new Array(1,2,3,4,5,6,7,8,9,0);
+				var k = new Array();
+				for (var i = 0; i < arr.length; i++) {
+					document.write(arr[i] + ', ');
+				}
+				document.write('<br />');
+
+				var j = 0;
+				for (var i = (arr.length - 1); i >= 0; i--) {
+					k[j] = arr[i];
+					document.write(k[j] + ', ');
+					j++;
+				}
+				document.write('<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-11">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #11: 'Многомерные массивы'</u></h3>");
+					var arr_1 = new Array();
+					var arr_2 = new Array();
+					var arr_3 = new Array();
+
+					for (i = 0; i < 5; i++) {arr_1[i] = i;}
+					for (i = 0; i < 10; i++) {arr_2[i] = i * 2;}
+					for (i = 0; i < 15; i++) {arr_3[i] = i * 3;}
+
+					var arr = new Array(arr_1, arr_2, arr_3);
+					for (var i = 0; i < arr.length; i++) {
+						for (var j = 0; j < arr[i].length; j++) {
+							document.write(arr[i][j] + ' ');
+						}
+						document.write('<br />');
+					}
+
+				document.write("<h3><u>HW #11</u></h3>");
+					var arr_1 = new Array();
+					var arr_2 = new Array();
+					var arr_3 = new Array();
+
+					for (var i = 0; i < 3; i++) arr_1[i] = i + 1;
+					for (var i = 0; i < 3; i++) arr_2[i] = (i + 2) * 2;
+					for (var i = 0; i < 3; i++) arr_3[i] = (i + 3) * 3;
+
+					document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'>');
+						document.write('<tr><td>' + arr_1[0] + '</td><td>' + arr_1[1] + '</td><td>' + arr_1[2] + '</td></tr>');
+						document.write('<tr><td>' + arr_2[0] + '</td><td>' + arr_2[1] + '</td><td>' + arr_2[2] + '</td></tr>');
+						document.write('<tr><td>' + arr_3[0] + '</td><td>' + arr_3[1] + '</td><td>' + arr_3[2] + '</td></tr>');
+					document.write('</table>');
+
+					for (var i = 0; i < 3; i++) {
+						if (i == 0 ) arr_1[i] = 1;
+						else arr_1[i] = 0;
+					};
+					for (var i = 0; i < 3; i++) {
+						if (i == 1 ) arr_2[i] = 1;
+						else arr_2[i] = 0;
+					};
+					for (var i = 0; i < 3; i++) {
+						if (i == 2 ) arr_3[i] = 1;
+						else arr_3[i] = 0;
+					};
+
+					var arr = new Array(arr_1, arr_2, arr_3);
+
+					document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'>');
+						document.write('<tr><td>' + arr[0][0] + '</td><td>' + arr[0][1] + '</td><td>' + arr[0][2] + '</td></tr>');
+						document.write('<tr><td>' + arr[1][0] + '</td><td>' + arr[1][1] + '</td><td>' + arr[1][2] + '</td></tr>');
+						document.write('<tr><td>' + arr[2][0] + '</td><td>' + arr[2][1] + '</td><td>' + arr[2][2] + '</td></tr>');
+					document.write('</table>');
+
+					document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'>');
+						for (i = 0; i < arr.length; i++) {
+							document.write('<tr>');
+							for (j = 0; j < arr[i].length; j++) {
+								if (i == j) arr[i][j] = 1;
+								else arr[i][j] = 0;
+								document.write('<td>' + arr[i][j] + '</td>');
+							}
+							document.write('</tr>');
+						}
+					document.write('</table>');
+
+				document.write('<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-12">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #12: 'Функции'</u></h3>");
+					function print(text) {
+						document.write('<b>' + text + '</b><br />');
+					}
+					print('Hello!');
+
+					function add(x, y, r) {
+						if (r) return x + y;
+						else print(x + y);
+					}
+					// var sum = add(5, 7, true);
+					// alert(sum);
+
+					add(5, 7, false);
+
+				document.write("<h3><u>HW #12</u></h3>");
+				// Создайте функцию, принимающую двумерный массив
+				// и выводящую его в теге <table> на страницу,
+				// чтобы каждое число было в своей ячейке.
+				function arrayInTable(arr) {
+					document.write('<table style=\'text-align: center;border: 1px solid #000;border-spacing: 1px;\'>');
+						for (i = 0; i < arr.length; i++) {
+							document.write('<tr>');
+							for (j = 0; j < arr[i].length; j++) {
+								// if (i == j) arr[i][j] = 1;
+								// else arr[i][j] = 0;
+								arr[i][j];
+								document.write('<td>' + arr[i][j] + '</td>');
+							}
+							document.write('</tr>');
+						}
+					document.write('</table>');
+				}
+
+				// Создайте двумерный массив 3 на 3 и передайте
+				// его в функцию, убедившись, что она работает.
+				var arr_1 = new Array();
+				var arr_2 = new Array();
+				var arr_3 = new Array();
+
+				for (var i = 0; i < 3; i++) arr_1[i] = i + 1;
+				for (var i = 0; i < 3; i++) arr_2[i] = (i + 2) * 2;
+				for (var i = 0; i < 3; i++) arr_3[i] = (i + 3) * 3;
+
+				var arr = new Array(arr_1, arr_2, arr_3);
+				arrayInTable(arr);
+
+				// Создайте функцию, принимающую одномерный массив
+				// и возвращающую (именно возвращающую, а не выводящую)
+				// сумму всех элементов массива
+				function arrSum(arr, sum) {
+					for (var i = 0; i < arr.length; i++)
+						sum += arr[i];
+					return sum;
+				}
+
+				// Создайте одномерный массив, затем вызовите
+				// функцию из 3-го пункта, а результат запишите
+				// в переменную.
+				var arr = new Array();
+				for (i = 0; i < 10; i++) arr[i] = i;
+				var sum = arrSum(arr, 0);
+
+				// Выведите эту переменную через alert().
+				// alert(sum);
+				document.write('<br />');
+				document.write(sum);
+
+			</script>
+		</div>
+
+		<div class="lesson lesson-13">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #13: 'Глобальные и локальные переменные'</u></h3>");
+					var global = 15;
+					var i = 10;
+					function myFunc() {
+						var i = 5;
+						global++;
+						i++;
+					}
+
+					// alert('До вызова global = ' + global + ', i = ' + i);
+					// myFunc();
+					// alert('После вызова global = ' + global + ', i = ' + i);
+
+				document.write("<h3><u>HW #13</u></h3>");
+				// Создайте переменную counter, которая
+				// изначально должна быть равна 0.
+				var counter = 0;
+
+				// Создайте функцию, которая увеличивает
+				// переменную counter на 1 при каждом её вызове.
+				function addCounter() {
+					counter++;
+				}
+
+				// Создайте функцию, которая через alert()
+				// выводит значение переменной counter
+				function printCounter() {
+					alert(counter);
+				}
+
+				// Вызовите 5 раз функцию из 2-го пункта.
+				addCounter();
+				addCounter();
+				addCounter();
+				addCounter();
+				addCounter();
+
+				// Вызовите функцию из 3-го пункта и убедитесь,
+				// что она вызовет alert() и выведет там значение 5.
+				// printCounter();
+				document.write('<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-14">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #14: 'События и их обработчики'</u></h3>");
+					function handlerClick(button) {
+						alert('Жмак произошел. \nЖмакалка с именем "' + button.name + '" с надписью "' + button.value + '"');
+					}
+					var counter = 0;
+					function handlerMouseOver(element) {
+						counter++;
+						element.innerHTML = 'Сюда навели мышкой ' + counter + ' раз'
+					}
+			</script>
+
+			<input type="button" name="b" value="Click me" onclick="handlerClick(this)">
+			<br />
+			<span onmouseover="handlerMouseOver(this)">Сюда навели мышкой 0 раз</span>
+
+			<script type="text/javascript">
+				document.write("<h3><u>HW #14</u></h3>");
+					var widthAdd = false;
+					function handlerWidthAdd(element) {
+						if (widthAdd == false) {
+							element.width = 500;
+							widthAdd = true;
+							// handlerWidthOut(element);
+						}
+					}
+					function handlerWidthOut(element) {
+						if (widthAdd) {
+							element.width = 300;
+							widthAdd = false;
+						}
+					}
+				document.write('<br />');
+			</script>
+			<!-- Выведите на страницу через тег <img /> любое изображение. -->
+			<img src="https://picsum.photos/500/200/?random" alt="500x200" width="300" onmouseover="handlerWidthAdd(this)" onmouseout="handlerWidthOut(this)">
+			<img src="https://picsum.photos/500/200/?random" alt="500x200" width="300" onclick="handlerWidthAdd(this)" ondblclick="handlerWidthOut(this)">
+		</div>
+
+		<div class="lesson lesson-15">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #15: 'Регулярные выражения'</u></h3>");
+					var str = "Some string";
+					if (str.match(/r+/i)) document.write('Найдена последовательность символов r ');
+					else document.write('Последовательность символов r не найдена')
+
+					function checkForm(form) {
+						var email = form.email.value;
+						var m = email.match(/^[A-Za-z0-9][A-Za-z0-9\._-]*[A-Za-z0-9_]*@([A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9]+)*\.)+[A-Za-z]+$/i);
+						if (!m) {
+							alert('e-mail введен не верно');
+							return false;
+						}
+						return true;
+					}
+				document.write('<br />');
+			</script>
+			<form name="myForm" action="http://yandex.ru" method="post" onsubmit="return checkForm(this)">
+				<p>
+					<input type="text" name="email">
+				</p>
+				<p>
+					<input type="submit" value="Отправить">
+				</p>
+			</form>
+
+			<script type="text/javascript">
+				document.write("<h3><u>HW #15</u></h3>");
+					function checkHWForm(form) {
+						var login = form.login.value;
+						var l = login.match(/^[A-Za-z0-9]{3,32}$/i)
+						if (!l) {
+							alert('Логин не соотвествует');
+							return false;
+						}
+						return true;
+					}
+
+
+			</script>
+			<form action="http://ya.ru" method="post" name="hwForm" onsubmit="return checkHWForm(this)">
+				<p>
+					<input type="text" name="login" value="">
+				</p>
+				<p>
+					<input type="submit" value="Проверить">
+				</p>
+			</form>
+		</div>
+
+		<div class="lesson lesson-16">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #16: 'Таймеры'</u></h3>");
+					// var id = setInterval('myFunc1()', 1000);
+					var counter_1 = 0;
+					function myFunc1() {
+						counter_1++;
+						alert('Прошло секунд: ' + counter_1);
+						if (counter_1 == 5) clearInterval(id);
+					}
+
+					var counter_2 = 0;
+					function myFunc2() {
+						counter_2++;
+						alert('Прошло секунд: ' + counter_2);
+						if (counter_2 < 5) setTimeout('myFunc2()', 1000);
+					}
+					// myFunc2();
+
+					function timer() {
+						var s = Number(document.getElementById('timer').innerHTML);
+						s++;
+						document.getElementById('timer').innerHTML = s;
+						setTimeout('timer()', 1000);
+					}
+			</script>
+			<p>
+				Прошло <span id="timer">-1</span> сек.
+			</p>
+			<script type="text/javascript">
+			document.write("<h3><u>HW #16</u></h3>");
+				var dec_sec = 0;
+				var dec_min = 0;
+				var dec_hour = 0;
+
+				function myTimer() {
+					var s = Number(document.getElementById('mySec').innerHTML);
+					var m = Number(document.getElementById('myMin').innerHTML);
+					var h = Number(document.getElementById('myHour').innerHTML);
+					s++;
+
+					if (s == 60) {
+						s = 0;
+						m++;
+					}
+
+					if (m == 60) {
+						m = 0;
+						h++;
+					}
+
+					if (s < 10) dec_sec = ('0' + s);
+					else dec_sec = s;
+
+					if (m < 10) dec_min = ('0' + m);
+					else dec_min = m;
+
+					if (h < 10) dec_hour = ('0' + h);
+					else dec_hour = h;
+
+
+					document.getElementById('mySec').innerHTML = dec_sec;
+					document.getElementById('myMin').innerHTML = dec_min;
+					document.getElementById('myHour').innerHTML = dec_hour;
+					setTimeout('myTimer()', 1000);
+				}
+				function CountTime() {
+					// timer();
+					myTimer();
+				}
+			// document.write('<br />');
+			</script>
+			<p>
+				Время проведенное на сайте: <span id="myHour">0</span>:<span id="myMin">0</span>:<span id="mySec">-1</span>
+			</p>
+		</div>
+
+		<div class="lesson lesson-17">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #17: 'Общая концепция ООП'</u></h3>");
+				document.write("<h3><u>HW #17</u></h3>");
+				document.write('<br />');
+			</script>
+		</div>
+
+		<div class="lesson lesson-18">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #18: 'Функции. Математические операции'</u></h3>");
+				var 	text = "Число ПИ равно: " 						+ Math.PI;
+						text += "\nЧисло E равно: " 					+ Math.E;
+						text += "\nМодуль (-7) равно: " 				+ Math.abs(-7);
+						text += "\nsin(0.3) равно: " 					+ Math.sin(0.3);
+						text += "\nСлучайное число: " 				+ Math.random();
+						text += "\nОкругление 'вниз': " 				+ Math.floor(5.999);
+						text += "\nОкругление 'вверх': " 			+ Math.ceil(5.0000001);
+						text += "\nСлучайное число от 0 до 10: " 	+ Math.floor(Math.random() * 11);
+				// alert(text);
+
+				document.write("<h3><u>HW #18</u></h3>");
+				/*
+					Создайте функцию, которая вызывается по нажатию
+					кнопки «Рассчитать» и рассчитывает sin или cos
+					(в зависимости от выбранного элемента в выпадающем
+					списке) с учётом того, что пользователь вводил градусы,
+					а не радианы.
+				*/
+					function myCalc(form) {
+						var func = form.mathFunc.value;
+						var x 	= form.num.value;
+						var rad  = x * Math.PI / 180;
+						var dec  = Number(document.getElementById('decision').innerHTML);
+
+						if 	(func == 1) 	dec = Math.sin(rad);//alert(Math.sin(rad));//dec = Math.sin(rad);
+						else 						dec = Math.cos(rad);//alert(Math.cos(rad));//dec = Math.cos(rad);
+
+						document.getElementById('decision').innerHTML = dec;
+					}
+				document.write('<br />');
+			</script>
+			<!--
+				 Создайте форму с текстовым полем для ввода числа
+				 и выпадающим списком из 2-х значений: sin и cos.
+				 Также добавьте кнопку «Рассчитать»
+			 -->
+			<form  name="myForm" onsubmit="return myCalc(this)">
+				<p>
+					<label for="num">Градусы:</label>
+					<input id="num" type="text" name="num" placeholder="Число">
+				</p>
+				<p>
+					<label for="mathFunc">Функция:</label>
+					<select name="mathFunc" id="mathFunc">
+						<option value="1">sin()</option>
+						<option value="2">cos()</option>
+					</select>
+				</p>
+				<p>
+					<input type="submit" value="Рассчитать">
+				</p>
+				<p>
+					Значение: <span id="decision">0</span>
+				</p>
+			</form>
+		</div>
+
+		<div class="lesson lesson-19">
+			<script type="text/javascript">
+				document.write("<h3><u>Lesson #19: 'Функции. Дата и время'</u></h3>");
+
+				document.write("<h3><u>HW #19</u></h3>");
+				document.write('<br />');
+			</script>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAUE,UAYC,CAXC,WAAW,CCTI,SAAS,CDUxB,UAAU,CARJ,MAAM,CASZ,WAAW,CAVJ,MAAM,CAYb,GAAG,CEqBO,gKAAiD",
+"sources": ["../libs/Sass/bourbon/css3/_font-face.scss","scss/fonts.scss","../libs/Sass/bourbon/helpers/_font-source-declaration.scss"],
+"names": [],
+"file": "fonts.css"
+}
