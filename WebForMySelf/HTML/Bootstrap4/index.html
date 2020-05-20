@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      body {
+        margin-bottom: 100px;
+      }
+      .bs .row > .col,
+      .bs .row > [class^="col-"] {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        background-color: #5a6268;
+        border: 1px solid #000;
+        color: #ffffff;
+      }
+      .flex-cols {
+        min-height: 10rem;
+        background-color: #cccccc;
+      }
+
+    </style>
+
+  <title>Bootstrap 4</title>
+</head>
+
+<body>
+  
+  <div class="bs">
+    <div class="container">
+      <!--  -->
+      <section class="">
+        <h3>Колонки одинаковой ширины</h3>
+        <h4>Безразмерные "резиновые" столбцы</h4>
+        <div class="row">
+          <div class="col">col</div>
+          <div class="col">col</div>
+          <div class="col">col</div>
+        </div>
+        
+        <h4>Фиксированная ширина столбцов</h4>
+        <div class="row">
+          <div class="col-1">col-1</div>
+          <div class="col-1">col-2</div>
+          <div class="col-1">col-3</div>
+          <div class="col-1">col-4</div>
+          <div class="col-1">col-5</div>
+          <div class="col-1">col-6</div>
+          <div class="col-1">col-7</div>
+          <div class="col-1">col-8</div>
+          <div class="col-1">col-9</div>
+          <div class="col-1">col-10</div>
+          <div class="col-1">col-11</div>
+          <div class="col-1">col-12</div>
+          <div class="col-1">col-13</div>
+          <div class="col-1">col-14</div>
+          <div class="col-1">col-15</div>
+        </div>
+        
+        <h3 class="mt-5">Установка ширины одного столбца</h3>
+        <div class="row">
+          <div class="col">Sidebar 1</div>
+          <div class="col-6">Content</div>
+          <div class="col">Sidebar 2</div>
+        </div>
+        
+        <h3>Содержание переменной ширины</h3>
+        <div class="row">
+          <div class="col">Sidebar 1</div>
+          <div class="col-6">Content</div>
+          <div class="col-auto">Sidebar 2</div>
+        </div>
+        
+        <h3>Колонки одинаковой ширины в несколько строк</h3>
+        <div class="row">
+          <div class="col">col-1</div>
+          <div class="col">col-2</div>
+          <div class="w-100"></div>
+          <div class="col">col-3</div>
+          <div class="col">col-4</div>
+        </div>
+      </section>
+
+      <!--  -->
+      <section class="">
+        <h3 class="mt-5">Breakpoints</h3>
+        <h3>Складывание колонок по горизонтали</h3>
+        <div class="row">
+          <div class="col-sm">col</div>
+          <div class="col-sm">col</div>
+          <div class="col-sm">col</div>
+        </div>
+        
+        <br>
+        <div class="row">
+          <div class="col-md-4">Sidebar 1</div>
+          <div class="col-md-8">Content</div>
+        </div>
+        
+        <br>
+        <div class="row">
+          <div class="col-md-3">Sidebar 1</div>
+          <div class="col-md-6">Content</div>
+          <div class="col-md-3">Sidebar 2</div>
+        </div>
+        
+        <h3 class="mt-5">Комбинирование классов</h3>
+        <div class="row">
+          <div class="col-md-3 col-sm-4">Sidebar 1</div>
+          <div class="col-md-6 col-sm-8">Content</div>
+          <div class="col-md-3">Sidebar 2</div>
+        </div>
+        
+        <h3>Переполнение ряда</h3>
+        <div class="row">
+          <div class="col-md-3 col-sm-4">Sidebar 1</div>
+          <div class="col-md-6 col-sm-8">Content</div>
+          <div class="col-md-4">Sidebar 2</div>
+        </div>
+        
+        <h3>Сброс отствупов</h3>
+        <div class="row no-gutters">
+          <div class="col-md-3 col-sm-4">Sidebar 1</div>
+          <div class="col-md-6 col-sm-8">Content</div>
+          <div class="col-md-3">Sidebar 2</div>
+        </div>
+        
+        <h3 class="mt-5">Выравнивание</h3>
+        <h3>Выравнивание ряда по вертикали</h3>
+        <div class="row flex-cols align-items-start">
+          <div class="col">col 1</div>
+          <div class="col">col 2</div>
+          <div class="col">col 3</div>
+        </div>
+        
+        <br>
+        <div class="row flex-cols align-items-center">
+          <div class="col">col 1</div>
+          <div class="col">col 2</div>
+          <div class="col">col 3</div>
+        </div>
+        
+        <br>
+        <div class="row flex-cols align-items-end">
+          <div class="col">col 1</div>
+          <div class="col">col 2</div>
+          <div class="col">col 3</div>
+        </div>
+        
+        <h3 class="mt-5">Выравнивание колонок по вертикали</h3>
+        <div class="row flex-cols">
+          <div class="col align-self-start">col 1</div>
+          <div class="col align-self-center">col 2</div>
+          <div class="col align-self-end">col 3</div>
+        </div>
+        
+        <h3>Выравнивание по горизонтали</h3>
+        <div class="row justify-content-start">
+          <div class="col-4">col 1</div>
+          <div class="col-4">col 2</div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-4">col 1</div>
+          <div class="col-4">col 2</div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-end">
+          <div class="col-4">col 1</div>
+          <div class="col-4">col 2</div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-around">
+          <div class="col-2">col 1</div>
+          <div class="col-2">col 2</div>
+          <div class="col-2">col 3</div>
+          <div class="col-2">col 4</div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-between">
+          <div class="col-2">col 1</div>
+          <div class="col-2">col 2</div>
+          <div class="col-2">col 3</div>
+          <div class="col-2">col 4</div>
+        </div>
+      </section>
+
+      <!--  -->
+      <section class="">
+        <h3 class="mt-5">Изменение порядка</h3>
+        <h3>Классы сортировки</h3>
+        <div class="row">
+          <div class="col-md-6 order-md-2">Content</div>
+          <div class="col-md-3 order-md-1">Sidebar 1</div>
+          <div class="col-md-3 order-md-3">Sidebar 2</div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-md-6">Content</div>
+          <div class="col-md-3 order-md-first">Sidebar 1</div>
+          <div class="col-md-3">Sidebar 2</div>
+        </div>
+
+        <h3 class="mt-5">Отступы</h3>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">Header</div>
+        </div>
+
+        <h3 class="mt-5">Классы-помощники отступов</h3>
+        <div class="row">
+          <div class="col-md-3 m-auto">Header (m-auto)</div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-md-5 ml-auto mr-auto">Header (ml-auto mr-auto)</div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-md-5 mr-auto">Header 1 (mr-auto)</div>
+          <div class="col-md-5">Header 2</div>
+        </div>
+
+        <h3 class="mt-5">Вложенность сеток</h3>
+        <div class="row">
+          <div class="col-md-4">Sidebar</div>
+          <div class="col-md-8">Content
+            <div class="row">
+              <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel dicta consequatur voluptate sequi natus debitis culpa odit doloremque quas iure minus animi in, repudiandae possimus itaque necessitatibus nihil fugit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel dicta consequatur voluptate sequi natus debitis culpa odit doloremque quas iure minus animi in, repudiandae possimus itaque necessitatibus nihil fugit.</p>
+              </div>
+              <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel dicta consequatur voluptate sequi natus debitis culpa odit doloremque quas iure minus animi in, repudiandae possimus itaque necessitatibus nihil fugit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel dicta consequatur voluptate sequi natus debitis culpa odit doloremque quas iure minus animi in, repudiandae possimus itaque necessitatibus nihil fugit.</p>
+              </div>
+              <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel dicta consequatur voluptate sequi natus debitis culpa odit doloremque quas iure minus animi in, repudiandae possimus itaque necessitatibus nihil fugit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel dicta consequatur voluptate sequi natus debitis culpa odit doloremque quas iure minus animi in, repudiandae possimus itaque necessitatibus nihil fugit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--  -->
+      <section class="">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col d-lg-none">hide on screens wider than lg</div>
+          <div class="col d-none d-lg-block">hide on screens smaller than lg</div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-md-6 order-md-2">Content</div>
+          <div class="col-md-3 order-md-1">Sidebar 1</div>
+          <div class="col-md-3 order-md-3 d-none d-md-block">Sidebar 2</div>
+        </div>
+      </section>
+      <br>
+      <!--  -->
+      <section>
+        <div class="row">
+          <div class="col-md-12">
+            <img class="img-fluid float-left mr-3" src="https://picsum.photos/200/200" alt="#">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vel a voluptate corporis aliquid laborum est laboriosam autem dolorum at, officiis fuga voluptatem deserunt, libero quidem beatae sapiente dicta voluptatibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vel a voluptate corporis aliquid laborum est laboriosam autem dolorum at, officiis fuga voluptatem deserunt, libero quidem beatae sapiente dicta voluptatibus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio explicabo recusandae mollitia temporibus eveniet minima! Vitae facere velit est atque neque nam error mollitia suscipit. Aspernatur excepturi ea ipsum beatae.</p>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-dark table-bordered table-hover table-sm">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive-lg">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                    <th scope="col">Heading</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+      <section>
+        <h3 class="mt-5">Компоненты</h3>
+
+      </section>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
