@@ -1,0 +1,24 @@
+{
+  "name": "fullstackpractic",
+  "version": "1.0.0",
+  "description": "Full-Stack практика. Создание JavaScript блога",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "blog",
+    "nodejs",
+    "fullstack"
+  ],
+  "author": "vva76",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <!-- jQuery.com -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $('<div />')
+      .css({
+        margin: '20px auto',
+        width: 200,
+        height: 150,
+        borderRadius: '50%',
+        backgroundColor: 'red',
+        transition: '.3s transform ease-in'
+      })
+      .hover(function() {
+        $(this).css('transform', 'scale(1.1)')
+      }, function() {
+        $(this).css('transform', 'scale(1)')
+      })
+      .click(function() {
+        const $clone = $(this).clone()
+
+        $clone.css({
+          position: 'relative',
+          top: 50,
+          backgroundColor: 'blue'
+        })
+        .click(() => {$clone.fadeOut()})
+        $(document.body).append($clone)
+      })
+      .appendTo($(document.body))
+  </script>
+
+  <!-- Lodash.com -->
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+  <script>
+  console.log(_)
+  </script>
+
+  <!-- Momentjs.com -->
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script>
+    const now = moment()
+
+    now.set({ 
+      month: 9,
+      date: 10,
+      hour: 4 
+    })
+    console.log(now.format('DD.MM.YYYY'))
+  </script>
+
+  <!-- https://github.com/axios/axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.data)
+      .then(data => console.log(data))
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "js-native-blog",
+  "version": "1.0.0",
+  "description": "js native blog",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "keywords": [
+    "js",
+    "blog",
+    "javascript"
+  ],
+  "author": "vva76",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@webpack-cli/add": "latest",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "latest",
+    "jshint": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "dependencies": {
+    "@babel/polyfill": "latest"
+  }
+}
