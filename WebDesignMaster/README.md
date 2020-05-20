@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; WEBDESIGN MASTER |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; WEBDESIGN MASTER |
 
 -------------------------------------------------------------------------------
 ### **[WebDesign Master](https://webdesign-master.ru/). Уроки создания сайтов**
