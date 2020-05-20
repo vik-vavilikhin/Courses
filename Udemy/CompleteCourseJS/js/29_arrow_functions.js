@@ -1,0 +1,57 @@
+'use strict';
+
+let name = 'Ivan';
+let age = 30;
+let mail = 'ex@mail.ru';
+let box = document.querySelector('.box');
+let p = document.createElement('p');
+
+box.appendChild(p)
+	.textContent = `
+		Пользователю ${name} ${age} лет. Его электронный адрес ${mail}
+	`;
+
+function makeArray() {
+	var items = [];
+
+	for(let i = 0; i < 10; i++) {
+		var item = function() {
+			console.log(i);
+		};
+		items.push(item);
+	}
+
+	return items;
+}
+
+var arr = makeArray();
+
+arr[1]();
+arr[3]();
+arr[7]();
+
+let fun = () => {
+	console.log(this);
+};
+
+// fun();
+
+let obj = {
+	number: 5,
+	sayNumber: function() {
+		let say = () => {
+			console.log(this);
+		};
+		say();
+	}
+};
+
+obj.sayNumber();
+
+let btn = document.querySelector('button');
+btn.addEventListener('click', function() {
+	let show = () => {
+		console.log(this);
+	};
+	show();
+});

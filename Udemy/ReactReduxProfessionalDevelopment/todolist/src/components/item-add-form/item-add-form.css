@@ -1,0 +1,9 @@
+.item-add-form {
+  margin-top: 1rem;
+}
+.item-add-form input {
+  margin-right: 3px;
+}
+.btn-item-add-form {
+  white-space: nowrap;
+}

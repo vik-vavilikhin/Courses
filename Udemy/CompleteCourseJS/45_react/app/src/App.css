@@ -1,0 +1,42 @@
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #000;
+  text-align: center;
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.rest_block {
+  height: 80px;
+  line-height: 80px;
+  background-color: #ff6677;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.work_block {
+  height: 80px;
+  line-height: 80px;
+  background-color: #aa99ff;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.clicker {
+  width: 170px;
+  border-radius: 8px;
+  height: 40px;
+  margin-top: 30px;
+  outline: none;
+}
