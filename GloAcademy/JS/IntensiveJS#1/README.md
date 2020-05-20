@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; [Академия верстки](https://github.com/vik-vavilikhin/GloAcademy) &rarr; ИНТЕНСИВ ПО JS #1 |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [Академия верстки](https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy) &rarr; ИНТЕНСИВ ПО JS #1 |
 
 -------------------------------------------------------------------------------
 |                      Наименование                                    | Демо |
