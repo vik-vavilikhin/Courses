@@ -1,0 +1,134 @@
+.s-form {
+	background: 
+		radial-gradient(transparent 0%, rgba(#000, 1) 100% ),
+		url(../images/bg.png) center no-repeat;
+		background-size: cover;
+	.form-wrapper {
+		margin: 0 auto;
+		max-width: 800px;
+		// height: 500px;
+		text-align: left;
+		padding: 20px 85px 35px;
+		position: relative;
+		.tab-list {
+			border: none;
+			padding: 0 27px 1px;
+			&__item {
+				margin-right: 10px;
+				background-color: #fff;
+				border-radius: 7px 7px 0 0;
+			}
+			&__link {
+				padding: 0px 16px;
+				display: block;
+				font-size: 24px;
+				color: #080808;
+				border: none;
+				&.active {
+					color: #fff;
+					background-color: #03a5db;
+					text-shadow: 2px 2px 1px rgba(#000, 0.75);
+					border-top: 1px solid #84d3ed;
+					box-shadow: 
+						1px -1px 0px 0px #047ca0, 
+						-1px -1px 0px 0px #047ca0, 
+						0px 2px 0px 0px #03a5db;
+				}
+			}
+		}
+		.tab {
+			&-content {
+				padding: 24px;
+				background-color: #03a5db;
+				border-top: 1px solid #84d3ed;
+				border-radius: 7px;
+				box-shadow:  
+					1px -1px 0px 0px #047ca0, 
+					-1px 1px 0px 0px #047ca0;
+			}
+			&-pane {
+				// max-height: 365px;
+				// overflow: hidden;
+				padding: 60px 55px 50px;
+				background-color: #000;
+				border-radius: 7px;
+				border: 1px solid #7dd7f4;
+				position: relative;
+				.form-enter, .form-registration  {
+					// .input, p, label {
+						// 	display: block;
+						// }
+						&__name, &__pass, &__mail, &__repeat {
+							animation: flipInX 2s 0.5s both;
+						/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+						}
+					.input {
+						display: block;
+						width: 100%;
+						box-sizing: border-box;
+						margin-bottom: 25px;
+						padding: 10px 25px;
+						font-size: 24px;
+						border-radius: 7px;
+						color: #ffffff;
+						background-color: #1d1c1c;
+						border: none;
+						box-shadow: inset 1px 1px 2px 1px #0e0e0e;
+						&::placeholder {
+							color: #ffffff;
+						}
+					}
+					p {
+						font-size: 15px;
+						color: #c51f03;
+						padding: 0 25px;
+						text-align-last: left;
+						margin-bottom: 60px;
+						display: inline-block;
+						animation: swing 2s 1s infinite both;
+					}
+					&__box {
+						display: block;
+						padding-left: 25px;
+						
+					}
+					&__checkbox {
+						animation: pulse .4s .1s infinite both;
+						&:checked {
+							animation: none;
+						}
+					}
+					&__remind {
+						font-size: 15px;
+						color: #6f6d6d;
+						// animation: pulseMin .2s .1s infinite both;
+					}
+				}
+				.btn-enter, .btn-reg {
+					position: absolute;
+					right: -40px;
+					bottom: 15px;
+					font-size: 24px;
+					padding: 3px 31px;
+					cursor: pointer;
+					border: none;
+					color: #ffffff;
+					background: radial-gradient(circle, #cb2103 0%, #7f0501 100%);
+					box-shadow: -10px 5px 5px rgba(0,0,0,.5);
+					animation: bounceInLeft 1s 0.5s both;
+					/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+					&::after {
+						content: ''; 
+						position: absolute;
+						right: 0; 
+						bottom: -22px;
+						border: 12px solid transparent;	
+						border-left: 0; 
+						border-top: 10px solid #4a0503;
+						animation: bounceInDown 2s 0.5s both;
+					}
+				}
+			}
+		}
+	}
+}

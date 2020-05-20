@@ -1,0 +1,26 @@
+mixin tabs()
+	+b.DIV.form-wrapper
+		+b.UL#myTab.tab-list.nav.nav-tabs
+			+e.LI.item.nav-item
+				+e.A.link#enter-tab.nav-link.active(data-toggle='tab', href='#enter') Вход
+			+e.LI.item.nav-item
+				+e.A.link#registration-tab.nav-link(data-toggle='tab', href='#registration') Регистрация
+			
+		.tab-content
+			#enter.tab-pane.fade.show.active
+				+b.FORM.form-enter
+					+e.INPUT.name.input(type="text" placeholder="Ваше имя")
+					+e.INPUT.pass.input(type="password" placeholder="Пароль")
+					+e.P Забыли пароль?
+					+e.DIV.box
+						+e.INPUT.checkbox(type="checkbox", name="remind")
+						+e.LABEL.remind(for="remind") Напомнить мне
+				+b.BUTTON.btn-enter Войти
+
+			#registration.tab-pane.fade
+				+b.FORM.form-registration
+					+e.INPUT.name.input(type="text" placeholder="Ваше имя")
+					+e.INPUT.mail.input(type="email" placeholder="e-mail")
+					+e.INPUT.pass.input(type="password" placeholder="Пароль")
+					+e.INPUT.repeat.input(type="password" placeholder="Повторить")
+				+b.BUTTON.btn-reg Регистрация

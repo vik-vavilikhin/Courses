@@ -1,0 +1,26 @@
+mixin map()
+	+b.SECTION.s-map
+		+b.container
+			+b.DIV.map-content
+				+b.DIV.contact
+					+e.H2.h2 Контакты
+					+e.P.address г. Москва,#[br] Варшавское шоссе, дом 16,#[br] корпус 1, офис №8
+					+e.P.distance 200 от м. Театральная
+					+e.P.phone 
+						+e.A.link(href="tel:+74994098725") +7 (499) 409-87-25
+					+e.P.mail 
+						+e.A.link(href="mailto:info@vashsite.ru") info@vashsite.ru
+		#map
+	
+	+b.FOOTER.s-footer
+		+b.container
+			+b.DIV.footer-content
+				+b.DIV.logo
+					+e.IMG.img(src="images/logo.png", alt="Технологии Пожарной безопасности")
+					+e.P.title Технологии Пожарной безопасности
+				+b.DIV.sertificate 
+					+e.P.description Сертификация пожарной безопасности Работаем по России и странам СНГ
+				+b.DIV.contact
+					+e.P.phone 
+						+e.A.link(href="tel:+74994098725") +7 (499) 409-87-25
+					+e.P.address г. Москва, Варшавское шоссе, дом 16, корпус 1, офис №8

@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+
+.s-video {
+	width: 100%;
+	// background: url(../video/Clouds_Lapse.jpg) no-repeat center;
+	background-size: cover;
+	.container {
+		min-height: 100vh;
+		text-align: center;
+		display: table;
+	}
+}
+.wrap-block {
+	display: table-cell;
+	vertical-align: middle;
+}

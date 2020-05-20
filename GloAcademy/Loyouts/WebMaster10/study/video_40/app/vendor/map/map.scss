@@ -1,0 +1,89 @@
+
+.s-map {
+	background-color: #e8e8e8;
+	position: relative;
+	#map{
+		height:485px;
+		width: 100%;
+		position: absolute; top: 0; left: 0;
+		// z-index: -1;
+	}
+	.map-content {
+		@include row-flex();
+		.contact {
+			z-index: 1;
+			@include col();
+			@include size(5);
+			text-align: center;
+			align-content: space-between;
+	
+			padding: 7rem;
+			background-color: #c60b0b;
+			color: #ffffff;
+			&__h2 {
+				font-size: 3rem;
+				margin-bottom: 4rem;
+			}
+			p {
+				font-size: 1.8rem;
+				margin-bottom: 4rem;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			&__link {
+				color: inherit;
+			}
+		}
+	}
+}
+
+.s-footer {
+	padding: 2rem 0;
+	background-color: #fff;
+	.footer-content {
+		@include row-flex();
+		justify-content: space-between;
+		align-items: center;
+		.logo {
+			@include col();
+			@include size(3);
+			display: flex;
+
+			&__img {
+				width: 6rem;
+				height: 6rem;
+				margin-right: 2rem;
+			}
+			&__title {
+				padding-right: 3rem;
+				font-size: 1.6rem;
+			}
+		}
+		.sertificate {
+			@include col();
+			@include size(4);
+			padding: 0 2rem;
+			text-align: center;
+			&__description {
+				font-size: 1.4rem;
+				color: #666666;
+			}
+		}
+		.contact {
+			@include col();
+			@include size(3);
+			text-align: right;
+			padding-left: 3rem;
+			&__phone {
+				font-size: 2.2rem;
+			}
+			&__address {
+				font-size: 1.4rem;
+			}
+			&__link {
+				color: #000000;
+			}
+		}
+	}
+}

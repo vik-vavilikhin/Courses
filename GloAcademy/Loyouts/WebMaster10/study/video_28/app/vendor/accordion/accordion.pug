@@ -1,0 +1,28 @@
+mixin card(NumBox, AddClass)
+	- 
+		var 
+			Id = 'heading' + NumBox
+			Collapse = 'collapse' + NumBox
+			Class = 'collapse'
+	if AddClass
+		- Class = Class + ' ' + AddClass
+
+	+b.DIV.card
+		+e.DIV(id= Id).header
+			+e.H5.h5.mb-0
+				+b.BUTTON.btn.btn-link(type='button', data-toggle='collapse', data-target= '#' + Collapse)
+					| Сколько времени может занять быстрая уборка 3-х комнатной квартиры?
+
+		+b.DIV(id= Collapse class= Class aria-labelledby= Id, data-parent='#accordionExample')
+			.card-body
+				| Быстрая уборка 3 комнатной квартиры, которая включает в себя мытье полов, протирку пыли и зеркал занимает около 3 часов. Но, конечно, многое зависит от степени загрязненности и заставленности комнат. 
+
+mixin accordion()
+	+b.DIV.accordion-box
+		+e.H1.h1 Ответы на вопросы
+		+e.H2.h2 Которые нам задают чаще всего
+		
+		+b.DIV#accordionExample.accordion
+			+card('One', 'show')
+			+card('Two')
+			+card('Three')
