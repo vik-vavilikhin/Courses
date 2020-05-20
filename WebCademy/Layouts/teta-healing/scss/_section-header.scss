@@ -1,0 +1,162 @@
+// ========= HEADER ========= //
+.header {
+  // ========= general ========= //
+  height: 800px;
+  background-color: #EEF9FF;
+  position: relative;
+  overflow: hidden;
+
+  @media(max-width: 1140px) {
+    height: 700px;
+  }
+
+  @media(max-width: 992px) {
+    height: auto;
+  }
+
+  &__img-wrapper {
+    width: 1260px;
+    position: absolute;
+    // height: 690px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (max-width: 1290px) {
+      max-width: 100%;
+    }
+
+    @media(max-width: 992px) {
+      width: auto;
+      height: auto;
+      transform: translate(0, 0);
+    }
+
+    @media(max-width: 768px) {
+      max-width: 70%;
+      margin: 0 auto;
+      position: static;
+
+    }
+
+    @media(max-width: 540px) {
+      max-width: 100%;
+    }
+  }
+
+  // ========= private ========= //
+  &__content {
+    max-width: 645px;
+    flex-shrink: 0;
+
+    @media(max-width: 1140px) {
+      max-width: 500px;
+    }
+  }
+
+  &__title {
+    font-family: 'Uni Neue Book', sans-serif;
+    font-weight: 400;
+    font-size: 82px;
+    line-height: 1.1;
+    color: #363636;
+    margin-bottom: 25px;
+
+    span {
+      font-family: 'Uni Neue', sans-serif;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      color: #69B0AC;
+
+    }
+
+    @media(max-width: 1140px) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    max-width: 440px;
+    margin-bottom: 40px;
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #7C7C7C;
+    }
+
+    @media(max-width: 1140px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &-list {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #545454;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    b {
+      font-weight: 700;
+      color: #363636;
+    }
+
+    &__item {
+      margin-bottom: 17px;
+      position: relative;
+      padding-left: 40px;
+
+      @media(max-width: 1140px) {
+        padding-left: 30px;
+      }
+
+      &::before {
+        content: '';
+        background-image: url("./../img/bulit.svg");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 23px;
+        position: absolute;
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: -85px;
+
+    @media(max-width: 992px) {
+      position: static;
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__arrow {
+    width: 95px;
+    height: 40px;
+    position: absolute;
+    // bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: url(./../img/substrate-navigation.svg) no-repeat;
+
+  }
+
+  &__link {
+    display: block;
+    width: 50px;
+    height: 52px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(./../img/button-navigation.svg) no-repeat;
+  }
+}

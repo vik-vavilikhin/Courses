@@ -1,0 +1,46 @@
+/* 
+font-family: 'Uni Neue';
+font-family: 'Uni Neue Book';
+*/
+$colorBase: #69b0ac;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Uni Neue", sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1290px;
+
+}
+
+[class$="__row"] {
+  display: flex;
+
+  @media(max-width: 1140px) {
+    flex-direction: column;
+  }
+}
+
+@import "_section-header";
+@import "./blocks/_nav";
+@import "./blocks/_logo";
+@import "./blocks/_top-nav";
+@import "./blocks/_menu";
+
+@import "_section-about";
+@import "./blocks/_promo-video";
+@import "./blocks/_about-text";
+@import "./blocks/_statistics";
+
+@import "./_animation";

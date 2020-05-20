@@ -1,0 +1,49 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    position: relative;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1;
+    color: #363636;
+    padding-right: 27px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      top: 1px;
+      background-color: #dddddd;
+    }
+
+    /* Условие для экранов с шириной от 0 до 440px */
+    @media(max-width: 440px) {
+      font-size: 20px;
+      padding-right: 10px;
+
+      &:after {
+        height: 20px;
+      }
+    }
+  }
+
+  &__slogan {
+    font-family: 'Uni Neue Book', sans-serif;
+    width: 160px;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #4B5455;
+    padding-left: 27px;
+
+    /* Условие для экранов с шириной от 0 до 440px */
+    @media(max-width: 440px) {
+      padding-left: 10px;
+      width: 144px;
+    }
+  }
+}

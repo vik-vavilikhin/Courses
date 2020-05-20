@@ -1,0 +1,12 @@
+.nav {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+
+  /* Условие для экранов с шириной от 0 до 440px */
+  @media(max-width: 440px) {
+    padding-top: 8px;
+  }
+}

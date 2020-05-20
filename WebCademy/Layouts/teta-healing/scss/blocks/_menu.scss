@@ -1,0 +1,129 @@
+// $colorBase: #69b0ac;
+$colorHoverActive: darken($colorBase, 15%);
+$colorPalette: rgba($colorBase, .9);
+
+/* --------------- Кнопка для мобильной навигации ----------- */
+.menu-icon {
+  z-index: 19;
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  &-line {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: $colorBase;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      content: "";
+      width: 30px;
+      height: 5px;
+      background-color: $colorBase;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      content: "";
+      width: 30px;
+      height: 5px;
+      background-color: $colorBase;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+  }
+
+  &.menu-icon-active {
+
+    /* --------------- Анимация для кнопки ----------- */
+    .menu-icon-line {
+      background-color: transparent;
+      position: fixed;
+
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        background-color: #ffffff;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        top: 0;
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  /* Условие для экранов с шириной от 1140 до 1200px */
+  @media (max-width: 1140px) {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ----------------- Мобильная навигация ----------------- */
+
+.mobile-nav {
+  display: none;
+
+  @media (max-width: 1140px) {
+    z-index: 9;
+    display: block;
+    position: absolute;
+
+    right: -350px;
+    top: 0;
+    height: 100%;
+    width: 350px;
+    padding: 50px;
+    background-color: $colorPalette;
+    transition: transform 0.4s ease-in;
+
+    /* Условие для экранов с шириной от 0 до 1200px */
+    // right: -350px;
+
+    &--active {
+      transform: translateX(-100%);
+      position: fixed;
+    }
+
+    &__title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: $colorHoverActive;
+    }
+
+    &__list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+
+    &__link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 22px;
+
+      &:hover {
+        color: $colorHoverActive;
+      }
+    }
+  }
+}

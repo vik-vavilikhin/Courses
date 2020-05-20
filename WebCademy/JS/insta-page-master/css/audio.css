@@ -1,0 +1,1 @@
+.audio-controls{width:85px;height:85px;position:absolute;right:20px;top:20px;font-size:80px}.audio-controls a{cursor:pointer;opacity:0.2;-webkit-transition:0.2s ease-in;transition:0.2s ease-in}.audio-controls a:hover{opacity:0.6}.audioElement{display:none}

@@ -1,0 +1,24 @@
+.top-nav {
+  &__link {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1;
+    color: #363636;
+    text-decoration: none;
+    margin-right: 44.7px;
+    transition: color 0.2s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #69b0ac;
+    }
+  }
+
+  /* Условие для экранов с шириной до 1140px */
+  @media(max-width: 1140px) {
+    display: none;
+  }
+}

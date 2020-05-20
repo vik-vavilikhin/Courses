@@ -1,0 +1,68 @@
+.section-about {
+
+  &__video {
+    @media(max-width: 1140px) {
+      width: 100%;
+      margin: 0 auto 75px;
+    }
+
+    .promo-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 625px;
+      height: 420px;
+      background: #FFFFFF;
+      box-shadow: 0px 80px 100px rgba(211, 226, 235, 0.8);
+      border-radius: 50px;
+      border: 10px solid #fff;
+      overflow: hidden;
+
+      background: radial-gradient(25.3% 57.25% at 50% 50%,
+          rgba(80, 152, 190, 0.5) 0%,
+          rgba(52, 113, 146, 0.76) 100%),
+        url(./../img/video.jpg);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 80px 100px rgba(211, 226, 235, 0.8);
+
+      @media(max-width: 1140px) {
+        width: 100%;
+      }
+
+      &__play-btn {
+        margin: 0;
+        padding: 0;
+        width: 80px;
+        height: 84px;
+        border: none;
+        background-color: transparent;
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+
+        &::before {
+          width: 116px;
+          height: 116px;
+          background: rgba(162, 173, 255, 0.2);
+          animation: circle 1s infinite;
+        }
+
+        &::after {
+          width: 174px;
+          height: 174px;
+          border: 1px solid rgba(162, 173, 255, 0.3);
+          animation: wave 1s ease-out infinite;
+        }
+      }
+    }
+  }
+}
