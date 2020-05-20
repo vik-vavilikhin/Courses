@@ -30,7 +30,7 @@
 
 [6.0]: https://study.up-skills.ru/teach/control/stream/view/id/184641829                      "Пишем «Delivery Food» на JavaScript"
 [6.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/delivery-food
-[6.2]: https://vik-vavilikhin.github.io/GloAcademy/JS/delivery-food/                          "Демо"
+[6.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/delivery-food/                  "Демо"
 
 [7.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grMtQ5ckqFoRMGUynpuoa3Q               "«Квиз на JS»"
 [7.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%235Burger
