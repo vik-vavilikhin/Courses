@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; АКАДЕМИЯ ВЕРСТКИ |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; АКАДЕМИЯ ВЕРСТКИ |
 
 -------------------------------------------------------------------------------
 ### **[Академия верстки](https://glo-academy.ru/frontenddeveloper/)**
