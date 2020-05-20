@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; WEBFORMYSELF |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; WEBFORMYSELF |
 
 -------------------------------------------------------------------------------
 ### **[WebForMySelf](https://webformyself.com/). Все о создании сайтов**
