@@ -1,12 +1,12 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; [WebDesignMaster](https://github.com/vik-vavilikhin/WebDesignMaster) &rarr; СОЗДАНИЕ КОНТЕНТНОГО САЙТА НА JEKYLL ОТ А ДО Я |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [WebDesignMaster](https://github.com/vik-vavilikhin/Courses/tree/master/WebDesignMaster) &rarr; СОЗДАНИЕ КОНТЕНТНОГО САЙТА НА JEKYLL ОТ А ДО Я |
 
 ### Создание контентного сайта на Jekyll от А до Я.  
 > #### Дизайн. Вёрстка. Посадка на движок. Размещение. Монетизация.  
 -------------------------------------------------------------------------------
 |                      Наименование                                    | Демо |
 |:---------------------------------------------------------------------|:-----|
-|Создание контентного сайта на Jekyll от А до Я                        |[демо]()|
+|Создание контентного сайта на Jekyll от А до Я                        |_демо_|
 
 Добро пожаловать в новый курс от WebDesign Master - "Создание контентного сайта на Jekyll от А до Я. Дизайн. Вёрстка. Посадка на движок. Размещение. Монетизация."  
 
