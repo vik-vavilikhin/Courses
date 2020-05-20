@@ -1,12 +1,12 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; [WebDesignMaster](https://github.com/vik-vavilikhin/WebDesignMaster) &rarr; ДЖЕДАЙ ВЁРСТКИ #7. ПРОЕКТ S&MITLER |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [WebDesignMaster](https://github.com/vik-vavilikhin/Courses/tree/master/WebDesignMaster) &rarr; ДЖЕДАЙ ВЁРСТКИ #7. ПРОЕКТ S&MITLER |
 
 ### **Джедай вёрстки #7. Проект S&Mitler.**
 >#### Адаптивная HTML вёрстка из Adobe XD на реальном примере.
 -------------------------------------------------------------------------------
 |                      Наименование                                    | Демо |
 |:---------------------------------------------------------------------|:-----|
-|[Джедай вёрстки #7. Проект S&Mitler](https://www.youtube.com/watch?v=vWfRHtxy81Q&index=17&list=PLyf8LgkO_8q_-ELwz9tlMX8R5gMSRWNto)        |[демо]()|
+|[Джедай вёрстки #7. Проект S&Mitler](https://www.youtube.com/watch?v=vWfRHtxy81Q&index=17&list=PLyf8LgkO_8q_-ELwz9tlMX8R5gMSRWNto)        |_демо_|
 
 #### Важные примечания к выпуску:
 - Наименование папки вашего аккаунта Windows должно быть написано латиницей, например: `C:\Users\alex`, а не кириллицей `C:\Users\алекс`. Это необходимо для корректной работы Gulp, Prepros и Adobe XD.  
