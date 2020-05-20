@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; WebCademy |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; WebCademy |
 
 -------------------------------------------------------------------------------
 ### **[WebCademy](https://www.youtube.com/user/CBSystematicsTV/about/)**
