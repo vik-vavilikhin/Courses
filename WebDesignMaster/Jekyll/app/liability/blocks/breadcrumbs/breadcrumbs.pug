@@ -1,0 +1,6 @@
+mixin breadcrumbs()
+	+b.NAV.breadcrumbs
+		+e.UL.body
+			+e.LI.item: +e.A(href="/").link Главная
+			+e.LI.item: +e.A(href="#").link Новости IT
+			+e.LI.item.active Представители резервов призваны к ответу.

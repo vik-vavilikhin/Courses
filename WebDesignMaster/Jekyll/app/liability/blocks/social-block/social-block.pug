@@ -1,0 +1,24 @@
+mixin commentsBlock(commentsCount, mod)
+	- var addClass = ['__info' + '_' + mod + ' comments-info__']
+
+	+b.DIV(class= addClass)
+		+e.I.icon.fa.fa-comments
+		+e.A.link.item-comments-count(href="#disqus_thread")= commentsCount
+
+mixin social-block(urlImg, title, date, positionDate, commentsCount)
+	//- item('urlImg', 'title', 'date', 'positionDate', 'commentsCount')
+	include ../likely-block/likely-block
+
+	+b.DIV.__social.social__
+		+b.DIV.comments(title="Количество комментариев")
+			if !date
+				+commentsBlock(commentsCount, 'noDate')
+				+b.DIV.fa.fa-share-alt(title="Поделиться в социальных сетях")
+				+block-likely(urlImg, title)
+			else
+				if positionDate == 'after'
+					+commentsBlock(commentsCount, 'dateAfter')
+					+e.SPAN.date= date
+				else
+					+e.SPAN.date= date
+					+commentsBlock(commentsCount, 'dateBefore')

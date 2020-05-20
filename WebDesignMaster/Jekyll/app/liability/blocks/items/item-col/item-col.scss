@@ -1,0 +1,45 @@
+.item-col {
+	margin: 12px 0 15px;
+	&__link {
+		text-decoration: none;
+		transition: color .25s ease;
+		&:hover,
+		&.hover {
+			text-decoration: underline;
+		}
+	}
+	&-dark {
+		.item-col {
+			&__link {
+				color: #a4a4a4;
+				&:hover,
+				&.hover {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+	&__meta {
+		margin: 6px 0 8px;
+		.social {
+			.comments {
+				&__date {
+					color: $accent;
+				}
+				&-info {
+					color: #7e838b;
+					margin-left: 20px;
+					.item-comments-count {
+						color: #7e838b;
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		font-size: .9375rem;
+		font-weight: normal;
+		margin: 0;
+		line-height: 1.35;
+	}
+}

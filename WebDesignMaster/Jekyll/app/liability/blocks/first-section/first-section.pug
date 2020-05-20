@@ -1,0 +1,25 @@
+mixin first-section()
+	include ../items/item-title/item-title
+	include ../ad/ad
+
+	- var folder = ['electronics']
+
+	+b.SECTION.section.first-section.clearfix
+		+b.DIV.container-fluid
+			+ad('a-horizontal', 'top-a')
+			+b.DIV.row.no-gutters
+				//- item(folder, img, title, date, positionDate, commentsCount)
+				+b.DIV.col-md-6
+					+item-title(folder, '1', 'Новые смартфоны покорили поклонников мобильной индустрии', '', '','26')
+
+				+b.DIV.col-md-6
+					+item-title(folder, '2', 'Macbook федя занял свое почетное место на бабушкином столе из 60-х', '', '', '26')
+				
+				+b.DIV.col-md-4
+					+item-title(folder, '3', 'На стол знаменитой московской студии поставили 2 новых девайса', '', '','26')
+				
+				+b.DIV.col-md-4
+					+item-title(folder, '4', 'Новенькие наушники, стилизованные под объективы камер положили на грязный поддон', '', '', '26')
+				
+				+b.DIV.col-md-4
+					+item-title(folder, '5', 'Macbook гриша нашел свой дом на нижней полке самодельного короба для обуви', '', '', '26')

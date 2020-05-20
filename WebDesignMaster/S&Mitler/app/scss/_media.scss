@@ -1,0 +1,142 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+  .welcome {
+    &__header {
+      font-size: 64px;
+    }
+  }
+  .headerContacts {
+    font-size: 14px;
+  }
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .welcome {
+    &__header {
+      font-size: 46px;
+    }
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+  .headerContacts {
+    .phoneHeader {
+      text-align-last: left;
+    }
+  }
+  .button {
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .headerFlex {
+    .col-sm-12 {
+      max-width: calc(100% / 12 * 11);
+    }
+  }
+}
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .headerFlex {
+    .col-xs-my {
+      max-width: calc(100% / 12 * 10.5);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .headerFlex {
+    .col-xs-my {
+      max-width: calc(100% / 12 * 10);
+    }
+  }
+  .topLine {
+    &__phone  {
+      display: none;
+    }
+  }
+  .welcome {
+    &__header {
+      font-size: 36px;
+    }
+    &__para {
+      font-size: 10px;
+    }
+    &__area {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+  }
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome {
+    &__header {
+      font-size: 28px;
+    }
+    &__para {
+      font-size: 9px;
+    }
+    &__area {
+      font-size: 12px;
+    }
+  }
+  .headerFlex .composition__description {
+    margin-top: 25px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 340px) {
+  .headerFlex {
+    .col-xs-my {
+      max-width: calc(100% / 12 * 9.6);
+    }
+  }
+  .welcome {
+    &__header {
+      font-size: 26px;
+    }
+    &__para {
+      font-size: 8.7px;
+    }
+    &__area {
+      font-size: 12px;
+    }
+  }
+  .headerFlex .composition__description {
+    font-size: 10px;
+  }
+}
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+  
+}

@@ -1,0 +1,6 @@
+mixin ad(advertising, addClass)
+	- var Class = ['ad ' + addClass]
+	- var urlImg = "images/" + advertising + ".jpg"
+
+	+b(class= Class)
+		+b.IMG(src= urlImg, alt= advertising).img-responsive

@@ -1,0 +1,14 @@
+extend template
+
+block body
+	+b.BODY
+		//- +debug-grid()
+		//- ===================
+		+top-line()
+		+section-header('all-posts', 'Все статьи:')
+		+cat-list()
+		+s-more('Следующая страница', true, 'right', 'd-none d-md-block')
+		+footer()
+		+copyright()
+		//- ===================
+		+hidden()

@@ -1,0 +1,16 @@
+extend template
+
+block body
+	+b.BODY.isPage
+		//- +debug-grid()
+		//- ===================
+		+top-line()
+		+page-header()
+		+page-content()
+		//- +section-header('all-posts', '')
+		//- +cat-list()
+		//- +s-more('Следующая страница', true, 'right', 'd-none d-md-block')
+		+footer()
+		+copyright()
+		//- ===================
+		+hidden()

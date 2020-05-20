@@ -1,0 +1,17 @@
+mixin fifth-section()
+	include ../items/item-type-one/item-type-one
+	- var folder = ['diy']
+
+	+b.SECTION.section.fifth-section.type-one
+		+b.DIV.container-fluid
+			+b.DIV.row
+				+b.DIV.col-sm-12
+					+b.H2.section__headline: +b.A(href="#").section__link DIY
+				
+				+b.DIV.col-md-7
+					+item-type-one(folder, '1', 'Как создать красивое освещение в виде шариков в своем доме.', '21/06/2017', 'after', '26')
+					
+				+b.DIV.col-md-5
+					+item-title(folder, '2', 'Как сфотографировать себя на телефон с зеркалкой.', '21/06/2017', 'after', '26')
+					
+					+item-title(folder, '3', 'Самодельные деревянные винты увеличенной площади для квадрокоптера.', '21/06/2017', 'after', '26')

@@ -1,0 +1,10 @@
+mixin top-line()
+	include ../main-menu/main-menu
+	include ../logo/logo
+	include ../search/search
+
+	+b.HEADER.top-line
+		+b.DIV.container-fluid
+			+logo()
+			+search()
+			+main-menu('top-menu')

@@ -1,0 +1,12 @@
+mixin item-col(folder, img, title, date, positionDate, commentsCount)
+	include ../../social-block/social-block
+
+	- var urlImg = "images/blog/" + folder + "/" + img + ".jpg"
+
+	+b.DIV.item-col.item-col-dark
+		+e.A(href="#").link
+			+e.IMG(src= urlImg alt= title title= title).img.img-responsive.img-width.overlay
+		+e.DIV.meta
+			+social-block(urlImg, title, date, positionDate, commentsCount)
+		+e.H4.title
+			+e.A(href="#").link= title

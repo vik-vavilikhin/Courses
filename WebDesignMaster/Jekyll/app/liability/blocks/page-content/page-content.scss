@@ -1,0 +1,38 @@
+.article {
+	&-content {
+		padding: $gutter*1.8 0;
+		background-color: #fff;
+	}
+	&-main {
+		&__body {
+
+		}
+		&__blockquote {
+			padding: $gutter;
+			margin: $gutter*2 $gutter*2.5;
+			font-size: 20px;
+			color: #000000;
+			border: {
+				top: $accent 2px solid;
+				bottom: $accent 2px solid;
+			}
+		}
+		&__h2, &__h3, &__h4, &__h5, &__h6 {
+			line-height: 1.2;
+		}
+
+		&__paragraph {
+			margin: 25px 0;
+			line-height: 1.6;
+		}
+		&__img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: auto;
+		}
+		&__video {
+			margin: $gutter 0;
+		}
+	}
+}

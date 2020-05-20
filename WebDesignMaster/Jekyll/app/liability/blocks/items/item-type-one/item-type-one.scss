@@ -1,0 +1,26 @@
+.type-one-first {
+	.social {
+		margin-top: 8px;
+		.comments {
+			color: #939393;
+			&-info {
+				&__link {
+					color: #939393;
+				}
+			}
+		}
+	}
+	.content {
+		&__headline {
+			font-size: 1.375rem;
+			margin-top: $gutter/2.5;
+			margin-bottom: $gutter*1.5;
+		}
+		[class*="__link"] {
+			color: $text-color;
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+}

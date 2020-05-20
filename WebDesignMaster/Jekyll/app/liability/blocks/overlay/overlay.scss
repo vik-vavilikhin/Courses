@@ -1,0 +1,22 @@
+.overlay {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: block;
+	&::before {
+		content: "";
+		background: $dark;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0.45;
+		transition: opacity .25s ease;
+	}
+	&:hover {
+		&::before {
+			opacity: 0.75;
+		}
+	}
+}

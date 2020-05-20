@@ -1,0 +1,61 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: GeekTOP - Новости из мира IT
+name: GeekTOP
+# email: your-email@example.com
+description: Новости электроники, технологий, современных гаджетов и другая актуальная информация современной IT-индустрии
+
+themecolor: '#202225'
+imagehom: img/geektop.jpg
+url: 'http://geektop.ru' # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/' # the subpath of your site, e.g. /blog
+
+category_dir: blog
+plugins: 
+  - jekyll-paginate-v2
+
+pagination:
+  enable: true
+  per_page: 9
+  title: ':title - Страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+exlude:
+  - 'node_modules'
+  - 'gulpfile.js'
+  - 'package.json'
+  - 'packege-lock.json'
+  - 'js/common.js'
+  - 'npm-debug.log'
+  - 'css/main.scss'
+  - '**/Thumbs.db'
+  - 'libs'
+  - 'vendor'
+  - 'liability'
+
+soc:
+  <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-vk"></i></a></li>
+  <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-facebook"></i></a></li>
+  <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+  <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-instagram"></i></a></li>
+  <li class="social-menu__item"><a class="social-menu__link" href="#"><i class="fa fa-rss"></i></a></li>
+
+copyright: Копирование контента и размещение на других сайтах запрещено

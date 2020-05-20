@@ -1,0 +1,27 @@
+{
+  "name": "optimizedhtml",
+  "version": "4.0.0",
+  "description": "OptimizedHTML 4 - Start HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vva76",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-notify": "latest",
+    "gulp-rename": "latest",
+    "gulp-rsync": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest"
+  },
+  "dependencies": {
+    "jshint": "^2.10.1"
+  }
+}

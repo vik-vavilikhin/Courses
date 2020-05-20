@@ -1,0 +1,54 @@
+{
+  "name": "gulp-project",
+  "description": "Template for website development with Gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vik-vavilikhin",
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vik-vavilikhin/education.git"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "bemto.pug": "latest",
+    "bower": "latest",
+    "browser-sync": "latest",
+    "clean-css": "latest",
+    "del": "latest",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-cli": "latest",
+    "gulp-concat": "latest",
+    "gulp-csso": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-pug": "latest",
+    "gulp-pxtorem": "latest",
+    "gulp-rename": "latest",
+    "gulp-rsync": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-ttf-svg": "latest",
+    "gulp-ttf2eot": "latest",
+    "gulp-ttf2woff": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-uglify": "latest",
+    "gulp-uncss": "latest",
+    "gulp-util": "latest",
+    "gulp-watch": "latest",
+    "imagemin-pngquant": "latest",
+    "smart-grid": "latest",
+    "ttf2woff2": "latest"
+  },
+  "dependencies": {},
+  "optionalDependencies": {}
+}

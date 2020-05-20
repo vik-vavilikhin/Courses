@@ -1,0 +1,22 @@
+.second-section {
+	padding: $gutter/2 0;
+	.content-section {
+		&__headline {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.news-wrap {
+	padding-bottom: $gutter/2;
+	.pattern {
+		&::before {
+			display: none;
+		}
+	}
+	.overlay {
+		&::before {
+			opacity: 0.4;
+		}
+	}
+}

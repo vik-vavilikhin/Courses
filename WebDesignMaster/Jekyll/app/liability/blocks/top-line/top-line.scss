@@ -1,0 +1,15 @@
+.top-line {
+	background-color: $dark;
+	position: relative;
+	height: 65px;
+	.container-fluid {
+		position: relative;
+	}
+}
+.isPage {
+	.top-line {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+	}
+}

@@ -1,0 +1,28 @@
+.logo {
+	font-family: baron-g, sans-serif;
+	color: #ffffff;
+	font-size: 1.4375rem;
+	display: inline-block;
+	text-decoration: none;
+	position: absolute;
+	padding-left: $gutter;
+	left: 0;
+	line-height: 65px;
+	&:hover, &:focus {
+		text-decoration: none;
+		color: #ffffff;
+	}
+	&__accent-litera {
+		color: $accent;
+	}
+}
+
+.copyright {
+	.logo {
+		position: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+		padding-left: 3px;
+	}
+}

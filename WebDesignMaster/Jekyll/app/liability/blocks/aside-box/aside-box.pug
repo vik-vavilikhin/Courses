@@ -1,0 +1,5 @@
+mixin aside-box(img)
+	- var urlImg = "images/" + img + ".jpg"
+	
+	+b.DIV.aside-box
+		+b.IMG(src= urlImg alt= img title= img).img-responsive

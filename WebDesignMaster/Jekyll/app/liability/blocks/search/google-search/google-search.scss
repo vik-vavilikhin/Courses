@@ -1,0 +1,21 @@
+.google-search-form {
+	&__input {
+		&_placeholder {
+			width: 100%;
+			padding: 8px 15px;
+			border: lighten($dark, 10%) 1px solid;
+			background-color: lighten($dark, 7.5%);
+			font-size: 1rem;
+			color: #ffffff;
+			outline: none;
+			&:focus {
+				border-color: lighten($dark, 15%);
+			}
+			&::placeholder {
+				color: rgba(#fff, .3);
+				font-family: Arial, sans-serif;
+				font-style: italic;
+			}
+		}
+	}
+}

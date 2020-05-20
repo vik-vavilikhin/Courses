@@ -1,0 +1,37 @@
+.item-news {
+	min-height: 280px;
+	margin-bottom: $gutter;
+	color: $text-color;
+	&__content {
+		border: {
+			left: #dfdfdf 1px solid;
+			bottom: #dfdfdf 1px solid;
+		}
+		z-index: 1;
+		position: absolute;
+		bottom: 0;
+		background-color: #fff;
+		width: 80%;
+		padding: $gutter;
+		[class*="date"] {
+			font-size: .8125rem;
+			color: $accent;
+			font-family: baron-g, sans-serif;
+			font-weight: bold;
+		}
+	}
+	
+	&__headline {
+		font-size: 1.0625rem;
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	&:hover{
+		.item-news {
+			&__headline {
+				text-decoration: underline;
+			}
+		}
+	}
+}

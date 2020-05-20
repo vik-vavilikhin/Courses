@@ -1,0 +1,13 @@
+mixin page-header()
+	include ../social-block/social-block
+
+	+b.HEADER.page-header.overlay(style="background-image: url(images/example.jpg)")
+		+e.DIV.content
+			+b.DIV.container-fluid
+				+b.DIV.row
+					+b.DIV.col-lg-7.col-md-8
+						+b.DIV.page-header-meta
+							+e.A(href="#").link.page-category-link Новости IT
+							+e.SPAN.date 21/06/2017
+							+e.H1.headline Как принято считать, представители современных социальных резервов призваны к ответу.
+							+social-block('', '', '', '', '26')

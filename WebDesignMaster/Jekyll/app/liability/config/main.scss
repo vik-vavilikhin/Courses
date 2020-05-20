@@ -1,0 +1,95 @@
+@import "../../vendor/smartgrid/smart-grid";
+@import "../../vendor/scss/vars";
+@import "../../vendor/scss/fonts";
+@import "../../vendor/scss/libs";
+
+/* ========================= */
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 1.125rem;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.5;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text-color;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	.iframe {
+		border: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%!important;
+		height: 100%!important;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+a {
+	color: $accent;
+	text-decoration: underline;
+	&:hover, &:focus {
+		color: $accent;
+	}
+}
+/* ==== CONTAINER-FLUID ==== */
+.container-fluid {
+	max-width: 1200px;
+	padding: 0 $gutter;
+}
+/* ==== SECTION ============ */
+.section {
+	background-color: #fafafa;
+	padding: {
+		bottom: $gutter;
+	}
+	&__headline {
+		text-transform: uppercase;
+		margin: 0;
+		font-size: 1.4375rem;
+		font-weight: 800;
+	}
+}
+
+/* ==== Always at the end == */
+@import "../../vendor/scss/media"; 

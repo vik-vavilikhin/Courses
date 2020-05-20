@@ -1,0 +1,52 @@
+mixin latest-box()
+	include ../items/item-latest-box/item-latest-box
+
+	+b.DIV.latest-box
+		+e.H3.headline Последние статьи:
+		+e.DIV.list
+			+item-latest-box(
+				'Электроника',
+				'Графеновые наушники собрали более ста тысяч долларов на Kickstarter',
+				'title',
+				'21/06/2017',
+				'after',
+				'26'
+			)
+
+			+item-latest-box(
+				'Новости IT',
+				'Forbes: Intel хочет выйти на рынок игровых видеокарт и потеснить NVIDIA и AMD',
+				'title',
+				'21/06/2017',
+				'after',
+				'26'
+			)
+
+			+item-latest-box(
+				'Обзоры',
+				'Обзор второго поколения наушников MEEAudio M6Pro — мониторность',
+				'title',
+				'21/06/2017',
+				'after',
+				'26'
+			)
+
+			+item-latest-box(
+				'Лайфхаки',
+				'Pacsafe — лучшие рюкзаки и сумки с защитой от воров',
+				'title',
+				'21/06/2017',
+				'after',
+				'26'
+			)
+
+			+item-latest-box(
+				'DIY',
+				'Bitcoin вырос более чем на 10% за вчерашний день',
+				'title',
+				'21/06/2017',
+				'after',
+				'26'
+			)
+
+			

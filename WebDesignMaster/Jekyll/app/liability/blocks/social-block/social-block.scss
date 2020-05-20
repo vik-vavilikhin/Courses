@@ -1,0 +1,55 @@
+.social {
+	margin-top: 10px;
+	.fa {
+		font-size: .75rem;
+	}
+	
+	.comments {
+		display: inline-block;
+		&-info {
+			display: inline-block;
+			&__link {
+				font-size: .75rem;
+				display: inline-block;
+				margin-left: 10px;
+				text-decoration: none;
+			}
+		}
+		
+		&__date {
+			font-size: .75rem;
+			font-weight: bold;
+		}
+		
+		&__info {
+			&_noDate,
+			&_dateAfter,
+			&_dateBefore {
+				position: relative;
+				&::after {
+					content: "";
+					font-family: fontawesome;
+					font-size: 5px;
+					top: 45%;
+					position: absolute;
+					opacity: .5;
+				}
+			}
+			&_noDate,
+			&_dateAfter {
+				margin-right: 25px;
+				&::after {
+					right: -15px;
+				}
+			}
+			
+			&_dateBefore {
+				margin-left: 20px;
+				&::after {
+					left: -25px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}

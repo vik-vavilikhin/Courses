@@ -1,0 +1,8 @@
+mixin item-news(folder, img, title, date)
+	- var urlImg = "images/blog/" + folder + "/" + img + ".jpg"
+
+	+b.DIV.pattern
+		+b.A(href="#" style="background-image: url(" + urlImg + ")").item-news.overlay
+			+e.DIV.content
+				+e.H3.headline  #{title}
+				+e.SPAN.date  #{date}

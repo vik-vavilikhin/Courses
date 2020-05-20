@@ -1,0 +1,8 @@
+mixin search()
+	include google-search/google-search
+	
+	+b.DIV.search-wrap
+		+e.DIV(title="Поиск по сайту...").btn
+			+b.DIV.fa.fa-search
+		+e.DIV.field
+			+google-search()

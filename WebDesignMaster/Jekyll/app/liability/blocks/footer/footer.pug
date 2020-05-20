@@ -1,0 +1,8 @@
+mixin footer()
+	include ../main-menu/main-menu
+	include ../social-menu/social-menu
+
+	+b.SECTION.footer.main-footer
+		+b.DIV.container
+			+main-menu('footer-menu')
+			+social-menu()

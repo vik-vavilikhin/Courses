@@ -1,0 +1,28 @@
+mixin main-menu(additionalClass)
+	-
+		var menuName = ['main-menu ' + additionalClass]
+		
+		var dataMenu = [
+			{'title': 'Электроника',	'url': '/index.html',		'active': true},
+			{'title': 'Новости IT', 	'url': '/all-posts.html',	'active': false},
+			{'title': 'Обзоры', 			'url': '/category.html',	'active': false},
+			{'title': 'Лайфхаки', 		'url': '/category.html',	'active': false},
+			{'title': 'DIY', 				'url': '/category.html',	'active': false},
+			{'title': 'О сайте', 		'url': '/about.html',		'active': false}
+		]
+
+
+	//- Кнопка меню для мобильных устройств
+	+b.DIV.mobile-menu-button
+		+b.I.fa.fa-bars
+		|  Меню
+
+		//- Меню для больших экранов
+	+b.NAV(class= menuName)
+		+e.UL.body
+			each item in dataMenu
+				- var itemClass = ['item']
+				if (item.active == true)
+					- itemClass = itemClass + '_active'
+				+e.LI(class= itemClass)
+					+e.A(href= item.url).link= item.title

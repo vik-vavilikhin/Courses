@@ -1,0 +1,10 @@
+.s-more {
+	padding: $gutter*2 0;
+	background-color: #f5f5f5;
+	&-first {
+		padding: $gutter 0;
+		margin-bottom: $gutter;
+		background: none;
+		border-bottom: 1px solid #dfdfdf;
+	}
+}

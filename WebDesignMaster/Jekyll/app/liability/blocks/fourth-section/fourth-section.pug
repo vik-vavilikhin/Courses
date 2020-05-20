@@ -1,0 +1,27 @@
+mixin fourth-section()
+	include ../items/item-title/item-title
+	include ../aside-box/aside-box
+	- var folder = ['lifehacks']
+
+	+b.SECTION.section.fourth-section
+		+b.DIV.container-fluid
+			+b.DIV.row
+				+b.DIV.col-sm-12
+					+b.H2.section__headline: +b.A(href="#").section__link Лайфхаки
+				+b.DIV.col-md-8.col-sm-6
+					+b.DIV.row.no-gutters
+						+b.DIV.col-md-6
+							//- item(folder, img, title, date, positionDate, commentsCount)
+							+item-title(folder, '14', 'Ключевые особенности структуры проекта.', '21/06/2017', 'after', '26')
+						
+						+b.DIV.col-md-6
+							+item-title(folder, '15', 'Перспективное планирование не оставляет шанса.', '21/06/2017', 'after', '26')
+						
+						+b.DIV.col-md-6
+							+item-title(folder, '16', 'Диаграммы связей описаны максимально подробно.', '21/06/2017', 'after', '26')
+						
+						+b.DIV.col-md-6
+							+item-title(folder, '17', 'Диаграммы ассоциативно распределены по отраслям.', '21/06/2017', 'after', '26')
+
+				+b.DIV.col-md-4.col-sm-6
+					+aside-box('a-vertical')

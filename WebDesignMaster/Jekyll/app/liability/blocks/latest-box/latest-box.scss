@@ -1,0 +1,10 @@
+.latest-box {
+	margin-bottom: $gutter;
+	&__headline {
+		border-bottom: 2px solid $accent;
+		padding-bottom: 10px;
+		text-transform: none;
+		font-weight: 800;
+		margin: 0 0 20px;
+	}
+}

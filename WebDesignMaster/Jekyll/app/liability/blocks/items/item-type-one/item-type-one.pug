@@ -1,0 +1,12 @@
+mixin item-type-one(folder, img, title, date, positionDate, commentsCount)
+	include ../../social-block/social-block
+
+	- var urlImg = "images/blog/" + folder + "/" + img + ".jpg"
+
+	+b.DIV.type-one-first
+		+e.A(href="#").link
+			+e.IMG.img.img-width.img-responsive(src= urlImg alt= title title= title)
+		+social-block(urlImg, title, date, positionDate, commentsCount)
+		+b.DIV.__content.content__
+			+e.H3.headline
+				+e.A.link(href="#") #{title}

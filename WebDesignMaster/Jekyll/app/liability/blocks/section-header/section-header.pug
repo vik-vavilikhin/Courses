@@ -1,0 +1,8 @@
+mixin section-header(sectionName, sectionTitle)
+	include ../ad/ad
+
+	+b.DIV.section-header.container-fluid
+		+ad('a-horizontal', 'top-a')
+		+b.DIV.row
+			+b.DIV.col-md-8
+				+b.DIV(class= sectionName + '-header') #{sectionTitle}

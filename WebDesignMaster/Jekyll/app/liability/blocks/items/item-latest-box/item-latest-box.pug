@@ -1,0 +1,9 @@
+mixin item-latest-box(linkTitle, linkHeader, title, date, positionDate, commentsCount)
+	include ../../social-block/social-block
+
+	+b.DIV.item-latest-box__
+		+e.A(href="#").title #{linkTitle}
+		+e.DIV.body
+			+e.A(href="#").header #{linkHeader}
+			+e.DIV.footer
+				+social-block('', title, date, positionDate, commentsCount)

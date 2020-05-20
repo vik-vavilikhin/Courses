@@ -1,0 +1,17 @@
+extend template
+
+block body
+	+b.BODY.isHome
+		//- +debug-grid()
+		//- ===================
+		+top-line()
+		+first-section()
+		+second-section()
+		+third-section()
+		+fourth-section()
+		+fifth-section('diy')
+		+s-more('Показать еще')
+		+footer()
+		+copyright()
+		//- ===================
+		+hidden()

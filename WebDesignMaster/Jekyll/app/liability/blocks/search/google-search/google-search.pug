@@ -1,0 +1,7 @@
+mixin google-search()
+	+b.FORM(action="/search.html")#cse-search-box.google-search-form
+		+e.INPUT(type="hidden" 	name="cx" 	value="partner-pub-xxx:xxx").input._partner
+		+e.INPUT(type="hidden" 	name="cof" 	value="FORID:10").input
+		+e.INPUT(type="hidden" 	name="ie" 	value="UTF-8").input._encoding
+		+e.INPUT(type="text" 	name="q" 	placeholder="Поиск по сайту...").input._placeholder
+

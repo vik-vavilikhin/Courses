@@ -1,0 +1,28 @@
+mixin second-section()
+	include ../items/item-news/item-news
+	include ../aside-box/aside-box
+	- var folder = ['news']
+
+	+b.SECTION.section.second-section
+		+b.DIV.container-fluid
+			+b.row
+				+b.col-md-8
+					+b.DIV.content-section
+						+e.H2.headline: +e.A(href="").link Новости it
+						
+						+b.DIV.row.news-wrap
+							+b.DIV.col-md-6
+								+item-news(folder, '6', 'Золотистый iPhone предыдущего поколения положили на тыкву', '21/06/2017')
+
+							+b.DIV.col-md-6
+								+item-news(folder, '7', 'Программист из Урюпово посадил зрение после 22-х лет работы', '21/06/2017')
+
+							+b.DIV.col-md-6
+								+item-news(folder, '8', 'Обнаружена первая в мире белая виниловая пластинка без дорожек', '21/06/2017')
+
+							+b.DIV.col-md-6
+								+item-news(folder, '9', 'Человек впервые в жизни сделал снимок моря в поле', '21/06/2017')
+
+				+b.col-md-4
+					+aside-box('vk-witget')
+					+aside-box('a-cube')

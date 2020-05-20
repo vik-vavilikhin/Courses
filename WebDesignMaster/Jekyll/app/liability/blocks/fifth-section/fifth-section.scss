@@ -1,0 +1,18 @@
+.fifth-section,
+.cat-first {
+	padding: 40px 0;
+	.pattern {
+		margin-bottom: $gutter;
+	}
+	.section {
+		&__headline {
+			margin-bottom: $gutter/2;
+		}
+	}
+	.item-title {
+		min-height: 230px;
+		&__content {
+			padding: 30px 30px 20px;
+		}
+	}
+}

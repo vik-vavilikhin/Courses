@@ -1,0 +1,36 @@
+.social-menu {
+	padding: 15px 0 20px;
+	&__body, &__item {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		display: block;
+		text-align: center;
+		border: 1px solid rgba(#fff, .1);
+		border-radius: 10em;
+		width: 52px;
+		height: 52px;
+		line-height: 50px;
+		color: #ffffff;
+		font-size: 24px;
+		margin: 4px;
+		transition: border-color .25s ease, opacity .25s ease;
+		.fa {
+			opacity: .75;
+			transition: opacity .25s ease;
+		}
+		&:hover {
+			color: #ffffff;
+			border-color: rgba(#fff, .35);
+			.fa {
+				opacity: 1;
+			}
+		}
+	}
+}

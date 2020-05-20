@@ -1,0 +1,12 @@
+mixin logo()
+	-
+		var dataLogo = [
+			{
+				'additionalClass'	: 'logo-litera',
+				'title'				: 'GeekTOP'
+			}
+		]
+
+	each item in dataLogo
+		+b.A(href="#" class="logo " + item.additionalClass)= item.title
+		

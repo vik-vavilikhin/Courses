@@ -1,0 +1,15 @@
+mixin social-menu()
+	-
+		var dataSocial = [
+			'vk',
+			'facebook',
+			'odnoklassniki',
+			'instagram',
+			'rss'
+		]
+
+	+b.NAV.social-menu
+		+e.UL.body
+			each item in dataSocial
+				- var itemClass = ['fa fa-'+ item]
+				+e.LI.item: +e.A(href="#").link: +b.I(class= itemClass)

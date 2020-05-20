@@ -1,0 +1,34 @@
+/* ==== ITEM-TITLE ========= */
+.item-title {
+	min-height: 340px;
+	&__content {
+		position: absolute;
+		bottom: 0;
+		color: #ffffff;
+		padding: 40px;
+		z-index: 1;
+	}
+	&__social {
+		margin-top: 10px;
+		.fa {
+			font-size: .75rem;
+			margin-right: 5px;
+		}
+	}
+}
+.content {
+	&__headline {
+		margin: 0;
+		text-transform: uppercase;
+		font-weight: 800;
+		line-height: 1.25;
+		font-size: 1.1875rem;
+	}
+	[class*="__link"] {
+		color: #ffffff;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

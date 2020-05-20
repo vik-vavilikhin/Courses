@@ -1,0 +1,30 @@
+.search-wrap {
+	&__btn{
+		position: absolute;
+		right: 0;
+		color: #5A5A5A;
+		cursor: pointer;
+		line-height: 65px;
+		text-align: center;
+		transition: color .25s ease;
+		&:hover {
+			color: lighten(#5A5A5A, 10%);
+		}
+		padding: {
+			right: $gutter;
+			left: 10px;
+		}
+	}
+
+	&__field {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 70px;
+		padding: 15px;
+		background-color: lighten($dark, 3%);
+		width: 100%;
+		border-top: lighten($dark, 7%) 1px solid;
+		z-index: 4;
+	}
+}

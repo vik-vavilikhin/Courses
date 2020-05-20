@@ -1,0 +1,9 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto-g", "../fonts/RobotoRegular/RobotoRegular", 400, normal, eof ttf woff woff2 svg);
+@include font-face("roboto-g", "../fonts/RobotoMedium/RobotoMedium", 500, medium, eof ttf woff woff2 svg);
+@include font-face("roboto-g", "../fonts/RobotoBold/RobotoBold", 700, bold, eof ttf woff woff2 svg);
+@include font-face("roboto-g", "../fonts/RobotoBlack/RobotoBlack", 800, black, eof ttf woff woff2 svg);
+
+@include font-face("baron-g", "../fonts/BaronBold/BaronBold", 700, bold, eof ttf woff woff2 svg);
+@include font-face("baron-g", "../fonts/BaronBlack/BaronBlack", 800, black, eof ttf woff woff2 svg);

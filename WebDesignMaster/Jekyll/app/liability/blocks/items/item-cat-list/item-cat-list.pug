@@ -1,0 +1,12 @@
+mixin item-cat-list(folder, img, title, date, paragraph)
+	- var urlImg = "images/blog/" + folder + "/" + img + ".jpg"
+
+	+b.A(href="#").item-cat-list
+		+b.DIV.row
+			+b.DIV.col-sm-6
+				+b.DIV.pattern
+					+e.IMG(src= urlImg alt= title title= title).img.img-responsive.overlay
+			+b.DIV.content.col-sm-6
+				+e.H3.headline #{title}
+				+e.DIV.date #{date}
+				+e.P.paragraph #{paragraph}

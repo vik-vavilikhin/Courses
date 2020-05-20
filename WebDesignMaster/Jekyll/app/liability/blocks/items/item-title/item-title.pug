@@ -1,0 +1,11 @@
+mixin item-title(folder, img, title, date, positionDate, commentsCount)
+	include ../../social-block/social-block
+
+	- var urlImg = "images/blog/" + folder + "/" + img + ".jpg"
+	
+	+b.DIV.pattern
+		+b.DIV.item-title.overlay(style= "background-image: url(" + urlImg + ")")
+			+b.DIV.__content.content__
+				+e.H3.headline
+					+e.A.link(href="#") #{title}
+				+social-block(urlImg, title, date, positionDate, commentsCount)

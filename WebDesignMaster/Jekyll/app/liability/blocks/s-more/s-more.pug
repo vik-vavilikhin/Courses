@@ -1,0 +1,10 @@
+mixin s-more(btnInscription, pagination, arrow, addClass)
+	include ../button/button
+	include ../pagination/pagination
+	- var addClass = ['section s-more text-center ' + addClass]
+
+	+b.SECTION(class= addClass)
+		+b.DIV.container
+			+button(btnInscription, arrow)
+			if pagination == true
+				+pagination()

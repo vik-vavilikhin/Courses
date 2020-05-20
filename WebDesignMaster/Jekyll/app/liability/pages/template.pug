@@ -1,0 +1,63 @@
+include ../../vendor/bemto.pug/bemto
+- 
+	set_bemto_settings({
+		prefix	: '',
+		element	: '__',
+		modifier	: '_'
+	})
+
+//- ============== LAYOUTS ============
+include ../layout/head/head
+include ../layout/body/body
+include ../layout/debug-grid/debug-grid
+
+//- ============== BLOCKS =============
+//-   -----------------------------
+		-------- INDEX.HTML ---------
+		-----------------------------
+include ../blocks/top-line/top-line
+include ../blocks/first-section/first-section
+include ../blocks/second-section/second-section
+include ../blocks/third-section/third-section
+include ../blocks/fourth-section/fourth-section
+include ../blocks/fifth-section/fifth-section
+include ../blocks/s-more/s-more
+include ../blocks/footer/footer
+include ../blocks/copyright/copyright
+//-   -----------------------------
+		-------- CATEGORY.HTML ------
+		-----------------------------
+include ../blocks/cat-header/cat-header
+include ../blocks/cat-first/cat-first
+include ../blocks/cat-list/cat-list
+//-   -----------------------------
+		-------- ALL-POSTS.HTML -----
+		-----------------------------
+include ../blocks/section-header/section-header
+//-   -----------------------------
+		-------- PAGE-HEADER.HTML ---
+		-----------------------------
+include ../blocks/page-header/page-header
+include ../blocks/page-content/page-content
+//-   -----------------------------
+		-------- PAGE-ABOUT.HTML ---
+		-----------------------------
+include ../blocks/page-about/page-about
+
+//- ============== SCRIPTS ============
+include ../layout/body-scripts/hidden
+
+doctype html
+html(lang='ru')
+	head
+		block head
+			+head({
+				"title"			: "GEEKTOP - Новости из мира IT",
+				"author"			: "vav-integrity",
+				"description"	: "Учебный сайт. 'Создание контентного сайта на Jekyll от А до Я'. Автор: WebDesign Master"
+			})
+		
+	block body   
+		+b.BODY.page
+			//- +debug-grid()
+			+body()

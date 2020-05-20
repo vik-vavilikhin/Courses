@@ -1,0 +1,9 @@
+.fourth-section {
+	background-color: #f5f5f5;
+	padding: 30px 0;
+	.section {
+		&__headline {
+			margin-bottom: 10px;
+		}
+	}
+}

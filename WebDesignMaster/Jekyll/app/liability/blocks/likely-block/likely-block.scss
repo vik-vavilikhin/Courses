@@ -1,0 +1,55 @@
+.likely{
+	&-custom {
+		display: inline-block;
+		font-size: .75rem;
+	}
+
+	&__button {
+		padding-left: 15px;
+	}
+
+	&__counter {
+		display: none;
+	}
+
+	&__widget {
+		padding: 0 4px 0 3px;
+		position: relative;
+		cursor: pointer;
+		margin: 6px 2px 0;
+		border: 1px solid #fff;
+		border-radius: 2px;
+		display: inline-block;
+	}
+
+	&__icon {
+		svg {
+			width: 11px;
+			height: auto;
+			position: absolute;
+			top: 3.5px;
+			left: 4px;
+			path {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.article {
+	&-content {
+		.likely {
+			&__icon {
+				svg {
+					path {
+						fill: #333;
+					}
+				}
+			}
+		}
+	}
+}
+/* LIKELY */
+.likely-on-page {
+	@import "../../vendor/likely/likely.scss";
+}

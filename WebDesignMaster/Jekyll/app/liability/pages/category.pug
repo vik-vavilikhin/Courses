@@ -1,0 +1,15 @@
+extend template
+
+block body
+	+b.BODY
+		//- +debug-grid()
+		//- ===================
+		+top-line()
+		+cat-header()
+		+cat-first()
+		+cat-list()
+		+s-more('Следующая страница', true, 'right', 'd-none d-md-block')
+		+footer()
+		+copyright()
+		//- ===================
+		+hidden()
