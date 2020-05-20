@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; UDEMY |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; UDEMY |
 
 -------------------------------------------------------------------------------
 ### **[Udemy](https://www.udemy.com/). On-line академия веб-разработки**
