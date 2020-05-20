@@ -3,14 +3,37 @@
 
 -------------------------------------------------------------------------------
 ### **[Академия верстки](https://glo-academy.ru/frontenddeveloper/)**
-|                      Наименование                      | Репозиторий | Демо |
-|:-------------------------------------------------------|:------------|:-----|
-|[Интенсив по JS #1](https://www.youtube.com/watch?v=NHB0OJg9CMU)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/IntensiveJS%231)|_демо_|
-|[Интенсив по JS #2](https://www.youtube.com/watch?v=lzwieQQDxLY&list=PLSoSRmO9N3goLCoLIVP2HEqlDozvJnkh0&index=4)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/IntensiveJS%232)|_демо_|
-|SeaBattle|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/IntensiveJS%233SeaBattle)|_демо_|
-|[Aviasales](https://www.youtube.com/watch?v=GPZw1YjI0jQ)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/IntensiveJS%234Aviasales)|[демо](https://vik-vavilikhin.github.io/GloAcademy/JS/IntensiveJS%234Aviasales/)|
-|[Воркшоп "Свой Instagram на ReactJs"](https://study.up-skills.ru/teach/control/stream/view/id/9053832) |[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/React_WorkShop)|_демо_|
-|[Интенсив по JS \| Пишем "Delivery Food" на JavaScript](https://study.up-skills.ru/teach/control/stream/view/id/184641829)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/delivery-food)|[демо](https://vik-vavilikhin.github.io/GloAcademy/JS/delivery-food/)|
-|[Интенсив по JS \| «Квиз на JS»](https://www.youtube.com/playlist?list=PLSoSRmO9N3grMtQ5ckqFoRMGUynpuoa3Q)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/JS/IntensiveJS%235Burger)|[демо](https://vik-vavilikhin.github.io/GloAcademy/JS/IntensiveJS%235Burger/)|
+|                         Наименование                       |    Репозиторий   |    Демо   |
+|:-----------------------------------------------------------|:-----------------|:----------|
+|[Интенсив по JS #1][1.0]                                    |[репозиторий][1.1]|_демо_     |
+|[Интенсив по JS #2][2.0]                                    |[репозиторий][2.1]|_демо_     |
+|SeaBattle                                                   |[репозиторий][3.1]|_демо_     |
+|[Aviasales][4.0]                                            |[репозиторий][4.1]|[демо][4.2]|
+|[Воркшоп «Свой Instagram на ReactJs»][5.0]                  |[репозиторий][5.1]|_демо_     |
+|[Интенсив по JS \| Пишем «Delivery Food» на JavaScript][6.0]|[репозиторий][6.1]|[демо][6.2]|
+|[Интенсив по JS \| «Квиз на JS»][7.0]                       |[репозиторий][7.1]|[демо][7.2]|
+
+[1.0]: https://www.youtube.com/watch?v=NHB0OJg9CMU                                                  "Интенсив по JS #1"
+[1.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%231
+
+[2.0]: https://www.youtube.com/watch?v=lzwieQQDxLY&list=PLSoSRmO9N3goLCoLIVP2HEqlDozvJnkh0&index=4  "Интенсив по JS #2"
+[2.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%232
+
+[3.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%233SeaBattle
+
+[4.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3gqYueq0r5kjU1LjRa-iVSjn                     "Aviasales"
+[4.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%234Aviasales
+[4.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%234Aviasales/             "Демо"
+
+[5.0]: https://study.up-skills.ru/teach/control/stream/view/id/9053832                        "Воркшоп «Свой Instagram на ReactJs»"
+[5.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/React_WorkShop
+
+[6.0]: https://study.up-skills.ru/teach/control/stream/view/id/184641829                      "Пишем «Delivery Food» на JavaScript"
+[6.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/delivery-food
+[6.2]: https://vik-vavilikhin.github.io/GloAcademy/JS/delivery-food/                          "Демо"
+
+[7.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grMtQ5ckqFoRMGUynpuoa3Q               "«Квиз на JS»"
+[7.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%235Burger
+[7.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%235Burger/          "Демо"
 
 <!-- |[Веб-разработчик 10.0](https://study.up-skills.ru/teach/control/stream/view/id/6290544)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/Loyouts/WebMaster10)|[демо-1](), [демо-2]()| -->
