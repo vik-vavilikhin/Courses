@@ -4,4 +4,4 @@
 -------------------------------------------------------------------------------
 |                      Наименование                                    | Демо |
 |:---------------------------------------------------------------------|:-----|
-|Интенсив по JS #2 ([youtube 1-3](https://www.youtube.com/playlist?list=PLSoSRmO9N3goLCoLIVP2HEqlDozvJnkh0))|[демо]()|
+|Интенсив по JS #2 ([youtube 1-3](https://www.youtube.com/playlist?list=PLSoSRmO9N3goLCoLIVP2HEqlDozvJnkh0))|_демо]_|
