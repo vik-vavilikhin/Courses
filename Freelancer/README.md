@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Courses.md) &rarr; Фрилансер по жизни |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; Фрилансер по жизни |
 
 -------------------------------------------------------------------------------
 ### **[Фрилансер по жизни - IT и фриланс](https://www.youtube.com/channel/UCedskVwIKiZJsO8XdJdLKnA)**
