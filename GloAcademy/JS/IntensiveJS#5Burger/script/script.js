@@ -2,79 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // ===============================================
-  /*                  Данные                      */
-  // ===============================================
-  const questions = [{
-      question: "Какого цвета бургер?",
-      answers: [{
-          title: 'Стандарт',
-          url: './image/burger.png'
-        },
-        {
-          title: 'Черный',
-          url: './image/burgerBlack.png'
-        }
-      ],
-      type: 'radio'
-    },
-    {
-      question: "Из какого мяса котлета?",
-      answers: [{
-          title: 'Курица',
-          url: './image/chickenMeat.png'
-        },
-        {
-          title: 'Говядина',
-          url: './image/beefMeat.png'
-        },
-        {
-          title: 'Свинина',
-          url: './image/porkMeat.png'
-        }
-      ],
-      type: 'radio'
-    },
-    {
-      question: "Дополнительные ингредиенты?",
-      answers: [{
-          title: 'Помидор',
-          url: './image/tomato.png'
-        },
-        {
-          title: 'Огурец',
-          url: './image/cucumber.png'
-        },
-        {
-          title: 'Салат',
-          url: './image/salad.png'
-        },
-        {
-          title: 'Лук',
-          url: './image/onion.png'
-        }
-      ],
-      type: 'checkbox'
-    },
-    {
-      question: "Добавить соус?",
-      answers: [{
-          title: 'Чесночный',
-          url: './image/sauce1.png'
-        },
-        {
-          title: 'Томатный',
-          url: './image/sauce2.png'
-        },
-        {
-          title: 'Горчичный',
-          url: './image/sauce3.png'
-        }
-      ],
-      type: 'radio'
-    }
-  ];
-
-  // ===============================================
   /*              Элементы страницы               */
   // ===============================================
   const btnOpenModal = document.getElementById('btnOpenModal');
@@ -87,6 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnNext = document.getElementById('next');
   const btnSend = document.getElementById('send');
   const btnBurger = document.getElementById('burger');
+
+  // ===============================================
+  /*              Настройки FireBase              */
+  // ===============================================
+  const firebaseConfig = {
+    apiKey: "AIzaSyAx_FbBm6fdviyX9QL9SKBhipKNe2xNG-M",
+    authDomain: "gloacademy-intensive-quiz.firebaseapp.com",
+    databaseURL: "https://gloacademy-intensive-quiz.firebaseio.com",
+    projectId: "gloacademy-intensive-quiz",
+    storageBucket: "gloacademy-intensive-quiz.appspot.com",
+    messagingSenderId: "248513712566",
+    appId: "1:248513712566:web:5ca5950a1c04c29f47b117",
+    measurementId: "G-VPHZJ9DR6B"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // ===============================================
+  /*    Получение данных из внешнего источника    */
+  // ===============================================
+  const getData = () => {
+    formAnswers.textContent = 'LOAD';
+
+    btnNext.classList.add('d-none');
+    btnPrev.classList.add('d-none');
+
+    setTimeout(() => {
+      firebase.database().ref().child('questions').once('value')
+        .then(snap => playTest(snap.val()));
+    }, 500);
+  };
 
   // ===============================================
   /*                   Переменные                 */
@@ -115,10 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===============================================
   /*          Функция начала тестирования         */
   // ===============================================
-  const playTest = () => {
+  const playTest = (questions) => {
     const finalAnswers = [];
     const obj = {};
     let indexQuestion = 0;
+    modalTitle.textContent = 'Ответь на вопрос:';
 
     // ===============================================
     /*     Отрисовка содержиния модального окна     */
@@ -192,6 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
               >
             </div>
           `;
+          const numberPhone = document.getElementById('numberPhone');
+          numberPhone.addEventListener('input', (event) => {
+            event.target.value = event.target.value.replace(/[^0-9+-]/, '');
+          });
+
           break;
 
         case (indexQuestion === questions.length + 1):
@@ -203,8 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
             newObj[key] = obj[key];
             finalAnswers.push(newObj);
           }
-          console.log('finalAnswers: ', finalAnswers);
-
 
           setTimeout(() => {
             modalBlock.classList.remove('d-block');
@@ -250,6 +212,12 @@ document.addEventListener('DOMContentLoaded', () => {
       checkAnswer();
       indexQuestion++;
       renderQuestion(indexQuestion);
+      firebase
+        .database()
+        .ref()
+        .child('contacts')
+        .push(finalAnswers);
+      // console.log('finalAnswers: ', finalAnswers);
     };
   };
 
@@ -259,14 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
   btnOpenModal.addEventListener('click', () => {
     requestAnimationFrame(animateModal);
     modalBlock.classList.add('d-block');
-    playTest();
+    getData();
   });
 
   btnBurger.addEventListener('click', () => {
     requestAnimationFrame(animateModal);
     btnBurger.classList.add('active');
     modalBlock.classList.add('d-block');
-    playTest();
+    getData();
   });
   // ===============================================
   /* Отслеживание клика в модальном окне и 
