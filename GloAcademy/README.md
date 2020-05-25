@@ -37,7 +37,7 @@
 [7.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%235Burger
 [7.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%235Burger/          "Демо"
 
-<!-- [8.0]:  -->
+[8.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3gpaNUJr9Bpj1qIcUUjEQUiB "«Netclick на JS»"
 [8.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/netclicks_WorkShop
 [8.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/netclicks_WorkShop/          "Демо"
 
