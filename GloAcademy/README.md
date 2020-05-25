@@ -39,6 +39,6 @@
 
 [8.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3gpaNUJr9Bpj1qIcUUjEQUiB "«Netclick на JS»"
 [8.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/netclicks_WorkShop
-[8.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/netclicks_WorkShop/          "Демо"
+[8.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/netclicks_WorkShop/             "Демо"
 
 <!-- |[Веб-разработчик 10.0](https://study.up-skills.ru/teach/control/stream/view/id/6290544)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/Loyouts/WebMaster10)|[демо-1](), [демо-2]()| -->
