@@ -12,6 +12,7 @@
 |[Воркшоп «Свой Instagram на ReactJs»][5.0]                  |[репозиторий][5.1]|_демо_     |
 |[Интенсив по JS \| Пишем «Delivery Food» на JavaScript][6.0]|[репозиторий][6.1]|[демо][6.2]|
 |[Интенсив по JS \| «Квиз на JS»][7.0]                       |[репозиторий][7.1]|[демо][7.2]|
+|[Воркшоп \| «Неткликс на JS»][8.0]                          |[репозиторий][8.1]|[демо][8.2]|
 
 [1.0]: https://www.youtube.com/watch?v=NHB0OJg9CMU                                                  "Интенсив по JS #1"
 [1.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%231
@@ -35,5 +36,9 @@
 [7.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grMtQ5ckqFoRMGUynpuoa3Q               "«Квиз на JS»"
 [7.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%235Burger
 [7.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%235Burger/          "Демо"
+
+<!-- [8.0]:  -->
+[8.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/netclicks_WorkShop
+[8.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/netclicks_WorkShop/          "Демо"
 
 <!-- |[Веб-разработчик 10.0](https://study.up-skills.ru/teach/control/stream/view/id/6290544)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/Loyouts/WebMaster10)|[демо-1](), [демо-2]()| -->
