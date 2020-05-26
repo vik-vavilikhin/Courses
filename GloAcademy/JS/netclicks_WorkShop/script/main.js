@@ -49,13 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const image = target.closest('.tv-card__img');
 
       if (image) {
-        // Получить значение атрибута 'data-backdrop' картинки
-        const imgAttribute = image.getAttribute('data-backdrop');
         // Получить значение текущей картинки
         // и запомнить в переменной
         oldSrc = image.src;
         // Поменять картинку на значение атрибута
-        image.src = imgAttribute;
+        image.src = image.getAttribute('data-backdrop');
       }
 
     });
