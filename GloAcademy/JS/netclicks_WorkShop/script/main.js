@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (target.classList.contains('modal') ||
       target.closest('.cross')) {
       modal.classList.add('hide');
+      document.body.style.overflow = 'auto';
     }
   });
 });
