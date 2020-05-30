@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     Константы
   ===========================================*/
   const IMG_URL = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
-  const SERVER = 'https://api.themoviedb.org/3';
-  const API_KEY = '3c0c35a5baa5178f9566bfcb61de01a4';
 
   /*===========================================
                   Элементы DOM
@@ -24,14 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalLink = document.querySelector('.modal__link');
   const searchForm = document.querySelector('.search__form');
   const searchFormInput = document.querySelector('.search__form-input');
+  const preloader = document.querySelector('.preloader');
+  const dropdown = document.querySelectorAll('.dropdown');
+  const tvShowsHead = document.querySelector('.tv-shows__head');
+  const posterWrapper = document.querySelector('.poster__wrapper');
+  const modalContent = document.querySelector('.modal__content');
 
   /*===========================================
                 Работа с данными
   ===========================================*/
   const DBService = class {
-    // Содается класс для работы с данными
+
+    constructor() {
+      this.SERVER = 'https://api.themoviedb.org/3';
+      this.API_KEY = '3c0c35a5baa5178f9566bfcb61de01a4';
+    }
 
     getData = async (url) => {
+      // Содается класс для работы с данными
       // Получить данные по заданному адресу URL
       // метод получения асинхронный, поэтому пока 
       // данные не пришли работа дальнейшего кода 
@@ -64,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getSearchResult = query => {
       return this.getData(
-        `${SERVER}/search/tv?` +
-        `api_key=${API_KEY}` +
+        `${this.SERVER}/search/tv?` +
+        `api_key=${this.API_KEY}` +
         `&query=${query}` +
         `&language=ru-RU`
       );
@@ -73,12 +81,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getTvShow = id => {
       return this.getData(
-        `${SERVER}/tv/` +
+        `${this.SERVER}/tv/` +
         `${id}?` +
-        `api_key=${API_KEY}` +
+        `api_key=${this.API_KEY}` +
         `&language=ru-RU`
       );
     }
+  };
+
+  /*===========================================
+                Функции общего значения
+  ===========================================*/
+  const changeImage = event => {
+    // Смена картинки при наведении на карточку
+    const card = event.target.closest('.tv-shows__item');
+
+    if (card) {
+      const img = card.querySelector('.tv-card__img');
+
+      if (img.dataset.backdrop) {
+        [img.src, img.dataset.backdrop] = [img.dataset.backdrop, img.src];
+      }
+    }
+  };
+
+  const closeDropdown = () => {
+    // Закрытие акардеона подменю при сворачивании
+    // бокового меню
+    dropdown.forEach(item => {
+      item.classList.remove('active');
+    });
   };
 
   /*===========================================
@@ -90,6 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderCard = response => {
     // очищаем все карточки из предыдущих запросов
     tvShowsList.textContent = '';
+
+    if (!response.total_results) {
+      // Удалить прелоадер
+      loading.remove();
+      tvShowsHead.textContent = 'По Вашему запросу ничего не найдено...';
+      tvShowsHead.style.cssText = 'color: red; text-align: center; text-transform: uppercase;';
+      return;
+    }
+
+    tvShowsHead.textContent = 'Результат поиска';
+    tvShowsHead.style.cssText = '';
 
     // перебираем полученный объект
     response.results.forEach(item => {
@@ -153,8 +196,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /*===========================================
-
+                  Обработчики
   ===========================================*/
+  /*-------------
+      Поиск
+  -------------*/
   searchForm.addEventListener('submit', event => {
     event.preventDefault();
     const value = searchFormInput.value.trim();
@@ -173,16 +219,23 @@ document.addEventListener('DOMContentLoaded', () => {
     searchFormInput.value = '';
   });
 
-  /*===========================================
-                  Обработчики
-  ===========================================*/
+  /*---------------------
+      Кнопка "Гамбургер"
+  ---------------------*/
   hamburger.addEventListener('click', () => {
     // Открыть-закрыть боковое меню по клику на
     // кнопке className="hamburger"
     leftMenu.classList.toggle('openMenu');
     hamburger.classList.toggle('open');
+    closeDropdown();
   });
 
+  /*---------------
+      Закрытие 
+      бокового меню
+      по клику вне
+      меню
+  ---------------*/
   document.addEventListener('click', (event) => {
     // Закрыть боковое меню. Используется метод .closest()
     // отслеживается 'click' по всему Document
@@ -192,9 +245,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!target.closest('.left-menu')) {
       leftMenu.classList.remove('openMenu');
       hamburger.classList.remove('open');
+      closeDropdown();
     }
   });
 
+  /*----------------------
+      Боковое меню
+      Аккордеон подменю
+      окрытие/закрытие
+  ----------------------*/
   leftMenu.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -209,33 +268,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const changeImage = event => {
-    // Смена картинки при наведении на карточку
-    const card = event.target.closest('.tv-shows__item');
-
-    if (card) {
-      const img = card.querySelector('.tv-card__img');
-
-      if (img.dataset.backdrop) {
-        [img.src, img.dataset.backdrop] = [img.dataset.backdrop, img.src];
-      }
-    }
-  };
-
+  /*-------------------
+      Семена картинки
+      при наведении на
+      карточки
+  -------------------*/
   tvShowsList.addEventListener('mouseover', changeImage);
   tvShowsList.addEventListener('mouseout', changeImage);
 
-  /*====================================
-                Модальное окно
-  ====================================*/
+  /*--------------------
+      Модальное окно
+      отобразить при
+      клике на карточке
+  --------------------*/
   tvShowsList.addEventListener('click', (event) => {
-    // Открытие
     event.preventDefault();
 
     const target = event.target;
     const card = target.closest('.tv-card');
 
     if (card) {
+      // До запроса на сервер отобразить прелоадер
+      preloader.style.display = 'block';
+      // Получить данные с сервера по ID
+      // и отобразить в модальном окне
       new DBService().getTvShow(card.id)
         .then(({
           'poster_path': poster,
@@ -245,8 +301,16 @@ document.addEventListener('DOMContentLoaded', () => {
           overview,
           homepage,
         }) => {
-          tvCardImg.src = IMG_URL + poster;
-          tvCardImg.alt = title;
+          if (poster) {
+            tvCardImg.src = IMG_URL + poster;
+            tvCardImg.alt = title;
+            posterWrapper.style.display = '';
+            modalContent.style.paddingLeft = '';
+          } else {
+            posterWrapper.style.display = 'none';
+            modalContent.style.paddingLeft = '25px';
+          }
+
           modalTitle.textContent = title;
           genresList.textContent = '';
           genres.forEach(item => {
@@ -257,14 +321,26 @@ document.addEventListener('DOMContentLoaded', () => {
           modalLink.href = homepage;
         })
         .then(() => {
+          // Убрать у BODY полосы прокрутки
           document.body.style.overflow = 'hidden';
+          // Удалить у модального окна className = 'hide'
+          // ...что приведет к отображению модального окна
           modal.classList.remove('hide');
+        })
+        .finally(() => {
+          // После получения и обработки данных с  
+          // сервера и отображения модального окна
+          // убрать прелоадер с экрана
+          preloader.style.display = '';
         });
     }
   });
 
+  /*--------------------
+      Модальное окно
+      закрыть 
+  --------------------*/
   modal.addEventListener('click', (event) => {
-    // Закрытие
     const target = event.target;
 
     if (target.classList.contains('modal') ||
