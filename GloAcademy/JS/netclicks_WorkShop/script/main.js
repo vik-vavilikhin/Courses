@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tvShowsHead = document.querySelector('.tv-shows__head');
   const posterWrapper = document.querySelector('.poster__wrapper');
   const modalContent = document.querySelector('.modal__content');
+  const pagination = document.querySelector('.pagination');
 
   /*===========================================
                 Работа с данными
@@ -72,12 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     getSearchResult = query => {
-      return this.getData(
-        `${this.SERVER}/search/tv?` +
+      this.temp = `${this.SERVER}/search/tv?` +
         `api_key=${this.API_KEY}` +
         `&query=${query}` +
-        `&language=ru-RU`
-      );
+        `&language=ru-RU`;
+
+      return this.getData(this.temp);
     }
 
     getTvShow = id => {
@@ -120,6 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
         `&language=ru-RU`
       );
     }
+
+    getNextPage = page => {
+      return this.getData(this.temp + '&page=' + page);
+    }
   };
 
   const dbService = new DBService();
@@ -157,6 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderCard = (response, target) => {
     // очищаем все карточки из предыдущих запросов
     tvShowsList.textContent = '';
+
+
 
     if (!response.total_results) {
       // Удалить прелоадер
@@ -226,6 +233,18 @@ document.addEventListener('DOMContentLoaded', () => {
       // в блок списка карточек
       tvShowsList.append(card);
     });
+
+    pagination.textContent = '';
+    // if (!target && response.total_pages > 1) {
+    if (response.total_pages > 1) {
+      for (let i = 1; i <= response.total_pages; i++) {
+        pagination.innerHTML += `
+          <li>
+            <a href="#" class="pages">${i}</a>
+          </li>
+        `;
+      }
+    }
   };
 
   /*-------------
@@ -419,6 +438,18 @@ document.addEventListener('DOMContentLoaded', () => {
       target.closest('.cross')) {
       document.body.style.overflow = 'auto';
       modal.classList.add('hide');
+    }
+  });
+
+  pagination.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = event.target;
+
+    if (target.classList.contains('pages')) {
+      tvShows.append(loading);
+
+      dbService.getNextPage(target.textContent)
+        .then(renderCard);
     }
   });
 });
