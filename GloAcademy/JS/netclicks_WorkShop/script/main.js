@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Работа с данными
   ===========================================*/
   const DBService = class {
+    // Содается класс для работы с данными
 
     constructor() {
       this.SERVER = 'https://api.themoviedb.org/3';
@@ -39,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     getData = async (url) => {
-      // Содается класс для работы с данными
       // Получить данные по заданному адресу URL
       // метод получения асинхронный, поэтому пока 
-      // данные не пришли работа дальнейшего кода 
+      // данные не пришли, работа дальнейшего кода 
       // "висит"
+
       const res = await fetch(url);
       // Записать полученный результат в переменную
       if (res.ok) {
@@ -87,7 +88,41 @@ document.addEventListener('DOMContentLoaded', () => {
         `&language=ru-RU`
       );
     }
+
+    getTopRated = () => {
+      return this.getData(
+        `${this.SERVER}/tv/top_rated?` +
+        `api_key=${this.API_KEY}` +
+        `&language=ru-RU`
+      );
+    }
+
+    getPopular = () => {
+      return this.getData(
+        `${this.SERVER}/tv/popular?` +
+        `api_key=${this.API_KEY}` +
+        `&language=ru-RU`
+      );
+    }
+
+    getToday = () => {
+      return this.getData(
+        `${this.SERVER}/tv/airing_today?` +
+        `api_key=${this.API_KEY}` +
+        `&language=ru-RU`
+      );
+    }
+
+    getWeek = () => {
+      return this.getData(
+        `${this.SERVER}/tv/on_the_air?` +
+        `api_key=${this.API_KEY}` +
+        `&language=ru-RU`
+      );
+    }
   };
+
+  const dbService = new DBService();
 
   /*===========================================
                 Функции общего значения
@@ -119,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* -----------------
     Карточки фильмов
   ------------------*/
-  const renderCard = response => {
+  const renderCard = (response, target) => {
     // очищаем все карточки из предыдущих запросов
     tvShowsList.textContent = '';
 
@@ -127,11 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Удалить прелоадер
       loading.remove();
       tvShowsHead.textContent = 'По Вашему запросу ничего не найдено...';
-      tvShowsHead.style.cssText = 'color: red; text-align: center; text-transform: uppercase;';
+      tvShowsHead.style.cssText = `
+        color: red; 
+        text-align: center; 
+        text-transform: uppercase;
+      `;
       return;
     }
 
-    tvShowsHead.textContent = 'Результат поиска';
+    tvShowsHead.textContent = target ? target.textContent : 'Результат поиска';
     tvShowsHead.style.cssText = '';
 
     // перебираем полученный объект
@@ -188,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tvShowsList.append(card);
     });
   };
+
   /*-------------
       Прелоадер
   -------------*/
@@ -206,9 +246,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const value = searchFormInput.value.trim();
 
     if (value) {
-      tvShows.append(loading);
+      // tvShows.append(loading);
       // Вставить прелоадер
-      new DBService().getSearchResult(value)
+      dbService.getSearchResult(value)
         .then(renderCard);
       // Создать элемен класса для работы с данными
       // ...запустить метод класса для получения данных
@@ -266,7 +306,39 @@ document.addEventListener('DOMContentLoaded', () => {
       leftMenu.classList.add('openMenu');
       hamburger.classList.add('open');
     }
+
+    // Работа с боковым меню.
+    // обработка кликов по подменю
+    if (target.closest('#top-rated')) {
+      // Вставить прелоадер
+      tvShows.append(loading);
+      dbService.getTopRated()
+        .then((response) => renderCard(response, target));
+    }
+    if (target.closest('#popular')) {
+      // Вставить прелоадер
+      tvShows.append(loading);
+      dbService.getPopular()
+        .then((response) => renderCard(response, target));
+    }
+    if (target.closest('#today')) {
+      // Вставить прелоадер
+      tvShows.append(loading);
+      dbService.getToday()
+        .then((response) => renderCard(response, target));
+    }
+    if (target.closest('#week')) {
+      // Вставить прелоадер
+      tvShows.append(loading);
+      dbService.getWeek()
+        .then((response) => renderCard(response, target));
+    }
+    if (target.closest('#search')) {
+      tvShowsList.textContent = '';
+      tvShowsHead.textContent = '';
+    }
   });
+
 
   /*-------------------
       Семена картинки
@@ -292,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.style.display = 'block';
       // Получить данные с сервера по ID
       // и отобразить в модальном окне
-      new DBService().getTvShow(card.id)
+      dbService.getTvShow(card.id)
         .then(({
           'poster_path': poster,
           'vote_average': vote,
