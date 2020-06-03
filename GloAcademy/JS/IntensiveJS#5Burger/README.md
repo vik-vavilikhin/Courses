@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [Академия верстки](https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy) &rarr; Квиз на JS |
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [Академия верстки](https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy) &rarr; КВИЗ НА JS |
 
 ----------------------------------------------------------------
 |              Наименование           |   Исходники    |    Демо   |
