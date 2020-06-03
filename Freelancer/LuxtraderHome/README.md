@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [Фрилансер по жизни](https://github.com/vik-vavilikhin/Courses/tree/master/Freelancer) &rarr; Марафон по верстке. Luxtrader Home|
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [Фрилансер по жизни](https://github.com/vik-vavilikhin/Courses/tree/master/Freelancer) &rarr; Марафон по верстке. Luxtrader Home |
 
 -------------------------------------------------------------------------------
 ### **[Фрилансер по жизни - IT и фриланс](https://www.youtube.com/channel/UCedskVwIKiZJsO8XdJdLKnA)**
