@@ -634,3 +634,13 @@ body._lock {
     padding: 0 10px;
   }
 }
+
+.webp .actions-header__region{ background: url(../img/globe.webp) left no-repeat; }
+
+.webp .user-header__link_1{ background: url(../img/menu/01.webp) 2px center no-repeat; }
+
+.webp .user-header__link_2{ background: url(../img/menu/02.webp) left center no-repeat; }
+
+.webp .user-header__link_3{ background: url(../img/menu/03.webp) 4px center no-repeat; }
+
+.webp .user-header__link_4{ background: url(../img/menu/04.webp) left center no-repeat; }
