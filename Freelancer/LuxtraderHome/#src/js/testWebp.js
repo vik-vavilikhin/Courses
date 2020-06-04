@@ -1,4 +1,4 @@
-function testWebP(callback) {
+const testWebP = (callback) => {
   const webP = new Image();
   webP.onload = webP.onerror = function () {
     callback(webP.height == 2);
@@ -13,5 +13,3 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp');
   }
 });
-
-export default testWebP;

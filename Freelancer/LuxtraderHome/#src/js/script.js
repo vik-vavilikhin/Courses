@@ -1,10 +1,13 @@
-import testWebP from './testWebp';
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-const userHeaderIcon = document.querySelector('.user-header__icon');
-const userHeaderMenu = document.querySelector('.user-header__menu');
+  const userHeaderIcon = document.querySelector('.user-header__icon');
+  const userHeaderMenu = document.querySelector('.user-header__menu');
 
-userHeaderIcon.addEventListener('click', () => {
-  userHeaderMenu.classList.toggle('_active');
+  @ @include('./testWebp.js')
+
+  userHeaderIcon.addEventListener('click', () => {
+    userHeaderMenu.classList.toggle('_active');
+  });
+
 });
-
-testWebP();
