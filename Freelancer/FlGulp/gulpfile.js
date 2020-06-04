@@ -1,6 +1,6 @@
 'use strict';
 /*
-https: //www.youtube.com/watch?v=stFOy0Noahg
+  https://www.youtube.com/watch?v=stFOy0Noahg
 */
 
 const projectFolder = require('path').basename(__dirname); // 'dist';
@@ -34,23 +34,26 @@ const path = {
 const {
   src,
   dest
-} = require('gulp'),
-  gulp = require('gulp'),
-  browsersync = require('browser-sync').create(),
-  fileinclude = require('gulp-file-include'),
-  del = require('del'),
-  scss = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  gcmq = require('gulp-group-css-media-queries'),
-  cleanCSS = require('gulp-clean-css'),
-  rename = require('gulp-rename'),
-  uglify = require('gulp-uglify-es').default,
-  imagemin = require('gulp-imagemin'),
-  webp = require('gulp-webp'),
-  svgSprite = require('gulp-svg-sprite'),
-  ttf2woff = require('gulp-ttf2woff'),
-  ttf2woff2 = require('gulp-ttf2woff2'),
-  fonter = require('gulp-fonter');
+} = require('gulp');
+const gulp = require('gulp');
+const browsersync = require('browser-sync').create();
+const fileinclude = require('gulp-file-include');
+const del = require('del');
+const scss = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
+const rename = require('gulp-rename');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify-es').default;
+const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const webpHTML = require('gulp-webp-html');
+const webpcss = require("gulp-webpcss");
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const svgSprite = require('gulp-svg-sprite');
+const fonter = require('gulp-fonter');
 
 function browserSync() {
   browsersync.init({
@@ -65,7 +68,55 @@ function browserSync() {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
+    .pipe(webpHTML())
     .pipe(dest(path.build.html))
+    .pipe(browsersync.stream());
+}
+
+function css() {
+  return src(path.src.css)
+    .pipe(
+      scss({
+        outputStyle: "expanded"
+      })
+    )
+    .pipe(gcmq())
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 5 version"],
+        cascade: true
+      })
+    )
+    .pipe(webpcss())
+    .pipe(dest(path.build.css))
+    .pipe(cleanCSS())
+    .pipe(
+      rename({
+        extname: '.min.css'
+      })
+    )
+    .pipe(dest(path.build.css))
+    .pipe(browsersync.stream());
+}
+
+function js() {
+  return src(path.src.js)
+    .pipe(
+      fileinclude({
+        prefix: '@ @'
+      })
+    )
+    .pipe(dest(path.build.js))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(
+      rename({
+        extname: '.min.js'
+      })
+    )
+    .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }
 
@@ -92,88 +143,6 @@ function images() {
     .pipe(browsersync.stream());
 }
 
-function js() {
-  return src(path.src.js)
-    .pipe(
-      fileinclude({
-        prefix: '@ @'
-      })
-    )
-    .pipe(dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        extname: '.min.js'
-      })
-    )
-    .pipe(dest(path.build.js))
-    .pipe(browsersync.stream());
-}
-
-function css() {
-  return src(path.src.css)
-    .pipe(
-      scss({
-        outputStyle: "expanded"
-      })
-    )
-    .pipe(gcmq())
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 version"],
-        cascade: true
-      })
-    )
-    .pipe(dest(path.build.css))
-    .pipe(cleanCSS())
-    .pipe(
-      rename({
-        extname: '.min.css'
-      })
-    )
-    .pipe(dest(path.build.css))
-    .pipe(browsersync.stream());
-}
-
-function fontsStyle(params) {
-  let fileContent = fs.readFileSync(`${sourceFolder}/scss/_fonts.scss`);
-  if (fileContent == '') {
-    fs.writeFile(`${sourceFolder}/scss/_fonts.scss`, '', cb);
-    return fs.readdir(path.build.fonts, function (err, items) {
-      if (items) {
-        let cFontname;
-        for (var i = 0; i < items.length; i++) {
-          let fontname = items[i].split('.');
-          fontname = fontname[0];
-          if (cFontname != fontname) {
-            fs.appendFile(
-              `${sourceFolder}/scss/_fonts.scss`,
-              '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n',
-              cb
-            );
-          }
-          cFontname = fontname;
-        }
-      }
-    });
-  }
-}
-
-function cb() {
-
-}
-
-function watchFiles() {
-  gulp.watch([path.watch.html], html);
-  gulp.watch([path.watch.css], css);
-  gulp.watch([path.watch.js], js);
-  gulp.watch([path.watch.img], images);
-}
-
-function clean() {
-  return del(path.clean);
-}
-
 function fonts() {
   src(path.src.fonts)
     .pipe(ttf2woff())
@@ -193,7 +162,7 @@ gulp.task('otf2ttf', function name() {
 });
 
 gulp.task('svgSprite', function name() {
-  return gulp.src([`${sourceFolder}/iconsprite/*.svg`])
+  return gulp.src([`${sourceFolder}/img/iconsprite/*.svg`])
     .pipe(
       svgSprite({
         mode: {
@@ -207,15 +176,54 @@ gulp.task('svgSprite', function name() {
     .pipe(dest(path.build.img));
 });
 
+function fontsStyle(params) {
+  let fileContent = fs.readFileSync(`${sourceFolder}/scss/_fonts.scss`);
+  if (fileContent == '') {
+    fs.writeFile(`${sourceFolder}/scss/_fonts.scss`, '', cb);
+    return fs.readdir(path.build.fonts, function (err, items) {
+      if (items) {
+        let cFontname;
+        for (var i = 0; i < items.length; i++) {
+          let fontname = items[i].split('.');
+          fontname = fontname[0];
+          if (cFontname != fontname) {
+            fs.appendFile(
+              `${sourceFolder}/scss/_fonts.scss`,
+              `@include font("${fontname}", "${fontname}", "400", "normal");\r\n`,
+              cb
+            );
+          }
+          cFontname = fontname;
+        }
+      }
+    });
+  }
+}
+
+function cb() {}
+
+function watchFiles() {
+  gulp.watch([path.watch.html], html);
+  gulp.watch([path.watch.css], css);
+  gulp.watch([path.watch.js], js);
+  gulp.watch([path.watch.img], images);
+}
+
+function clean() {
+  return del(path.clean);
+}
+
 const build = gulp.series(
   clean,
   gulp.parallel(
-    js,
-    css,
     html,
+    css,
+    js,
     images,
-    fonts),
-  fontsStyle);
+    fonts
+  ),
+  fontsStyle
+);
 
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
