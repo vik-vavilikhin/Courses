@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  'use strict';
-  // ====== testWebP =========================
+// ====== testWebP =========================
 const testWebP = (callback) => {
   const webP = new Image();
 
@@ -40,11 +38,3 @@ function menuClose() {
   iconMenu.classList.remove('_active');
   menuBody.classList.remove('_active');
 }
-
-  const userHeaderIcon = document.querySelector('.user-header__icon');
-  const userHeaderMenu = document.querySelector('.user-header__menu');
-
-  userHeaderIcon.addEventListener('click', () => {
-    userHeaderMenu.classList.toggle('_active');
-  });
-});
