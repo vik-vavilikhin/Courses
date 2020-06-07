@@ -19,25 +19,53 @@ const elemMove = () => {
     // Получить новый родительский элемент
     // КУДА будет пернос
     const newParent = document.querySelector(`.${arrayFromString[0]}`);
+    // ========================
+    // Найти индекс расположения элемента в старой коллекции
+    const oldPosition = (parent) => {
+      const elemInParent = parent.children;
+      let oldPosition;
 
-    // Заполнить массив
+      for (let i = 0; i < elemInParent.length; i++) {
+        if (item == elemInParent[i]) oldPosition = i;
+      }
+      return oldPosition;
+    };
+    // ========================
+    // Коллекция нового места назначения
+    const newPlace = (parent) => {
+      const elemInParent = parent.children;
+      return elemInParent;
+    };
+    // console.log(newPlace(newParent));
+
+    // ========================
+
+    // Заполнить массив значений
     listItems.push({
       breakPoint: arrayFromString[2],
       elemSelector: item,
       newParent,
       newPosition: arrayFromString[1],
       oldParent,
+      oldPosition: oldPosition(oldParent)
     });
   });
-  // console.log(listItems);
+  console.log(listItems);
 
   // Обработать элементы массива значений
-  listItems.forEach(item => {
+  listItems.forEach(({
+    breakPoint,
+    elemSelector,
+    newParent,
+    newPosition,
+    oldParent,
+    oldPosition,
+  }) => {
     // Определить позицию вставки на новом месте
-    let newPosition =
-      item.newPosition == 1 ? 'beforebegin' :
-      item.newPosition == 2 ? 'beforeend' :
-      item.newPosition == 3 ? 'beforeend' :
+    const position =
+      newPosition == 1 ? 'beforebegin' :
+      newPosition == 2 ? 'afterbegin' :
+      newPosition == 3 ? 'beforeend' :
       'afterend';
 
     // В зависимости от размера документа переносить элемент
@@ -45,18 +73,18 @@ const elemMove = () => {
       // Динамическое определение ширины документа
       clientWidth = document.documentElement.clientWidth;
       // Взять текущий элемент массива
-      const selectorForMove = item.elemSelector;
+      const selectorForMove = elemSelector;
       // Если ширина меньше breakPoint
-      if (clientWidth <= item.breakPoint) {
+      if (clientWidth <= breakPoint) {
 
         if (selectorForMove.parentNode) {
           // Удалить элемент из старой позиции
           selectorForMove.parentNode.removeChild(selectorForMove);
           // Вставить на новую позицию
-          item.newParent.insertAdjacentElement(newPosition, selectorForMove);
+          newParent.insertAdjacentElement(position, selectorForMove);
         }
       } else {
-        item.oldParent.insertAdjacentElement('afterbegin', selectorForMove);
+        oldParent.insertAdjacentElement('afterbegin', selectorForMove);
       }
     });
   });

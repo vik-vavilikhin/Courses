@@ -533,7 +533,7 @@ body._lock {
 
 .menu__link,
 .actions-header__region {
-  font-family: 'PFDin';
+  font-family: "PFDin";
   text-transform: uppercase;
   letter-spacing: 1.4px;
   color: #ffffff;
@@ -577,9 +577,9 @@ body._lock {
   padding: 15px 30px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .3s ease 0s;
-  -o-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .user-header__menu li {
@@ -689,7 +689,7 @@ body._lock {
   }
 
   .menu__body:after {
-    content: '';
+    content: "";
     background-color: #1c242a;
     position: fixed;
     top: 0;
@@ -773,7 +773,7 @@ body._lock {
   .actions-header__region {
     display: inline-block;
     margin: 50px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 30px;
   }
 
   .actions-header__region span {
