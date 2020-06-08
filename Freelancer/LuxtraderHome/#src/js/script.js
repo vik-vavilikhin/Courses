@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // @@include('./modules/inspectUserAgent.js')
   // @ @include('./modules/testWebP.js')
   // @ @include('./modules/menu.mjs')
-  // @ @include('./modules/elemMove.js')
+  // @@include('./modules/elemMove.js')
+  // @ @include('./modules/1.js')
 
   document.addEventListener('click', (e) => {
     const target = e.target;
@@ -23,5 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   testWebP();
   burgerAction(iconMenu, menuBody);
-  elemMove();
+  elemMove('data-move');
 });

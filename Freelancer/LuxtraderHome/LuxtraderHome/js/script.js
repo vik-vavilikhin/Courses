@@ -46,56 +46,86 @@ const menuClose = (iconMenuElem, menuBodyElem) => {
   menuBodyElem.classList.remove('_active');
 };
 // =========================================
+  // @@include('./modules/elemMove.js')
   // // ====== dynamicAdapt =====================
-const elemMove = () => {
+const elemMove = (dataAttribute) => {
   // Определить текущую ширину открытого документа
   let clientWidth = document.documentElement.clientWidth;
-  // Получить все элементы с атрибутом 'data-move'
-  const elemArr = document.querySelectorAll(`[data-move]`);
+  // Получить все элементы с атрибутом 'dataAttribute'
+  const elemArr = document.querySelectorAll(`[${dataAttribute}]`);
   // Массив значений
   const listItems = [];
 
   // Обработка полученных элементов
   elemArr.forEach(item => {
-    // Получить значение атрибута 'data-move' текущего элемента
-    const stringOfAttribute = item.getAttribute('data-move');
+    // Получить значение атрибута 'dataAttribute' текущего элемента
+    const stringOfAttribute = item.getAttribute(`${dataAttribute}`);
+    // Определить ОТКУДА будет перенос
+    const oldParent = item.parentElement;
     // Полученную строку преобразовать в массив
     const arrayFromString = stringOfAttribute.split(', ');
-    // Определить первоначальный родительский элемент 
-    // ОТКУДА будет перенос
-    const oldParent = item.parentElement;
-    // Получить новый родительский элемент
-    // КУДА будет пернос
+    // Определить КУДА будет пернос из 'dataAttribute'
     const newParent = document.querySelector(`.${arrayFromString[0]}`);
+    // Определить индекс новой позиции из 'dataAttribute' 
+    const newPosition = parseInt(arrayFromString[1]);
+    // Определить "точку перелома" из 'dataAttribute'
+    const breakPoint = parseInt(arrayFromString[2]);
     // ========================
-    // Найти индекс расположения элемента в старой коллекции
-    const oldPosition = (parent) => {
-      const elemInParent = parent.children;
-      let oldPosition;
+    let oldPosition; // Пустая переменная. Определяется в oldData()
+    const oldCollection = []; // Старая коллекция элементов ОТКУДА
+    const newCollection = []; // Новая коллекция элементов КУДА
 
+    // ========================
+    // Данные о старом месте расположении:
+    // - родитель
+    // - старая колекция элементов
+    const oldData = (parent) => {
+      // Дочерние элементы
+      const elemInParent = parent.children;
       for (let i = 0; i < elemInParent.length; i++) {
-        if (item == elemInParent[i]) oldPosition = i;
+        // Проверка дочених элементов
+        // Если проверяемый элемент из коллекции
+        // с 'dataAttribute'
+        if (item == elemInParent[i]) {
+          // ...запомнить текущий индекс в коллекции
+          oldPosition = i;
+        }
+        // ...записать дочерний элемент в массив
+        // для дальнейшей обработки
+        oldCollection.push(elemInParent[i]);
       }
-      return oldPosition;
     };
+    oldData(oldParent);
+
     // ========================
     // Коллекция нового места назначения
-    const newPlace = (parent) => {
+    const newData = (parent) => {
+      // Дочерние элементы
       const elemInParent = parent.children;
-      return elemInParent;
+      // Выборка дочерних элементов
+      for (let i = 0; i < elemInParent.length; i++) {
+        // ...записать дочерний элемент в массив
+        // для дальнейшей обработки
+        newCollection.push(elemInParent[i]);
+      }
     };
-    // console.log(newPlace(newParent));
+    newData(newParent);
 
     // ========================
-
     // Заполнить массив значений
     listItems.push({
-      breakPoint: arrayFromString[2],
+      breakPoint,
       elemSelector: item,
-      newParent,
-      newPosition: arrayFromString[1],
-      oldParent,
-      oldPosition: oldPosition(oldParent)
+      newData: {
+        newParent,
+        newPosition,
+        newCollection,
+      },
+      oldData: {
+        oldParent,
+        oldPosition,
+        oldCollection,
+      },
     });
   });
   console.log(listItems);
@@ -104,10 +134,14 @@ const elemMove = () => {
   listItems.forEach(({
     breakPoint,
     elemSelector,
-    newParent,
-    newPosition,
-    oldParent,
-    oldPosition,
+    newData: {
+      newParent,
+      newPosition,
+    },
+    oldData: {
+      oldParent,
+      oldPosition,
+    }
   }) => {
     // Определить позицию вставки на новом месте
     const position =
@@ -151,5 +185,5 @@ const elemMove = () => {
 
   testWebP();
   burgerAction(iconMenu, menuBody);
-  elemMove();
+  elemMove('data-move');
 });

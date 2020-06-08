@@ -11,49 +11,38 @@ const elemMove = (dataAttribute) => {
   elemArr.forEach(item => {
     // Получить значение атрибута 'dataAttribute' текущего элемента
     const stringOfAttribute = item.getAttribute(`${dataAttribute}`);
+    // Определить ОТКУДА будет перенос
+    const oldParent = item.parentElement;
     // Полученную строку преобразовать в массив
     const arrayFromString = stringOfAttribute.split(', ');
-    // Определить индекс новой позиции
-    const newPosition = parseInt(arrayFromString[1]);
-    // Определить "точку перелома"
-    const breakPoint = parseInt(arrayFromString[2]);
-    // Определить первоначальный родительский элемент 
-    // ОТКУДА будет перенос
-    const oldParent = item.parentElement;
-    // Получить новый родительский элемент
-    // КУДА будет пернос
+    // Определить КУДА будет пернос из 'dataAttribute'
     const newParent = document.querySelector(`.${arrayFromString[0]}`);
-    let oldPosition;
-    const oldCollection = [];
-    const newCollection = [];
+    // Определить индекс новой позиции из 'dataAttribute' 
+    const newPosition = parseInt(arrayFromString[1]);
+    // Определить "точку перелома" из 'dataAttribute'
+    const breakPoint = parseInt(arrayFromString[2]);
+    // ========================
+    let oldPosition; // Пустая переменная. Определяется в oldData()
+    const oldCollection = []; // Старая коллекция элементов ОТКУДА
+    const newCollection = []; // Новая коллекция элементов КУДА
 
     // ========================
-    // Найти индекс расположения элемента в старой коллекции
-    // const oldPosition = (parent) => {
-    //   const elemInParent = parent.children;
-
-    //   for (let i = 0; i < elemInParent.length; i++) {
-    //     if (item == elemInParent[i]) oldPosition = i;
-    //   }
-    // };
-    // ========================
-    // const oldCollection = (parent) => {
-    //   const elemInParent = parent.children;
-
-    //   for (let i = 0; i < elemInParent.length; i++) {
-    //     oldCollection.push(elemInParent[i]);
-    //   }
-    //   return oldCollection;
-    // };
-    // ========================
-    // 
+    // Данные о старом месте расположении:
+    // - родитель
+    // - старая колекция элементов
     const oldData = (parent) => {
+      // Дочерние элементы
       const elemInParent = parent.children;
       for (let i = 0; i < elemInParent.length; i++) {
-
+        // Проверка дочених элементов
+        // Если проверяемый элемент из коллекции
+        // с 'dataAttribute'
         if (item == elemInParent[i]) {
+          // ...запомнить текущий индекс в коллекции
           oldPosition = i;
         }
+        // ...записать дочерний элемент в массив
+        // для дальнейшей обработки
         oldCollection.push(elemInParent[i]);
       }
     };
@@ -61,26 +50,33 @@ const elemMove = (dataAttribute) => {
 
     // ========================
     // Коллекция нового места назначения
-    const newData = (parent, newIndex) => {
+    const newData = (parent) => {
+      // Дочерние элементы
       const elemInParent = parent.children;
-
+      // Выборка дочерних элементов
       for (let i = 0; i < elemInParent.length; i++) {
-        // if (newIndex == i) {
-        newCollection.push([newIndex] = elemInParent);
+        // ...записать дочерний элемент в массив
+        // для дальнейшей обработки
+        newCollection.push(elemInParent[i]);
       }
     };
+    newData(newParent);
 
     // ========================
     // Заполнить массив значений
     listItems.push({
       breakPoint,
       elemSelector: item,
-      newParent,
-      newPosition,
-      newCollection,
-      oldParent,
-      oldPosition,
-      oldCollection,
+      newData: {
+        newParent,
+        newPosition,
+        newCollection,
+      },
+      oldData: {
+        oldParent,
+        oldPosition,
+        oldCollection,
+      },
     });
   });
   console.log(listItems);
@@ -89,10 +85,14 @@ const elemMove = (dataAttribute) => {
   listItems.forEach(({
     breakPoint,
     elemSelector,
-    newParent,
-    newPosition,
-    oldParent,
-    oldPosition,
+    newData: {
+      newParent,
+      newPosition,
+    },
+    oldData: {
+      oldParent,
+      oldPosition,
+    }
   }) => {
     // Определить позицию вставки на новом месте
     const position =
