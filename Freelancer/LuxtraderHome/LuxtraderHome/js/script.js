@@ -81,18 +81,19 @@ const elemMove = (dataAttribute) => {
     // - старая колекция элементов
     const oldData = (parent) => {
       // Дочерние элементы
-      const elemInParent = parent.children;
-      for (let i = 0; i < elemInParent.length; i++) {
+      const elemsInParent = parent.children;
+      for (let i = 0; i < elemsInParent.length; i++) {
         // Проверка дочених элементов
         // Если проверяемый элемент из коллекции
         // с 'dataAttribute'
-        if (item == elemInParent[i]) {
+        if (item == elemsInParent[i]) {
           // ...запомнить текущий индекс в коллекции
           oldPosition = i;
+          // console.log('oldPosition: ', oldPosition);
         }
         // ...записать дочерний элемент в массив
         // для дальнейшей обработки
-        oldCollection.push(elemInParent[i]);
+        oldCollection.push(elemsInParent[i]);
       }
     };
     oldData(oldParent);
@@ -101,12 +102,12 @@ const elemMove = (dataAttribute) => {
     // Коллекция нового места назначения
     const newData = (parent) => {
       // Дочерние элементы
-      const elemInParent = parent.children;
+      const elemsInParent = parent.children;
       // Выборка дочерних элементов
-      for (let i = 0; i < elemInParent.length; i++) {
+      for (let i = 0; i < elemsInParent.length; i++) {
         // ...записать дочерний элемент в массив
         // для дальнейшей обработки
-        newCollection.push(elemInParent[i]);
+        newCollection.push(elemsInParent[i]);
       }
     };
     newData(newParent);
@@ -114,21 +115,39 @@ const elemMove = (dataAttribute) => {
     // ========================
     // Заполнить массив значений
     listItems.push({
-      breakPoint,
       elemSelector: item,
-      newData: {
-        newParent,
-        newPosition,
-        newCollection,
-      },
+      breakPoint,
       oldData: {
         oldParent,
         oldPosition,
         oldCollection,
       },
+      newData: {
+        newParent,
+        newPosition,
+        newCollection,
+      },
     });
   });
   console.log(listItems);
+  // ========================
+  // 
+  const repaceElem = () => {
+    listItems.forEach(item => {
+
+      let i;
+      let oldPosition = item.oldData.oldPosition;
+      const oldCollection = item.oldData.oldCollection;
+
+      let newPosition = item.newData.newPosition;
+      const newCollection = item.newData.newCollection;
+
+      let elem = oldCollection.splice(oldPosition, 1);
+      newCollection.splice(newPosition, 0, elem[0]);
+    });
+  };
+  repaceElem();
+  // ========================
 
   // Обработать элементы массива значений
   listItems.forEach(({
