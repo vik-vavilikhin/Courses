@@ -86,7 +86,6 @@ const elemMove = (dataAttribute) => {
   const repaceElem = () => {
     listItems.forEach(item => {
 
-      let i;
       let oldPosition = item.oldData.oldPosition;
       const oldCollection = item.oldData.oldCollection;
 

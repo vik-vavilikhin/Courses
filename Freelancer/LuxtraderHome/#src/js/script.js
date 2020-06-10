@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // @ @include('./modules/testWebP.js')
   // @ @include('./modules/menu.mjs')
   // @@include('./modules/elemMove.js')
-  // @ @include('./modules/1.js')
+  // @@include('./modules/1.js')
+  // @ @include('./modules/2.js')
 
   document.addEventListener('click', (e) => {
     const target = e.target;
