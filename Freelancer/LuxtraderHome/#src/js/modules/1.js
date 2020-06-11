@@ -1,5 +1,5 @@
 // ====== dynamicAdapt =====================
-const elemMove = (dataAttribute) => {
+const elemReplace = (dataAttribute) => {
   // Определить текущую ширину открытого документа
   let clientWidth = document.documentElement.clientWidth;
   // Получить все элементы с атрибутом 'dataAttribute'

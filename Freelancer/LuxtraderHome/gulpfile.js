@@ -103,7 +103,7 @@ function js() {
   return src(path.src.js)
     .pipe(
       fileinclude({
-        prefix: '@ @'
+        prefix: '// @@'
       })
     )
     .pipe(dest(path.build.js))

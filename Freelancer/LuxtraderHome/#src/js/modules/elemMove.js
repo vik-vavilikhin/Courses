@@ -12,7 +12,8 @@ const elemMove = (dataAttribute) => {
     // Получить значение атрибута 'dataAttribute' текущего элемента
     const stringOfAttribute = item.getAttribute(`${dataAttribute}`);
     // Полученную строку преобразовать в массив
-    const arrayFromString = stringOfAttribute.split(', ');
+    // если в строке есть пробелы, удалить через рег.выражение
+    const arrayFromString = stringOfAttribute.replace(/\s+/g, '').split(',');
     // Определить индекс новой позиции
     const newPosition = parseInt(arrayFromString[1]);
     // Определить "точку перелома"
