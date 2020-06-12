@@ -572,7 +572,7 @@ body._lock {
   position: absolute;
   top: 88px;
   right: 0;
-  min-width: 171px;
+  min-width: 175px;
   background-color: #1c242a;
   padding: 15px 30px;
   opacity: 0;
@@ -718,7 +718,7 @@ body._lock {
 
   .menu__link,
   .actions-header__region {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .icon-menu {
@@ -772,7 +772,7 @@ body._lock {
 
   .actions-header__region {
     display: inline-block;
-    margin: 50px 0px 0px 0px;
+    margin: 35px 0px 0px 0px;
     padding: 0px 0px 0px 30px;
   }
 

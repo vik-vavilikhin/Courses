@@ -91,9 +91,8 @@ const elemReplace = () => {
     };
 
     // -----------------------------------
-    // В зависимости от размера документа переносить элемент
-    window.addEventListener('resize', () => {
-      // Динамическое определение ширины документа
+    // Динамическое определение ширины документа
+    const screenSize = () => {
       clientWidth = document.documentElement.clientWidth;
       // Если ширина меньше breakPoint
       if (clientWidth <= data.breakPoint) {
@@ -101,6 +100,14 @@ const elemReplace = () => {
       } else {
         replace(data, true);
       }
+    };
+    // При загрузке проверить необходимость переноса
+    screenSize();
+
+    // -----------------------------------
+    // При изменении размера документа переносить элемент
+    window.addEventListener('resize', () => {
+      screenSize();
     });
   });
 };
