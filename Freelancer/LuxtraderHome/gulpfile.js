@@ -19,14 +19,14 @@ const path = {
     html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
     css: `${sourceFolder}/scss/style.scss`,
     js: `${sourceFolder}/js/script.js`,
-    img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
+    img: `${sourceFolder}/img/**/*.+(png|jpg|jpeg|gif|ico|svg|webp)`,
     fonts: `${sourceFolder}/fonts/*.ttf`,
   },
   watch: {
     html: `${sourceFolder}/**/*.html`,
     css: `${sourceFolder}/scss/**/*.scss`,
     js: `${sourceFolder}/js/**/*.js`,
-    img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
+    img: `${sourceFolder}/img/**/*.+(png|jpg|jpeg|gif|ico|svg|webp)`,
   },
   clean: `./${projectFolder}/`
 };

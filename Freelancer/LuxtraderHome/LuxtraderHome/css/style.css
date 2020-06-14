@@ -490,6 +490,27 @@ body._lock {
   padding: 0 10px;
 }
 
+.title__item {
+  color: #bb9c66;
+  font-family: 'Ceremonious';
+  font-size: 40px;
+}
+
+.title__main {
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 5.25px;
+  font-weight: 500;
+}
+
+.title__main_regular {
+  font-weight: 400;
+}
+
+.title__main_w {
+  color: #FFFFFF;
+}
+
 .header {
   background-color: #1c242a;
 }
@@ -617,6 +638,39 @@ body._lock {
 
 .user-header__link_4 {
   background: url(../img/menu/04.png) left center no-repeat;
+}
+
+.item-main-slider {
+  position: relative;
+  padding: 33px 0px 102px 0px;
+  text-align: center;
+}
+
+.item-main-slider__content {
+  position: relative;
+  z-index: 2;
+}
+
+.item-main-slider__text {
+  max-width: 700px;
+  margin: 0px auto;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: calc(25 / 15);
+}
+
+.item-main-slider__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 @media (min-width: 992px) {

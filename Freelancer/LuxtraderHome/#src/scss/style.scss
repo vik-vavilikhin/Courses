@@ -68,11 +68,13 @@ body {
 
 // ====== UI СТИЛИ, ФОРМЫ, КЛАССЫ ==========
 // @import "forms";
-// @import "ui";
+@import "ui";
 
 // ====== СТИЛИ СТРАНИЦ и ЭЛЕМЕНТОВ ========
 @import "popup";
 @import "header";
+@import "slider";
+
 @import "footer";
 @import "home";
 

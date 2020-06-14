@@ -1,0 +1,26 @@
+.title {
+
+  // .title__item
+  &__item {
+    color: #bb9c66;
+    font-family: 'Ceremonious';
+    font-size: 40px;
+  }
+
+  // .title__main
+  &__main {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 5.25px;
+    font-weight: 500;
+
+    &_regular {
+      font-weight: 400;
+    }
+
+    &_w {
+      color: #FFFFFF;
+    }
+
+  }
+}
