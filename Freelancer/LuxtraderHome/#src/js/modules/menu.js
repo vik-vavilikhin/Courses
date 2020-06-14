@@ -13,9 +13,9 @@ const burgerAction = function (iconMenuElem, menuBodyElem) {
     });
   }
 };
-// =========================================
+// -----------------------------------------------
 const menuClose = (iconMenuElem, menuBodyElem) => {
   iconMenuElem.classList.remove('_active');
   menuBodyElem.classList.remove('_active');
 };
-// =========================================
+// -----------------------------------------------

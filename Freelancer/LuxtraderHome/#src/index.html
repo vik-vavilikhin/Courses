@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <title>Luxtrader Home</title>
-</head>
+@@include('includes/_head.html', {
+"title":"Luxtrader Home",
+})
 
 <body>
-  @@include('_header.html')
-  <main class="main">
+  <div class="wrapper">
+    @@include('includes/_header.html',{})
 
-  </main>
-  <!-- <script src="./js/script.min.js"></script> -->
-  <script src="./js/script.js"></script>
+    @@include('includes/_main.html',{})
+
+    @@include('includes/_footer.html',{})
+  </div>
+
+  @@include('includes/_popup.html',{})
+  @@include('includes/_js.html',{})
 </body>
 
 </html>

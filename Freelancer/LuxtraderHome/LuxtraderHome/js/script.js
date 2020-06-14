@@ -1,13 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
-  // ---------------------------------------
+  // ---------------------------------------------
   const userHeaderIcon = document.querySelector('.user-header__icon');
   const userHeaderMenu = document.querySelector('.user-header__menu');
   const iconMenu = document.querySelector('.icon-menu');
   const menuBody = document.querySelector('.menu__body');
+  // ---------------------------------------------
+  // ====== inspectUserAgent =================
+let ua = window.navigator.userAgent;
+let msie = ua.indexOf('MSIE ');
+let isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      this.Android() ||
+      this.BlackBerry() ||
+      this.iOS() ||
+      this.Opera() ||
+      this.Windows());
+  }
+};
 
-  // ---------------------------------------
-  // @ @include('./modules/inspectUserAgent.js')
+const isIE = () => {
+  ua = navigator.userAgent;
+  let isie = ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1;
+  return isie;
+};
+
+if (isIE()) {
+  document.querySelector('body').classList.add('ie');
+}
+if (isMobile.any()) {
+  document.querySelector('body').classList.add('touch');
+}
+// ---------------------------------------------
   // ====== testWebP =========================
 const testWebP = () => {
   const webP = new Image();
@@ -26,7 +66,7 @@ const testWebP = () => {
 
   webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 };
-// =========================================
+// ---------------------------------------------
   // ====== Burger ===========================
 const burgerAction = function (iconMenuElem, menuBodyElem) {
   if (iconMenuElem != null) {
@@ -42,13 +82,25 @@ const burgerAction = function (iconMenuElem, menuBodyElem) {
     });
   }
 };
-// =========================================
+// -----------------------------------------------
 const menuClose = (iconMenuElem, menuBodyElem) => {
   iconMenuElem.classList.remove('_active');
   menuBodyElem.classList.remove('_active');
 };
-// =========================================
-  // ====== dynamicAdapt =====================
+// -----------------------------------------------
+  // ====== elemReplace =====================
+/*
+  Параметры устанавливаемые HTML-верстке для селекторов:
+  'data-move'  - dataAttribute
+  'newPlase'   - куда переместить
+  'idTo'       - индекс назначения в новом месте 
+  'breakPoint' - на котором происходит перемещение
+  
+  НАПРИМЕР: <a data-move="menu__body, 1, 767" 
+                href="#" class="actions-header__region">
+              <span>Выбор региона</span>
+            </a>
+*/
 const elemReplace = () => {
   const dataAttribute = 'data-move';
   // Определить текущую ширину открытого документа
@@ -56,14 +108,14 @@ const elemReplace = () => {
   // Получить массив из всех элементов с атрибутом 'dataAttribute'
   const elemArr = Array.from(document.querySelectorAll(`[${dataAttribute}]`));
 
-  // -----------------------------
+  // -----------------------------------------------
   elemArr.forEach(item => {
     // Получить значение атрибута 'dataAttribute' текущего элемента
     const stringOfAttribute = item.getAttribute(`${dataAttribute}`);
     // Полученную строку преобразовать в массив
     // если в строке есть пробелы, удалить через рег.выражение
     const arrayFromString = stringOfAttribute.replace(/\s+/g, '').split(',');
-    // -----------------------------
+    // -----------------------------------------------
     // "точка перелома" из 'dataAttribute'
     const breakPoint = parseInt(arrayFromString[2]);
     // ОТКУДА будет перенос
@@ -74,7 +126,7 @@ const elemReplace = () => {
     const to = document.querySelector(`.${arrayFromString[0]}`);
     // Индекс новой позиции из 'dataAttribute' 
     const idTo = parseInt(arrayFromString[1]);
-    // -----------------------------
+    // -----------------------------------------------
     // Объект данных
     const data = {
       breakPoint,
@@ -83,9 +135,7 @@ const elemReplace = () => {
       to,
       idTo,
     };
-    // from.innerHTML = null;
-    // to.innerHTML = null;
-    // -----------------------------
+    // -----------------------------------------------
     // Защита от "дурака"
     // Если новый индекс в 'data-move' указан 
     // больше чем размер массива нового места 
@@ -97,7 +147,7 @@ const elemReplace = () => {
       data.idTo = lengthTo;
     }
     // console.log(data);
-    // -----------------------------
+    // -----------------------------------------------
     // Отрисовка элемента с новыми данными
     const replace = ({
       from,
@@ -105,12 +155,12 @@ const elemReplace = () => {
       to,
       idTo,
     }, reverse = false) => {
-      // -----------------------------------
+      // -----------------------------------------------
       // ОТКУДА перемещаем
       let arrFrom = Array.from(from.children); // массив
       // КУДА перемещаем
       let arrTo = Array.from(to.children); // массив
-      // -----------------------------------
+      // -----------------------------------------------
       const change = (from, idFrom, to, idTo) => {
         // Получить элемент, через удаление
         // из из массива ОТКУДА
@@ -118,7 +168,7 @@ const elemReplace = () => {
         // Добавить элемент в массив КУДА
         // по индексу idTo
         to.splice(idTo, 0, elemForMove);
-        // -----------------------------------
+        // -----------------------------------------------
         // Если полученный элемент совпадает с 
         // изначально заданным к пемещению
         if (elemForMove === item) {
@@ -130,17 +180,20 @@ const elemReplace = () => {
           }
         }
       };
-      // -----------------------------------
+      // -----------------------------------------------
+      // Проверить был перенос или нет.
+      // 'reverse' по умолчанию - false
       if (!reverse) {
+        // Прямой перенос
         change(arrFrom, idFrom, arrTo, idTo);
         reverse = true;
       } else {
+        // Обратный пенренос
         change(arrTo, idTo, arrFrom, idFrom);
         reverse = false;
       }
     };
-
-    // -----------------------------------
+    // -----------------------------------------------
     // Динамическое определение ширины документа
     const screenSize = () => {
       clientWidth = document.documentElement.clientWidth;
@@ -154,28 +207,28 @@ const elemReplace = () => {
     // При загрузке проверить необходимость переноса
     screenSize();
 
-    // -----------------------------------
+    // -----------------------------------------------
     // При изменении размера документа переносить элемент
     window.addEventListener('resize', () => {
       screenSize();
     });
   });
 };
-  // ---------------------------------------
+  // ---------------------------------------------
   document.addEventListener('click', (e) => {
     const target = e.target;
     if (!target.closest('.user-header__icon')) {
       userHeaderMenu.classList.remove('_active');
     }
   });
-  // ---------------------------------------
+  // ---------------------------------------------
   userHeaderIcon.addEventListener('click', () => {
     userHeaderMenu.classList.toggle('_active');
   });
-  // =======================================
+  // ---------------------------------------------
   testWebP();
   burgerAction(iconMenu, menuBody);
-  elemReplace('data-move');
+  elemReplace();
 });
 
-// 1:22 
+// 1:22

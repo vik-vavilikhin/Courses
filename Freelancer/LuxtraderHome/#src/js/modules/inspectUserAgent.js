@@ -39,4 +39,4 @@ if (isIE()) {
 if (isMobile.any()) {
   document.querySelector('body').classList.add('touch');
 }
-// =========================================
+// ---------------------------------------------
