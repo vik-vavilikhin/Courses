@@ -1,0 +1,105 @@
+// ====== FORM =============================
+.form {
+  &__row {}
+
+  &__column {}
+
+  &__line {}
+
+  &__input {}
+
+  &__button {}
+
+  &__error {}
+}
+
+
+// ====== BUTTON ===========================
+.btn {
+  position: relative;
+  display: inline-block;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+  }
+
+  &:before {
+    top: 0;
+    background-color: #9C9363;
+  }
+
+  &:after {
+    bottom: 0;
+    background-color: #72602D;
+  }
+
+  // .btn__body
+  &__body {
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background-image: linear-gradient(to top, #72602D, #9C9363);
+
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    span {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 0 50px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-family: 'Idealist';
+      font-size: 15px;
+      line-height: calc(21 / 15);
+      letter-spacing: 1.5px;
+      position: relative;
+
+      &:after {
+        content: '';
+        height: 50%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        background-image: linear-gradient(to top, #bb9c66 0%, #bb9c6600 100%);
+        opacity: 0.06;
+        transition: height 0.5s ease 0s;
+      }
+    }
+  }
+
+  @media(min-width: 992px) {
+    &:hover {
+      .btn__body span {
+        &::after {
+          opacity: 0.3;
+          height: 100%;
+        }
+      }
+    }
+
+    &_fw {
+      width: 100%;
+    }
+  }
+}

@@ -490,10 +490,92 @@ body._lock {
   padding: 0 10px;
 }
 
+.btn {
+  position: relative;
+  display: inline-block;
+}
+
+.btn:before,
+.btn:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+
+.btn:before {
+  top: 0;
+  background-color: #9C9363;
+}
+
+.btn:after {
+  bottom: 0;
+  background-color: #72602D;
+}
+
+.btn__body:before,
+.btn__body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#72602D), to(#9C9363));
+  background-image: -o-linear-gradient(bottom, #72602D, #9C9363);
+  background-image: linear-gradient(to top, #72602D, #9C9363);
+}
+
+.btn__body:before {
+  left: 0;
+}
+
+.btn__body:after {
+  right: 0;
+}
+
+.btn__body span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50px;
+  padding: 0 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Idealist';
+  font-size: 15px;
+  line-height: calc(21 / 15);
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.btn__body span:after {
+  content: '';
+  height: 50%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#bb9c66), to(#bb9c6600));
+  background-image: -o-linear-gradient(bottom, #bb9c66 0%, #bb9c6600 100%);
+  background-image: linear-gradient(to top, #bb9c66 0%, #bb9c6600 100%);
+  opacity: 0.06;
+  -webkit-transition: height 0.5s ease 0s;
+  -o-transition: height 0.5s ease 0s;
+  transition: height 0.5s ease 0s;
+}
+
 .title__item {
   color: #bb9c66;
   font-family: 'Ceremonious';
   font-size: 40px;
+  margin: 0px 0px 0.675em 0px;
 }
 
 .title__main {
@@ -653,7 +735,7 @@ body._lock {
 
 .item-main-slider__text {
   max-width: 700px;
-  margin: 0px auto;
+  margin: 27px auto 0px auto;
   color: #ffffff;
   font-size: 15px;
   line-height: calc(25 / 15);
@@ -667,13 +749,30 @@ body._lock {
   left: 0;
 }
 
+.item-main-slider__btn {
+  margin: 55px 0px 0px 0px;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (min-width: 992px) {
+  .btn:hover .btn__body span::after {
+    opacity: 0.3;
+    height: 100%;
+  }
+
+  .btn_fw {
+    width: 100%;
+  }
+
   .menu__link:hover,
   .actions-header__region:hover {
     text-decoration: underline;
