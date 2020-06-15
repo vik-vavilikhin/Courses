@@ -3,80 +3,54 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------------------
   const userHeaderIcon = document.querySelector('.user-header__icon');
   const userHeaderMenu = document.querySelector('.user-header__menu');
-  const iconMenu = document.querySelector('.icon-menu');
-  const menuBody = document.querySelector('.menu__body');
   // ---------------------------------------------
   // ====== inspectUserAgent =================
-let ua = window.navigator.userAgent;
-let msie = ua.indexOf('MSIE ');
-let isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      this.Android() ||
-      this.BlackBerry() ||
-      this.iOS() ||
-      this.Opera() ||
-      this.Windows());
+/*
+  Определение браузера пользователя и ОС
+*/
+const inspectUserAgent = () => {
+  let ua = window.navigator.userAgent;
+  let msie = ua.indexOf('MSIE ');
+  let isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+      return (
+        this.Android() ||
+        this.BlackBerry() ||
+        this.iOS() ||
+        this.Opera() ||
+        this.Windows());
+    }
+  };
+
+  const isIE = () => {
+    ua = navigator.userAgent;
+    let isie = ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1;
+    return isie;
+  };
+
+  if (isIE()) {
+    document.querySelector('body').classList.add('ie');
+  }
+  if (isMobile.any()) {
+    document.querySelector('body').classList.add('touch');
   }
 };
-
-const isIE = () => {
-  ua = navigator.userAgent;
-  let isie = ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1;
-  return isie;
-};
-
-if (isIE()) {
-  document.querySelector('body').classList.add('ie');
-}
-if (isMobile.any()) {
-  document.querySelector('body').classList.add('touch');
-}
 // ---------------------------------------------
-  // ====== ibg ==============================
-/*
-  Функция для обработки фоновых изображений
-  Картинка берется из верски и подставляется в
-  качестве свойства 'backgroundImage' родительского
-  элемента.
-
-  ИСТОЧНИК: https://www.youtube.com/watch?v=nTtuiBXKp88&list
-  ИСХОДНИК: http://fls.guru/ibg.html
-*/
-const ibg = () => {
-  // '._ibg' - родительский элемент
-  // Получить все родительские элементы в массив
-  const ibg = document.querySelectorAll('._ibg');
-  // ...перебрать все элементы массива
-  ibg.forEach(item => {
-    // ...найти в каждом элементе вложенный тег 'img'
-    const image = item.querySelector('img');
-    // ...если таковой найден
-    if (image) {
-      // ...получить значение атрибута 'src=""'
-      const src = image.getAttribute('src');
-      // ...добавить родительскому элементу фон - 'backgroundImage'
-      // сответствующий вложенной картинке
-      item.style.backgroundImage = `url(${src})`;
-    }
-  });
-};
-ibg();
   // ====== testWebP =========================
 const testWebP = () => {
   const webP = new Image();
@@ -96,25 +70,56 @@ const testWebP = () => {
   webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 };
 // ---------------------------------------------
-  // ====== Burger ===========================
-const burgerAction = function (iconMenuElem, menuBodyElem) {
-  if (iconMenuElem != null) {
+  // ====== backgroundImage ==================
+/*
+  Функция для обработки фоновых изображений
+  Картинка берется из верски и подставляется в
+  качестве свойства 'backgroundImage' родительского
+  элемента.
+
+  ИСТОЧНИК: https://www.youtube.com/watch?v=nTtuiBXKp88&list
+  ИСХОДНИК: http://fls.guru/ibg.html
+*/
+const backgroundImage = () => {
+  // '._ibg' - родительский элемент
+  // Получить все родительские элементы в массив
+  const ibg = document.querySelectorAll('._ibg');
+  // ...перебрать все элементы массива
+  ibg.forEach(item => {
+    // ...найти в каждом элементе вложенный тег 'img'
+    const image = item.querySelector('img');
+    // ...если таковой найден
+    if (image) {
+      // ...получить значение атрибута 'src=""'
+      const src = image.getAttribute('src');
+      // ...добавить родительскому элементу фон - 'backgroundImage'
+      // сответствующий вложенной картинке
+      item.style.backgroundImage = `url(${src})`;
+    }
+  });
+};
+// ---------------------------------------------
+  // ====== burgerActive =====================
+/*
+  - iconMenuElem - меню-бургер '.icon-menu'
+  - menuBodyElem - основное меню навигации '.menu__body'
+*/
+const burgerActive = function () {
+  const iconMenu = document.querySelector('.icon-menu');
+  const menuBody = document.querySelector('.menu__body');
+
+  if (iconMenu != null) {
     const body = document.querySelector('body');
 
     let delay = 500;
-    iconMenuElem.addEventListener('click', (e) => {
+    iconMenu.addEventListener('click', (e) => {
       if (!body.classList.contains('_wait')) {
         // bodyLock(delay);
-        iconMenuElem.classList.toggle('_active');
-        menuBodyElem.classList.toggle('_active');
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
       }
     });
   }
-};
-// -----------------------------------------------
-const menuClose = (iconMenuElem, menuBodyElem) => {
-  iconMenuElem.classList.remove('_active');
-  menuBodyElem.classList.remove('_active');
 };
 // -----------------------------------------------
   // ====== elemReplace =====================
@@ -255,9 +260,9 @@ const elemReplace = () => {
     userHeaderMenu.classList.toggle('_active');
   });
   // ---------------------------------------------
+  inspectUserAgent();
   testWebP();
-  burgerAction(iconMenu, menuBody);
+  backgroundImage();
+  burgerActive();
   elemReplace();
 });
-
-// 1:22

@@ -1,4 +1,5 @@
 .main-slider {
+  position: relative;
 
   // .main-slider__body
   &__body {}
@@ -7,7 +8,27 @@
   &__item {}
 
   // .main-slider__control
-  &__control {}
+  &__control {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 50%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 .item-main-slider {
@@ -45,5 +66,26 @@
   // .item-main-slider__btn
   &__btn {
     margin: 55px 0px 0px 0px;
+  }
+}
+
+.control-main-slider {
+
+  // .control-main-slider__arrow
+  &__arrow {
+    position: relative;
+    z-index: 2;
+
+    // .control-main-slider__arrow_prev
+    &_prev {}
+
+    // .control-main-slider__arrow_next
+    &_next {}
+  }
+
+  // .control-main-slider__decor
+  &__decor {
+    position: relative;
+    z-index: 2;
   }
 }

@@ -3,13 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------------------
   const userHeaderIcon = document.querySelector('.user-header__icon');
   const userHeaderMenu = document.querySelector('.user-header__menu');
-  const iconMenu = document.querySelector('.icon-menu');
-  const menuBody = document.querySelector('.menu__body');
   // ---------------------------------------------
   // @@include('./modules/inspectUserAgent.js')
-  // @@include('./modules/ibg.js')
   // @@include('./modules/testWebP.js')
-  // @@include('./modules/menu.js')
+  // @@include('./modules/backgroundImage.js')
+  // @@include('./modules/burgerActive.js')
   // @@include('./modules/elemReplace.js')
   // ---------------------------------------------
   document.addEventListener('click', (e) => {
@@ -23,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     userHeaderMenu.classList.toggle('_active');
   });
   // ---------------------------------------------
+  inspectUserAgent();
   testWebP();
-  burgerAction(iconMenu, menuBody);
+  backgroundImage();
+  burgerActive();
   elemReplace();
 });
-
-// 1:22
