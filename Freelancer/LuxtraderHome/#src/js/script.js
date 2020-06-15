@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBody = document.querySelector('.menu__body');
   // ---------------------------------------------
   // @@include('./modules/inspectUserAgent.js')
+  // @@include('./modules/ibg.js')
   // @@include('./modules/testWebP.js')
   // @@include('./modules/menu.js')
   // @@include('./modules/elemReplace.js')

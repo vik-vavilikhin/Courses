@@ -1,3 +1,28 @@
+// ====== КАРТИНКИ =========================
+._ibg {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  img {
+    /*
+      ИСТОЧНИК: https://www.youtube.com/watch?v=nTtuiBXKp88&list
+      ИСХОДНИК: http://fls.guru/ibg.html
+    */
+
+    // Блок кода ниже для совместной работы с JS
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// =========================================
 .title {
 
   // .title__item
@@ -22,6 +47,5 @@
     &_w {
       color: #FFFFFF;
     }
-
   }
 }
