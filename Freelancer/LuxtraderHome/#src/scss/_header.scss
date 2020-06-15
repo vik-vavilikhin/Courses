@@ -3,6 +3,8 @@ $icon-color: #BB9C5F;
 
 .header {
   background-color: $bgc-header;
+  position: relative;
+  z-index: 50;
 
   // .header__container
   &__container {
@@ -51,7 +53,7 @@ $icon-color: #BB9C5F;
   // .menu__body
   &__body {
     @media (max-width: $md3+px) {
-      background-color: $bgc-header + cc;
+      background-color: $bgc-header + fa;
       position: fixed;
       width: 100%;
       height: 100%;

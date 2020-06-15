@@ -36,6 +36,7 @@
   // .title__main
   &__main {
     font-size: 35px;
+    line-height: calc(40 / 35);
     text-transform: uppercase;
     letter-spacing: 5.25px;
     font-weight: 500;
@@ -46,6 +47,10 @@
 
     &_w {
       color: #FFFFFF;
+    }
+
+    @media(max-width: $md3+px) {
+      font-size: 30px;
     }
   }
 }

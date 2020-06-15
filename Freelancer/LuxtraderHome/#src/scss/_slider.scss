@@ -1,11 +1,29 @@
 .main-slider {
   position: relative;
 
+  .swiper-wrapper {
+    z-index: 0;
+    align-items: stretch;
+
+    @media(max-width: $md3+px) {
+      align-items: flex-start;
+    }
+  }
+
   // .main-slider__body
-  &__body {}
+  &__body {
+    overflow: hidden;
+
+  }
 
   // .main-slider__item
-  &__item {}
+  &__item {
+    height: auto;
+
+    @media(max-width: $md3+px) {
+      height: 100%;
+    }
+  }
 
   // .main-slider__control
   &__control {
@@ -23,10 +41,11 @@
       content: '';
       background-color: #fff;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      width: 70%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
     }
   }
 }
@@ -75,9 +94,19 @@
   &__arrow {
     position: relative;
     z-index: 2;
+    background: url('../img/icons/sl-arrow.png') 0 0 no-repeat;
+    width: 14px;
+    height: 24px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
 
     // .control-main-slider__arrow_prev
-    &_prev {}
+    &_prev {
+      transform: rotate(180deg);
+    }
 
     // .control-main-slider__arrow_next
     &_next {}
@@ -87,5 +116,15 @@
   &__decor {
     position: relative;
     z-index: 2;
+    margin: 0 12px;
+    animation: rotateDecor 5s infinite linear;
+  }
+}
+
+@keyframes rotateDecor {
+  0% {}
+
+  100% {
+    transform: rotate(360deg);
   }
 }
