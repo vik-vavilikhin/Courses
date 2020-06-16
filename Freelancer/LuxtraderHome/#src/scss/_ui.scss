@@ -24,6 +24,7 @@
 
 // =========================================
 .title {
+  text-align: center;
 
   // .title__item
   &__item {
@@ -52,5 +53,89 @@
     @media(max-width: $md3+px) {
       font-size: 30px;
     }
+  }
+}
+
+// =========================================
+
+.block-header {
+
+  // .block-header__title
+  &__title {
+    margin: 0px 0px 20px 0px;
+  }
+
+  // .block-header__decor
+  &__decor {}
+}
+
+.block-decor {
+  display: flex;
+  align-items: center;
+
+  // .block-decor__items
+  &__items {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+
+    &:before {
+      content: '';
+      height: 1px;
+      width: 100%;
+      flex: 1 1 auto;
+      background-color: $icon-color;
+
+    }
+
+    &:after {
+      content: '';
+      // width: 25px * .64;
+      height: 25px * .64;
+      flex: 0 0 25px * .64;
+      border: 1px solid $icon-color;
+      transform: rotate(45deg);
+      margin: 0px 5px 0px 5px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      margin: 0px 5px;
+
+      &:before {
+        content: '';
+        height: 10px;
+        width: 10px;
+        flex: 0 0 10px;
+        border-radius: 50%;
+        border: 1px solid $icon-color;
+        margin: 0 5px;
+      }
+
+      &:after {
+        content: '';
+        width: 15px * .64;
+        height: 15px * .64;
+        flex: 0 0 15px * .64;
+        border: 1px solid $icon-color;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+
+      span {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // .block-decor__icon
+  &__icon {
+    flex: 0 0 145px;
+    text-align: center;
   }
 }

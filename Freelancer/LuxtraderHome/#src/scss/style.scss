@@ -20,6 +20,10 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+$bgc-header: #1c242a;
+$icon-color: #BB9C5F;
+
+
 // ====== Обнуление, Общие параметры =======
 @import "null";
 
@@ -77,6 +81,7 @@ body {
 @import "popup";
 @import "header";
 @import "slider";
+@import "lots";
 
 @import "footer";
 @import "home";
