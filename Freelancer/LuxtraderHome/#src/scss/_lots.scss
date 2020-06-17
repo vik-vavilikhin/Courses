@@ -4,8 +4,78 @@
   &__container {}
 
   // .lots__header
-  &__header {}
+  &__header {
+    margin: 0px 0px 40px 0px;
+  }
 
   // .lots__slider
   &__slider {}
+}
+
+.slider-lots {
+
+  // .slider-lots__body
+  &__body {}
+
+  // .slider-lots__slide
+  &__slide {}
+
+  // .slider-lots__control
+  &__control {}
+}
+
+.control-slider-lots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // .control-slider-lots__arrow
+  &__arrow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      flex: 0 0 108px;
+      width: 108px;
+      height: 35px;
+      background: url('../img/icons/sl-arrow.svg') 0 0 no-repeat;
+    }
+
+    &:after {
+      content: '';
+      margin: 0px 5px 0px 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid $icon-color;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+
+      span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // .control-slider-lots__link
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 100px;
+    flex: 0 0 100px;
+    height: 100px;
+    background: url('../img/icons/circle.png') 0 0 no-repeat;
+    margin: 0px 20px 0px 20px;
+
+    font-family: 'PFDin';
+    color: #000000;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
 }

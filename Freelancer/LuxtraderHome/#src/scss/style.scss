@@ -5,8 +5,8 @@
 @import "../libs/swiper/css/swiper";
 
 // ====== ШРИФТЫ ===========================
-// @subset=cyrillic-ext
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700@subset=cyrillic-ext");
+// &display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&display=swap&subset=cyrillic-ext");
 @import "fonts";
 
 // ====== Шрифт по умолчанию ===============
