@@ -799,14 +799,6 @@ button.swiper-pagination-bullet {
 }
 
 @font-face {
-  font-family: "Rubl";
-  font-display: swap;
-  src: url("../fonts/ALSRubl.woff") format("woff"), url("../fonts/ALSRubl.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Bravo";
   font-display: swap;
   src: url("../fonts/BravoRGRegular.woff") format("woff"), url("../fonts/BravoRGRegular.woff2") format("woff2");
@@ -1316,6 +1308,15 @@ body._lock {
   transition: height 0.5s ease 0s;
 }
 
+.btn_big .btn__body span {
+  font-family: "PFDin";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.19;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 ._ibg {
   position: relative;
   background-position: center;
@@ -1483,9 +1484,9 @@ body._lock {
 }
 
 .timer-lot {
-  -webkit-transform: translate(0px, -50%);
-      -ms-transform: translate(0px, -50%);
-          transform: translate(0px, -50%);
+  -webkit-transform: translate(0px, -92%);
+      -ms-transform: translate(0px, -92%);
+          transform: translate(0px, -92%);
   width: 72px;
   height: 72px;
   display: -webkit-box;

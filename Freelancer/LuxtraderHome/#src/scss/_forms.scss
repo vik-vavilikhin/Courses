@@ -88,6 +88,17 @@
     }
   }
 
+  &_big {
+    .btn__body span {
+      font-family: "PFDin";
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.19;
+      text-transform: uppercase;
+      color: #000000;
+    }
+  }
+
   @media(min-width: 992px) {
     &:hover {
       .btn__body span {
