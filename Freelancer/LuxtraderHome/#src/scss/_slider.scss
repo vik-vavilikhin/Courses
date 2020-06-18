@@ -106,9 +106,7 @@
     height: 24px;
     cursor: pointer;
 
-    &:focus {
-      outline: none;
-    }
+
 
     // .control-main-slider__arrow_prev
     &_prev {
@@ -126,6 +124,10 @@
     margin: 0 12px;
     animation: rotateDecor 5s infinite linear;
   }
+}
+
+[class*='__arrow']:focus {
+  outline: none;
 }
 
 @keyframes rotateDecor {

@@ -1313,8 +1313,8 @@ body._lock {
   font-size: 21px;
   font-weight: 500;
   line-height: 1.19;
-  text-transform: uppercase;
   color: #000000;
+  letter-spacing: 0;
 }
 
 ._ibg {
@@ -1345,6 +1345,7 @@ body._lock {
 .title__item {
   color: #bb9c66;
   font-family: "Ceremonious";
+  font-weight: 400;
   font-size: 40px;
   margin: 0px 0px 0.675em 0px;
 }
@@ -1471,65 +1472,6 @@ body._lock {
 
 .block-decor__icon img {
   max-width: 77px;
-}
-
-.lot__header {
-  text-align: center;
-  margin: 0px 0px 30px 0px;
-}
-
-.lot__image {
-  display: block;
-  height: 250px;
-}
-
-.timer-lot {
-  -webkit-transform: translate(0px, -92%);
-      -ms-transform: translate(0px, -92%);
-          transform: translate(0px, -92%);
-  width: 72px;
-  height: 72px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  padding: 0px 0px 0px 0px;
-  position: relative;
-}
-
-.timer-lot div {
-  position: relative;
-  z-index: 2;
-}
-
-.timer-lot:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  background-color: #fff;
-}
-
-.timer-lot__icon {
-  margin: 0px 0px 0px 0px;
-}
-
-.timer-lot__item {
-  font-family: 'PTSans';
-  font-size: 18px;
-  line-height: 1.17;
 }
 
 .header {
@@ -1773,10 +1715,6 @@ body._lock {
   cursor: pointer;
 }
 
-.control-main-slider__arrow:focus {
-  outline: none;
-}
-
 .control-main-slider__arrow_prev {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -1789,6 +1727,10 @@ body._lock {
   margin: 0 12px;
   -webkit-animation: rotateDecor 5s infinite linear;
           animation: rotateDecor 5s infinite linear;
+}
+
+[class*='__arrow']:focus {
+  outline: none;
 }
 
 @-webkit-keyframes rotateDecor {
@@ -1819,6 +1761,10 @@ body._lock {
 
 .lots__header {
   margin: 0px 0px 40px 0px;
+}
+
+.slider-lots {
+  overflow: hidden;
 }
 
 .control-slider-lots {
@@ -1896,6 +1842,93 @@ body._lock {
   font-weight: 500;
   line-height: 25px;
   text-transform: uppercase;
+}
+
+.lot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.lot__header {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  position: relative;
+}
+
+.lot__image {
+  display: block;
+  height: 250px;
+  border: 3px solid #BB9C5F;
+}
+
+.lot__timer {
+  -webkit-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.lot__title {
+  color: #000000;
+  font-family: "PFDin";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: calc(25 / 21);
+  text-transform: uppercase;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.timer-lot {
+  width: 72px;
+  height: 72px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 0px 0px 0px;
+}
+
+.timer-lot div {
+  z-index: 2;
+}
+
+.timer-lot:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #fff;
+}
+
+.timer-lot__icon {
+  margin: 0px 0px 0px 0px;
+}
+
+.timer-lot__item {
+  font-family: "PTSans";
+  font-size: 18px;
+  line-height: 1.17;
 }
 
 .page {

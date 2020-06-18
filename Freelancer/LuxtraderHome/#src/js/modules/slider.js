@@ -99,5 +99,49 @@ const sliderSettings = () => {
       },
     }
   });
+
+  const lotsSlider = new Swiper('.slider-lots__body', {
+    /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    */
+    observer: true,
+    observerParents: true,
+    slidesPerView: 3,
+    spaceBetween: 0,
+    autoHeight: true,
+    speed: 800,
+    spaceBetween: 100,
+
+    // touchRatio: 0,
+    // simulateTouch: false,
+    loop: true,
+    // preloadImages: false,
+    // lazy: true,
+    // Dotts
+    pagination: {
+      el: '',
+      clickable: true,
+    },
+    // Arrows
+    navigation: {
+      nextEl: '.control-slider-lots__arrow_next',
+      prevEl: '.control-slider-lots__arrow_prev',
+    },
+    /*
+        // Responsive breakpoints
+        breakpoints: {
+          320: {
+            autoHeight: true,
+          },
+          768: {
+            autoHeight: true,
+          },
+        }
+    */
+  });
 };
 sliderSettings();
