@@ -18,10 +18,20 @@
   overflow: hidden;
 
   // .slider-lots__body
-  &__body {}
+  &__body {
+    margin-bottom: 50px;
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+  }
 
   // .slider-lots__slide
-  &__slide {}
+  &__slide {
+    &.swiper-slide {
+      height: auto;
+    }
+  }
 
   // .slider-lots__control
   &__control {}
@@ -38,12 +48,18 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    justify-content: flex-end;
 
     span {
       flex: 0 0 108px;
       width: 108px;
       height: 35px;
-      background: url('../img/icons/sl-arrow.svg') 0 0 no-repeat;
+      background: url('../img/icons/sl-arrow.svg') left no-repeat;
+
+      @media (max-width: 450px) {
+        // width: 50px;
+        flex: 0 0 50px;
+      }
     }
 
     &:after {
@@ -61,6 +77,10 @@
       span {
         transform: rotate(180deg);
       }
+    }
+
+    @media (max-width:$md4+px) {
+      // display: none;
     }
   }
 
@@ -89,6 +109,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-align: center;
 
   // .lot__header
   &__header {
@@ -100,9 +121,8 @@
   // .lot__image
   &__image {
     display: block;
-    height: 250px;
-    // width: 250px;
     border: 3px solid $icon-color;
+    padding: 0px 0px 98% 0px;
   }
 
   // .lot__timer
@@ -122,13 +142,32 @@
     line-height: calc(25 / 21);
     text-transform: uppercase;
     flex: 1 1 auto;
+    z-index: 2;
+    margin: 0px 0px 30px/21px * 1em 0px;
+
+    @media (max-width:$md3+px) {
+      font-size: 18px;
+    }
+
+    @media (max-width:$md4+px) {
+      font-size: 21px;
+    }
+
+    @media(min-width: 992px) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   // .lot__info
   &__info {}
 
   // .lot__btn
-  &__btn {}
+  &__btn {
+    margin: 0 23px/125px*100%/2;
+
+  }
 }
 
 // ----- TIMER-LOT -------------------------
@@ -141,7 +180,7 @@
   padding: 0px 0px 0px 0px;
 
   div {
-    // position: relative;
+    position: relative;
     z-index: 2;
   }
 
@@ -171,29 +210,123 @@
 
 // ----- INFO-LOT --------------------------
 .info-lot {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 35px 0px;
 
   // .info-lot__stistic
-  &__stistic {}
+  &__stistic {
+    flex: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    text-align: center;
+
+    @media (max-width:870px) {
+      flex: 0 0 35px;
+    }
+  }
 
   // .info-lot__icon
-  &__icon {}
+  &__icon {
+    width: 25px * 0.72;
+    height: 25px * 0.72;
+    position: relative;
+    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0px auto 10px auto;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      transform: rotate(45deg);
+      background-color: #000;
+      position: absolute;
+    }
+
+    picture {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
   // .info-lot__value
-  &__value {}
+  &__value {
+    font-size: 14px;
+    border-bottom: 1px solid $icon-color;
+    margin: 0px 0px 6px 0px;
+  }
 
   // .info-lot__current-bet
-  &__current-bet {}
+  &__current-bet {
+    flex: 1 1 auto;
+
+    @media (max-width: 870px) {
+      flex: 0 0 auto;
+    }
+  }
 }
 
 // ----- CURRENT-BET-INFO-LOT --------------
 .current-bet-info-lot {
+  padding: 0 5px;
+  position: relative;
+
+  @media (max-width: 870px) {
+    padding: 0 20px;
+  }
+
+  div {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    border: 1px solid $icon-color;
+    top: 50%;
+    left: 50%;
+    width: 100px * .72;
+    height: 100px * .72;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
 
   // .current-bet-info-lot__label
-  &__label {}
+  &__label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.79;
+    margin: 0px 0px 13px 0px;
+
+  }
 
   // .current-bet-info-lot__value
-  &__value {}
+  &__value {
+    color: #1c242a;
+    font-family: "Bravo";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 0.42;
+    white-space: nowrap;
+
+    @media (max-width: 870px) {
+      font-size: 35px;
+    }
+
+    @media (max-width:$md4+px) {
+      font-size: 50px;
+    }
+  }
 
   // .current-bet-info-lot__currency
-  &__currency {}
+  &__currency {
+    margin-top: 12px;
+    font-size: 14px;
+  }
 }

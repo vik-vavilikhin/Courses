@@ -112,7 +112,7 @@ const sliderSettings = () => {
     observerParents: true,
     slidesPerView: 3,
     spaceBetween: 0,
-    autoHeight: true,
+    // autoHeight: true,
     speed: 800,
     spaceBetween: 100,
 
@@ -131,17 +131,28 @@ const sliderSettings = () => {
       nextEl: '.control-slider-lots__arrow_next',
       prevEl: '.control-slider-lots__arrow_prev',
     },
-    /*
-        // Responsive breakpoints
-        breakpoints: {
-          320: {
-            autoHeight: true,
-          },
-          768: {
-            autoHeight: true,
-          },
-        }
-    */
+    // /*
+    // Responsive breakpoints
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      870: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      970: {
+        spaceBetween: 100,
+        slidesPerView: 3,
+      },
+    }
+    // */
   });
 };
 sliderSettings();
