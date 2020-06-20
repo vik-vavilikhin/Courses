@@ -1,9 +1,12 @@
 // ====== КАРТИНКИ =========================
 ._ibg {
   position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
 
   img {
     /*

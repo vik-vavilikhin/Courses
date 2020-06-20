@@ -1,26 +1,243 @@
+// ===== CATEGORIES ========================
 .categories {
 
   // .categories__container
-  &__container {}
+  &__container {
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-color: #fff;
+    }
+  }
 
   // .categories__row
-  &__row {}
+  &__row {
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -50px;
+    padding: 35px 0px 0px 0px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      width: 24px * .72;
+      height: 24px * .72;
+      flex: 0 0 24px * .72;
+      border: 1px solid $icon-color;
+      margin: 0px 0px 0px 1px;
+      transform: translate(-50%, 0px) rotate(-45deg);
+    }
+
+    &:before {
+      left: 33.333%;
+
+      @media (max-width: 975px) {
+        left: 50%;
+      }
+
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      left: 66.667%;
+
+      @media (max-width: 975px) {
+        display: none;
+      }
+    }
+
+  }
 
   // .categories__column
-  &__column {}
+  &__column {
+    padding: 0 50px 25px;
+    flex: 0 1 33.333%;
+    margin: 0px 0px 25px 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    // Dot
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: $icon-color;
+      border-radius: 50%;
+      flex: 0 0 10px;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translate(-50%, 0px);
+    }
+
+    @media (max-width: 975px) {
+      flex: 0 1 50%;
+    }
+
+    @media (max-width: 650px) {
+      flex: 1 1 100%;
+    }
+  }
 
   // .categories__item
   &__item {}
+
+  // .categories__decor
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    transform: translate(50%, 0px);
+    height: calc(100% + 14px * .72);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 2;
+
+    // Line
+    &:before {
+      content: '';
+      width: 1px;
+      background-color: $icon-color;
+      flex: 1 1 auto;
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1 1 auto;
+
+      // Dot
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: $icon-color;
+        border-radius: 50%;
+        flex: 0 0 10px;
+        margin: 20px 0;
+      }
+
+      // Line
+      &::after {
+        content: '';
+        width: 1px;
+        background-color: $icon-color;
+        flex: 1 1 auto;
+      }
+    }
+
+    // Rhombus
+    &:after {
+      content: '';
+      width: 24px * .72;
+      height: 24px * .72;
+      border: 1px solid $icon-color;
+      transform: rotate(45deg);
+      margin: 20px 0px 0px 0px;
+      flex: 0 0 24px * .72;
+    }
+  }
+
 }
 
+// ===== ITEM ==============================
 .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  padding: 25px 30px 40px 30px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @media(min-width: 992px) {
+    &:hover {
+      .item__bg {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // .item__link
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: 5;
+  }
 
   // .item__icon
-  &__icon {}
+  &__icon {
+    position: relative;
+    z-index: 2;
+    margin: 0px 0px 22px 0px;
+  }
 
   // .item__title
-  &__title {}
+  &__title {
+    position: relative;
+    z-index: 2;
+
+    color: #fff;
+    font-family: "PFDin";
+    font-size: 21px;
+    font-weight: 500;
+    line-height: calc(25 / 21);
+    text-transform: uppercase;
+    text-align: center;
+    // Text style for "Часы"
+    letter-spacing: 2.1px;
+    flex: 1 1 auto;
+  }
+
+  &__decor {
+    position: relative;
+    z-index: 2;
+  }
 
   // .item__bg
-  &__bg {}
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform .8s ease 0s;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .7);
+    }
+  }
 }
