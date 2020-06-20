@@ -54,7 +54,7 @@
       flex: 0 0 108px;
       width: 108px;
       height: 35px;
-      background: url('../img/icons/sl-arrow.svg') left no-repeat;
+      background: url("../img/lots/icons/sl-arrow.svg") left no-repeat;
 
       @media (max-width: 450px) {
         // width: 50px;
@@ -63,7 +63,7 @@
     }
 
     &:after {
-      content: '';
+      content: "";
       margin: 0px 5px 0px 5px;
       width: 15px;
       height: 15px;
@@ -79,7 +79,7 @@
       }
     }
 
-    @media (max-width:$md4+px) {
+    @media (max-width: $md4+px) {
       // display: none;
     }
   }
@@ -92,10 +92,10 @@
     // width: 100px;
     flex: 0 0 100px;
     height: 100px;
-    background: url('../img/icons/circle.png') 0 0 no-repeat;
+    background: url("../img/lots/icons/circle.png") 0 0 no-repeat;
     margin: 0px 20px 0px 20px;
 
-    font-family: 'PFDin';
+    font-family: "PFDin";
     color: #000000;
     font-size: 21px;
     font-weight: 500;
@@ -145,15 +145,15 @@
     z-index: 2;
     margin: 0px 0px 30px/21px * 1em 0px;
 
-    @media (max-width:$md3+px) {
+    @media (max-width: $md3+px) {
       font-size: 18px;
     }
 
-    @media (max-width:$md4+px) {
+    @media (max-width: $md4+px) {
       font-size: 21px;
     }
 
-    @media(min-width: 992px) {
+    @media (min-width: 992px) {
       &:hover {
         text-decoration: underline;
       }
@@ -165,8 +165,7 @@
 
   // .lot__btn
   &__btn {
-    margin: 0 23px/125px*100%/2;
-
+    margin: 0 23px/125px * 100%/2;
   }
 }
 
@@ -222,7 +221,7 @@
     // align-items: center;
     text-align: center;
 
-    @media (max-width:870px) {
+    @media (max-width: 870px) {
       flex: 0 0 35px;
     }
   }
@@ -238,7 +237,7 @@
     margin: 0px auto 10px auto;
 
     &:after {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       transform: rotate(45deg);
@@ -287,13 +286,13 @@
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     border: 1px solid $icon-color;
     top: 50%;
     left: 50%;
-    width: 100px * .72;
-    height: 100px * .72;
+    width: 100px * 0.72;
+    height: 100px * 0.72;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
@@ -303,7 +302,6 @@
     font-weight: 400;
     line-height: 1.79;
     margin: 0px 0px 13px 0px;
-
   }
 
   // .current-bet-info-lot__value
@@ -319,7 +317,7 @@
       font-size: 35px;
     }
 
-    @media (max-width:$md4+px) {
+    @media (max-width: $md4+px) {
       font-size: 50px;
     }
   }

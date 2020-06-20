@@ -1,12 +1,12 @@
 // ====== backgroundImage ==================
 /*
-  Функция для обработки фоновых изображений
-  Картинка берется из верски и подставляется в
-  качестве свойства 'backgroundImage' родительского
-  элемента.
+*  Функция для обработки фоновых изображений
+*  Картинка берется из верски и подставляется в
+*  качестве свойства 'backgroundImage' родительского
+*  элемента.
 
-  ИСТОЧНИК: https://www.youtube.com/watch?v=nTtuiBXKp88&list
-  ИСХОДНИК: http://fls.guru/ibg.html
+*  ИСТОЧНИК: https://www.youtube.com/watch?v=nTtuiBXKp88&list
+*  ИСХОДНИК: http://fls.guru/ibg.html
 */
 const backgroundImage = () => {
   // '._ibg' - родительский элемент
