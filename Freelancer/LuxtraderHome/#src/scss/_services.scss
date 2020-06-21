@@ -4,7 +4,9 @@
   padding: 60px 0px;
 
   // .services__container
-  &__container {}
+  &__container {
+    overflow: hidden;
+  }
 
   // .services__header
   &__header {
@@ -16,6 +18,7 @@
     margin: 0 -50px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   // .services___column
@@ -25,7 +28,19 @@
     flex: 0 1 33.333%;
 
     @media (max-width: 975px) {
+      flex: 0 1 40%;
+    }
+
+    @media (max-width: 755px) {
+      flex: 0 1 45%;
+    }
+
+    @media (max-width: 660px) {
       flex: 0 1 50%;
+    }
+
+    @media (max-width: 590px) {
+      flex: 0 1 60%;
     }
   }
 
