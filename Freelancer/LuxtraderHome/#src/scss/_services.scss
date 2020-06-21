@@ -1,0 +1,101 @@
+// ===== SERVICES ==========================
+.services {
+  background-color: #1c242a;
+  padding: 60px 0px;
+
+  // .services__container
+  &__container {}
+
+  // .services__header
+  &__header {
+    margin: 0px 0px 40px 0px;
+  }
+
+  // .services__row
+  &__row {
+    margin: 0 -50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // .services___column
+  &__column {
+    padding: 0 50px;
+    margin: 0px 0px 60px 0px;
+    flex: 0 1 33.333%;
+
+    @media (max-width: 975px) {
+      flex: 0 1 50%;
+    }
+  }
+
+  // .services__item
+  &__item {}
+}
+
+// ===== SERVICE ===========================
+.service {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  // .service__img
+  &__img {
+    height: 205px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 10px 0px;
+  }
+
+  // .service__title
+  &__title {
+    color: #ffffff;
+    font-family: "PFDin";
+    font-size: 21px;
+    font-weight: 500;
+    line-height: calc(25 / 21);
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+  }
+
+  // .service__text
+  &__text {
+    color: $icon-color;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: calc(25 / 15);
+    margin: 25px 0px 0px 0px;
+  }
+
+  // .service__btn
+  &__btn {
+    color: #ffffff;
+    font-family: "PFDin";
+    font-size: 21px;
+    font-weight: 500;
+    line-height: calc(25 / 21);
+    text-transform: uppercase;
+    letter-spacing: 2.12px;
+    position: relative;
+    margin: 35px 0px 0px 0px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $icon-color;
+
+    }
+
+    span {
+      background-color: #1c242a;
+      position: relative;
+      z-index: 2;
+      padding: 0 15px;
+    }
+  }
+}
