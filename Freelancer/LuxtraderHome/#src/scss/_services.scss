@@ -1,7 +1,7 @@
 // ===== SERVICES ==========================
 .services {
   background-color: #1c242a;
-  padding: 60px 0px;
+  padding: 60px 0px 40px 0px;
 
   // .services__container
   &__container {
@@ -19,6 +19,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    @media (max-width: 480px) {
+      margin: 0;
+    }
   }
 
   // .services___column

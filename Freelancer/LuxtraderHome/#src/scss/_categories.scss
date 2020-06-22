@@ -1,6 +1,6 @@
 // ===== CATEGORIES ========================
 .categories {
-  margin: 70px;
+  margin: 70px 0;
 
   // .categories__items
   &__items {
@@ -31,6 +31,10 @@
     flex-wrap: wrap;
     margin: 0 -50px;
     padding: 35px 0px 0px 0px;
+
+    @media (max-width: 480px) {
+      margin: 0;
+    }
 
     &:before,
     &:after {
@@ -74,6 +78,11 @@
     position: relative;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 480px) {
+      // margin: 0 -25px 25px -25px;
+      padding: 0px 0px 25px 0px;
+    }
 
     // Dot
     &::before {
@@ -159,6 +168,10 @@
       transform: rotate(45deg);
       margin: 20px 0px 0px 0px;
       flex: 0 0 24px * 0.72;
+    }
+
+    @media (max-width: 480px) {
+      display: none;
     }
   }
 
@@ -288,6 +301,15 @@
         image: url('../img/categories/icons/decor-header.png');
         position: 0 0;
         repeat: no-repeat;
+      }
+    }
+
+    @media (max-width:$md3+px) {
+      padding: 10px 0 25px 0;
+      background-image: inherit !important;
+
+      &:before {
+        display: none;
       }
     }
   }

@@ -51,13 +51,12 @@
     justify-content: flex-end;
 
     span {
-      flex: 0 0 108px;
       width: 108px;
+      flex: 0 0 108px;
       height: 35px;
       background: url("../img/lots/icons/sl-arrow.svg") left no-repeat;
 
       @media (max-width: 450px) {
-        // width: 50px;
         flex: 0 0 50px;
       }
     }
@@ -67,6 +66,7 @@
       margin: 0px 5px 0px 5px;
       width: 15px;
       height: 15px;
+      flex: 0 0 15px;
       border-radius: 50%;
       border: 1px solid $icon-color;
     }
@@ -80,7 +80,7 @@
     }
 
     @media (max-width: $md4+px) {
-      // display: none;
+      width: 80px;
     }
   }
 
