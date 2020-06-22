@@ -1,0 +1,45 @@
+// ===== QUOTES ============================
+.quotes {
+  padding: 65px 0 75px 0;
+
+  // .quotes__container
+  &__container {}
+
+  // .quotes__slider
+  &__slider {}
+}
+
+// ===== SLIDER-QUOTES =====================
+.slider-quotes {
+
+  // .slider-quotes__body
+  &__body {}
+
+  // .slider-quotes__slide
+  &__slide {}
+
+  // .slider-quotes__image
+  &__image {}
+
+  // .slider-quotes__content
+  .__content {}
+
+  // .slider-quotes__title
+  &__title {}
+
+  // .slider-quotes__info
+  &__info {}
+
+  // .slider-quotes__control
+  &__control {}
+}
+
+// ===== SLIDER-QUOTES-CONTROL =============
+.slider-quotes-control {
+
+  // .slider-quotes-control__decor
+  &__decor {}
+
+  // .slider-quotes-control__link
+  &__link {}
+}

@@ -1,19 +1,13 @@
 <section class="lots">
   <div class="lots__container _container">
     <!-- .block-header -->
-    <div class="lots__header block-header">
-      <div class="block-header__title title">
-        <h2 class="title__item">Популярные</h2>
-        <h3 class="title__main">лоты Под аукцион</h3>
-      </div>
-      <div class="block-header__decor block-decor">
-        <div class="block-decor__items"><span></span></div>
-        <div class="block-decor__icon">
-          <img src="img/block-header/01.png" alt="decor__icon" />
-        </div>
-        <div class="block-decor__items"><span></span></div>
-      </div>
-    </div>
+    @@include('_block-header.html',{
+    "sectionName":"lots",
+    "header": "Популярные",
+    "title": "лоты Под аукцион",
+    "image": "01.png",
+    "white": ""
+    })
     <!-- /.block-header -->
 
     <!-- .lots__slider -->
