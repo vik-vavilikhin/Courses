@@ -33,7 +33,10 @@ const path = {
 
 const {
   src,
-  dest
+  dest,
+  parallel,
+  series
+
 } = require('gulp');
 const gulp = require('gulp');
 const browsersync = require('browser-sync').create();
@@ -213,9 +216,9 @@ function clean() {
   return del(path.clean);
 }
 
-const build = gulp.series(
+const build = series(
   clean,
-  gulp.parallel(
+  parallel(
     html,
     css,
     js,
@@ -225,7 +228,7 @@ const build = gulp.series(
   fontsStyle
 );
 
-const watch = gulp.parallel(build, watchFiles, browserSync);
+const watch = parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;

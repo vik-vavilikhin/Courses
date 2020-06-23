@@ -13,13 +13,13 @@ $fontfamily: "PTSans";
 // ------ Переменные -----------------------
 $minwidth: 320px;
 $mw: 950;
-$md1: $mw + 12;
+$md1: $mw+12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
 // ------ Обнуление, Общие параметры -------
-@import "null";
+// @import "null";
 
 body {
   color: #000000;
@@ -45,8 +45,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  &._loaded {
-  }
+  &._loaded {}
 }
 
 // ------ Основная сетка -------------------
@@ -73,7 +72,8 @@ body {
 // @import "ui";
 
 // ====== СТИЛИ СТРАНИЦ и ЭЛЕМЕНТОВ ========
-// @import "popup";
-@import "header";
-// @import "footer";
+// @import "header";
 // @import "home";
+
+// @import "footer";
+// @import "popup";
