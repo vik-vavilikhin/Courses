@@ -791,6 +791,14 @@ button.swiper-pagination-bullet {
 }
 
 @font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Harbell";
   font-display: swap;
   src: url("../fonts/HarbellPersonalUse.woff") format("woff"), url("../fonts/HarbellPersonalUse.woff2") format("woff2");
@@ -1332,6 +1340,16 @@ body._lock {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  /*
+    Отзывчивая картинка.
+    Где: 
+    320px/950px * 100% - динамический расчеи размера,
+    зависящий от размера родительского контейнера
+    
+    &__chaildImage {
+      flex: 0 0 320px/950px * 100%;
+    }
+  */
 }
 
 ._ibg img {
@@ -2487,6 +2505,131 @@ body._lock {
 
 .quotes {
   padding: 65px 0 75px 0;
+}
+
+.slider-quotes__body {
+  overflow: hidden;
+}
+
+.slider-quotes__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0 !important;
+}
+
+.slider-quotes__slide.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.slider-quotes__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.68421%;
+          flex: 0 0 33.68421%;
+}
+
+.slider-quotes__image img {
+  max-width: 100%;
+}
+
+.slider-quotes .__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 515px;
+          flex: 0 1 515px;
+}
+
+.slider-quotes__title {
+  font-size: 25px;
+  line-height: calc(30 / 25);
+  font-style: italic;
+  margin: 0px 0px 1.6em 0px;
+}
+
+.slider-quotes__info {
+  font-size: 15px;
+  line-height: calc(25 / 15);
+  color: #1c242a;
+}
+
+.control-slider-quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.control-slider-quotes__decor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.control-slider-quotes__decor:before {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 1px;
+  background-color: #BB9C5F;
+}
+
+.control-slider-quotes__decor:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 1px solid #BB9C5F;
+  border-radius: 50%;
+  margin: 0px 0px 0px 5px;
+}
+
+.control-slider-quotes__decor:last-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.control-slider-quotes__decor:last-child:after {
+  margin: 0px 5px 0px 0px;
+}
+
+.control-slider-quotes__arrow {
+  cursor: pointer;
+  margin: 0 50px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #BB9C5F;
+  border-radius: 50%;
+  background: url("../img/qoutes/refresh.svg") center no-repeat;
 }
 
 .page {

@@ -13,33 +13,112 @@
 .slider-quotes {
 
   // .slider-quotes__body
-  &__body {}
+  &__body {
+    overflow: hidden;
+  }
 
   // .slider-quotes__slide
-  &__slide {}
+  &__slide {
+    display: flex;
+    align-items: center;
+    opacity: 0 !important;
+
+    &.swiper-slide-active {
+      opacity: 1 !important;
+    }
+  }
 
   // .slider-quotes__image
-  &__image {}
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    flex: 0 0 320px/950px * 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
 
   // .slider-quotes__content
-  .__content {}
+  .__content {
+    flex: 0 1 515px;
+  }
 
   // .slider-quotes__title
-  &__title {}
+  &__title {
+    font-size: 25px;
+    line-height: calc(30 / 25);
+    font-style: italic;
+    margin: 0px 0px 40px/25px * 1em 0px;
+  }
 
   // .slider-quotes__info
-  &__info {}
+  &__info {
+    font-size: 15px;
+    line-height: calc(25 / 15);
+    color: #1c242a;
+  }
 
   // .slider-quotes__control
   &__control {}
 }
 
 // ===== SLIDER-QUOTES-CONTROL =============
-.slider-quotes-control {
+.control-slider-quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
 
-  // .slider-quotes-control__decor
-  &__decor {}
+  // .control-slider-quotes__decor
+  &__decor {
+    display: flex;
+    align-items: center;
+    flex: 0 1 33.333%;
+
+    &:before {
+      content: '';
+      flex: 1 1 auto;
+      height: 1px;
+      background-color: $icon-color;
+    }
+
+    &:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 1px solid $icon-color;
+      border-radius: 50%;
+      margin: 0px 0px 0px 5px;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+
+      &:after {
+        margin: 0px 5px 0px 0px;
+      }
+    }
+  }
 
   // .slider-quotes-control__link
-  &__link {}
+  &__link {
+    // text-align: center;
+    // flex: 0 1 33.333%;
+  }
+
+  // .control-slider-quotes__circle
+  &__arrow {
+    cursor: pointer;
+    margin: 0 50px;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $icon-color;
+    border-radius: 50%;
+    background: url('../img/qoutes/refresh.svg') center no-repeat;
+  }
 }

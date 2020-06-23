@@ -9199,6 +9199,38 @@ const sliderSettings = () => {
     }
     // */
   });
+
+  const sliderQuotes = new Swiper('.slider-quotes__body', {
+    effect: 'fade',
+    /*
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    */
+    observer: true,
+    observerParents: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    // autoHeight: true,
+    speed: 800,
+    // spaceBetween: 100,
+
+    // touchRatio: 0,
+    // simulateTouch: false,
+    loop: true,
+    // preloadImages: false,
+    // lazy: true,
+    // Dotts
+    pagination: {
+      el: '',
+      clickable: true,
+    },
+    // Arrows
+    navigation: {
+      nextEl: '.control-slider-quotes__arrow',
+    },
+  });
 };
 sliderSettings();
   // ---------------------------------------------
