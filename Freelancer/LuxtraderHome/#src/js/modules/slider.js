@@ -185,6 +185,14 @@ const sliderSettings = () => {
     navigation: {
       nextEl: '.control-slider-quotes__arrow',
     },
+    breakpoints: {
+      320: {
+        autoHeight: true,
+      },
+      480: {
+        autoHeight: false,
+      },
+    }
   });
 };
 sliderSettings();
