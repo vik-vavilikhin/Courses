@@ -168,7 +168,7 @@ const sliderSettings = () => {
     slidesPerView: 1,
     spaceBetween: 0,
     // autoHeight: true,
-    speed: 800,
+    speed: 1000,
     // spaceBetween: 100,
 
     // touchRatio: 0,
