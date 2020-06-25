@@ -1533,7 +1533,10 @@ textarea.input {
 
 .header {
   background-color: #1c242a;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 50;
 }
 
@@ -1580,6 +1583,14 @@ textarea.input {
   text-transform: uppercase;
   letter-spacing: 1.4px;
   color: #ffffff;
+  -webkit-transition: color .3s ease 0s;
+  -o-transition: color .3s ease 0s;
+  transition: color .3s ease 0s;
+}
+
+.menu__link._active,
+._active.actions-header__region {
+  color: #BB9C5F;
 }
 
 .actions-header {
@@ -2654,7 +2665,7 @@ textarea.input {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   border: 1px solid #BB9C5F;
   border-radius: 50%;
@@ -2663,6 +2674,10 @@ textarea.input {
 
 .info {
   padding: 0px 0px 75px 0px;
+}
+
+.info__container {
+  overflow: hidden;
 }
 
 .info__row {
@@ -2788,7 +2803,7 @@ textarea.input {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 95px;
           flex: 0 0 95px;
-  background-color: transparent;
+  background-color: #fff;
   border: none;
 }
 
@@ -2798,7 +2813,7 @@ textarea.input {
 }
 
 .form-subscribe__btn:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 1px;
@@ -2807,6 +2822,10 @@ textarea.input {
 }
 
 .form-subscribe__btn span {
+  cursor: pointer;
+  background: url(../img/icons/arrow-sent.svg) right no-repeat;
+  padding: 0px 35px 0px 0px;
+  font-family: "PFDin";
   color: #1c242a;
   font-size: 21px;
   font-weight: 500;
@@ -2815,7 +2834,112 @@ textarea.input {
   letter-spacing: 2.12px;
 }
 
+.footer {
+  background-color: #1c242a;
+  padding: 45px 0px 50px 0px;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__column:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 180px;
+          flex: 0 0 180px;
+}
+
+.footer__column_full {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin: 0px 0px 25px 0px;
+}
+
+.footer__info {
+  color: #BB9C5F;
+}
+
+.footer__menu {
+  padding: 0 30px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__list li {
+  margin: 15px 15px 0px 0px;
+}
+
+.footer__link {
+  color: #fff;
+  font-family: "PFDin";
+  font-weight: 500;
+  line-height: calc(25 / 14);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.footer__contacts {
+  padding: 15px 0px 0px 0px;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #BB9C5F;
+  font-family: "Bravo";
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 0px 0px 7px 0px;
+}
+
+.footer__phone small {
+  margin: 2px 5px 0px 0px;
+  font-size: 25px;
+}
+
+.footer__callback {
+  background: url("../img/icons/arrow-repeat.svg") left no-repeat;
+  padding: 0px 0px 0px 12px;
+  color: #BB9C5F;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+}
+
+.footer__callback span {
+  border-bottom: 1px dashed;
+}
+
 .page {
+  padding: 75px 0px 0px 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -2849,6 +2973,10 @@ textarea.input {
         -ms-transform: scale(1.1);
             transform: scale(1.1);
   }
+
+  .footer__link:hover {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: 1127px) {
@@ -2872,6 +3000,16 @@ textarea.input {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 40%;
             flex: 0 1 40%;
+  }
+}
+
+@media (max-width: 950px) {
+  .footer__phone {
+    font-size: 40px;
+  }
+
+  .footer__phone small {
+    font-size: 20px;
   }
 }
 
@@ -2908,6 +3046,26 @@ textarea.input {
 
   .current-bet-info-lot__value {
     font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__content {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 15px 7px 0px 7px;
+  }
+
+  .footer__contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -3085,6 +3243,20 @@ textarea.input {
   }
 }
 
+@media (max-width: 767px) {
+  .footer__logo {
+    margin: 0px;
+  }
+
+  .footer__info {
+    margin: 25px 0px 0px 0px;
+  }
+
+  .footer__menu {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
 @media (max-width: 755px) {
   .services__column {
     -webkit-box-flex: 0;
@@ -3106,6 +3278,30 @@ textarea.input {
     width: 200px;
     height: 200px;
     padding: 15px 15px 25px 15px;
+  }
+
+  .slider-quotes__title {
+    font-size: 20px;
+    line-height: calc(25 / 20);
+  }
+
+  .info {
+    padding: 0px 0px 40px 0px;
+  }
+
+  .subscribe__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .subscribe__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .subscribe__column:first-child {
+    margin: 0px 0px 10px 0px;
   }
 }
 
@@ -3174,6 +3370,10 @@ textarea.input {
     height: 250px;
   }
 
+  .quotes__header {
+    margin: 0px 0px 15px 0px;
+  }
+
   .slider-quotes__slide {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3184,14 +3384,20 @@ textarea.input {
 
   .slider-quotes__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
   }
 
   .slider-quotes .__content {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+
+  .info__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }
 

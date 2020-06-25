@@ -2,8 +2,14 @@
 .info {
   padding: 0px 0px 75px 0px;
 
+  @media (max-width: 640px) {
+    padding: 0px 0px 40px 0px;
+  }
+
   // .info__container
-  &__container {}
+  &__container {
+    overflow: hidden;
+  }
 
   // .info__row
   &__row {
@@ -21,6 +27,10 @@
     &:last-child {
       flex: 1 1 auto;
       margin: 0;
+    }
+
+    @media (max-width: $md4+px) {
+      flex: 1 1 auto;
     }
   }
 
@@ -99,12 +109,24 @@
   &__body {
     display: flex;
     margin: 0 -22px;
+
+    @media (max-width: 640px) {
+      flex-wrap: wrap;
+    }
   }
 
   // .subscribe__column
   &__column {
     flex: 0 1 50%;
     padding: 0 22px;
+
+    @media (max-width: 640px) {
+      flex: 1 1 auto;
+
+      &:first-child {
+        margin: 0px 0px 10px 0px;
+      }
+    }
   }
 
   // .subscribe__text
@@ -129,7 +151,6 @@
     flex: 1 1 auto;
 
     input {
-
       outline-style: none;
       border: none;
     }
@@ -139,7 +160,7 @@
   &__btn {
     position: relative;
     flex: 0 0 95px;
-    background-color: transparent;
+    background-color: #fff;
     border: none;
 
     &:focus {
@@ -148,7 +169,7 @@
     }
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       width: 1px;
@@ -157,6 +178,10 @@
     }
 
     span {
+      cursor: pointer;
+      background: url(../img/icons/arrow-sent.svg) right no-repeat;
+      padding: 0px 35px 0px 0px;
+      font-family: "PFDin";
       color: #1c242a;
       font-size: 21px;
       font-weight: 500;

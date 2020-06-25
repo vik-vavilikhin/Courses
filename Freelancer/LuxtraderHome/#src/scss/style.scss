@@ -78,7 +78,7 @@ body {
 @import "ui";
 
 // ====== СТИЛИ СТРАНИЦ и ЭЛЕМЕНТОВ ========
-@import "popup";
+// @import "popup";
 @import "header";
 @import "slider";
 @import "lots";
@@ -88,9 +88,10 @@ body {
 @import "info";
 
 @import "footer";
-@import "home";
+// @import "home";
 
 // ====== ОСНОВНОЙ БЛОК ====================
 .page {
+  padding: 75px 0px 0px 0px;
   flex: 1 1 auto;
 }

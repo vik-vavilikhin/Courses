@@ -2,6 +2,13 @@
 .quotes {
   padding: 65px 0 75px 0;
 
+  // .quotes__header
+  &__header {
+    @media (max-width:$md4+px) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
   // .quotes__container
   &__container {}
 
@@ -43,7 +50,7 @@
     flex: 0 0 320px/950px * 100%;
 
     @media (max-width:$md4+px) {
-      flex: 0 0 70%;
+      flex: 0 0 60%;
     }
 
     img {
@@ -66,6 +73,11 @@
     line-height: calc(30 / 25);
     font-style: italic;
     margin: 0px 0px 40px/25px * 1em 0px;
+
+    @media (max-width: 640px) {
+      font-size: 20px;
+      line-height: calc(25 / 20);
+    }
   }
 
   // .slider-quotes__info
@@ -129,7 +141,7 @@
     cursor: pointer;
     margin: 0 50px;
     display: inline-flex;
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     border: 1px solid $icon-color;
     border-radius: 50%;
