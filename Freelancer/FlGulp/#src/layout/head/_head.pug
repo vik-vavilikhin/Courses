@@ -1,0 +1,26 @@
+mixin head(data)
+	meta(charset='utf-8')
+	meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+	// ====================================================
+	meta(content=data.author name="author")
+	meta(content=data.description name="description")
+	
+	// ============== АДАПТАЦИЯ К РАЗЛИЧНЫМ УСТРОЙСТВАМ ===
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	meta(name="HandheldFriendly" content="true")
+	meta(name="format-detection", content="telephone=no")
+
+	// ============== ТАБЛИЦЫ СТИЛЕЙ ======================
+	each css in data.css
+		link(rel='stylesheet', href= css)
+	
+	//- // ============== FAVICON =============================
+	//- link(rel="shortcut icon" href="images/icon/favicon.png" type="image/x-icon")
+	
+	//- // =========== МОДУЛИ ==============================
+	//- // <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7/bootstrap.min.css">
+	//- // <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	//- link(rel='stylesheet', href='vendor/fontello/css/fontello.css')
+
+	title= data.title
