@@ -1,18 +1,13 @@
-## Интенсив по JS | Пишем "iTunes" на JavaScript
+| [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
+&rarr; [Курсы](https://github.com/vik-vavilikhin/Courses) &rarr; [Академия верстки](https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy) &rarr; iTUNES НА JS |
 
-[Исходники](https://github.com/vik-vavilikhin/Courses/raw/master/GloAcademy/JS/IntensiveJS%236Tunes/Tunes.zip)
+----------------------------------------------------------------------
+|              Наименование             |   Исходники    |    Демо   |
+|:--------------------------------------|:---------------|:----------|
+|[Интенсив по JS \| Пишем «iTunes»][1.0]|[Tunes.zip][1.1]|[демо][1.2]|
 
-<!-- [![День 1(видео)](http://img.youtube.com/vi/7tr_hegKXKI/1.jpg)](http://www.youtube.com/watch?v=7tr_hegKXKI) -->
-## День 1
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=7tr_hegKXKI" target="_blank"><img src="http://img.youtube.com/vi/7tr_hegKXKI/1.jpg" 
-alt="День 1(видео)" width="240" height="180" border="10" /></a>
+[1.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grMtQ5ckqFoRMGUynpuoa3Q "«Квиз на JS»"
+[1.1]: https://github.com/vik-vavilikhin/Courses/raw/master/GloAcademy/JS/IntensiveJS%236Tunes/Tunes.zip "Исходники"
+[1.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%236Tunes/
 
-## Полезные ссылки
-  - [Переменные](https://learn.javascript.ru/variables)
-  - [var, let, const](https://habr.com/ru/company/ruvds/blog/420359/)
-  - [Функции](https://learn.javascript.ru/function-basics)
-  - [Условия](https://learn.javascript.ru/ifelse)
-  - [Модули в JS](https://learn.javascript.ru/modules-intro)
-  - [Свойство classList](https://developer.mozilla.org/ru/docs/Web/API/Element/classList)
-  - [Метод перебора массива forEach](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
   
