@@ -50,6 +50,6 @@
 
 [10.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grfdU789ifSVBOpGHdg0M4W "Интенсив по JS «iTunes»"
 [10.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%236Tunes
-[10.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%236Tunes                 "Демо"
+[10.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%236Tunes/           "Демо"
 
 <!-- |[Веб-разработчик 10.0](https://study.up-skills.ru/teach/control/stream/view/id/6290544)|[репозиторий](https://github.com/vik-vavilikhin/GloAcademy/tree/master/Loyouts/WebMaster10)|[демо-1](), [демо-2]()| -->
