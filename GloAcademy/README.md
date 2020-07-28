@@ -48,7 +48,7 @@
 [9.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/WorkShop_Avito
 [9.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/WorkShop_Avito/                 "Демо"
 
-[10.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grfdU789ifSVBOpGHdg0M4W "Интенсив по JS «iTunes»"
+[10.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3goIGWnh7KLXtqPDbgiV8Dia "Интенсив по JS «iTunes»"
 [10.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%236Tunes
 [10.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%236Tunes/           "Демо"
 
