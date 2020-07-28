@@ -3,9 +3,9 @@
 [Исходники](https://github.com/vik-vavilikhin/Courses/raw/master/GloAcademy/JS/IntensiveJS%236Tunes/Tunes.zip)
 
 <!-- [![День 1(видео)](http://img.youtube.com/vi/7tr_hegKXKI/1.jpg)](http://www.youtube.com/watch?v=7tr_hegKXKI) -->
-## <center>День 1</center>
-<center><a href="http://www.youtube.com/watch?feature=player_embedded&v=7tr_hegKXKI" target="_blank"><img src="http://img.youtube.com/vi/7tr_hegKXKI/1.jpg" 
-alt="День 1(видео)" width="240" height="180" border="10" /></a></center>
+## День 1
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7tr_hegKXKI" target="_blank"><img src="http://img.youtube.com/vi/7tr_hegKXKI/1.jpg" 
+alt="День 1(видео)" width="240" height="180" border="10" /></a>
 
 ## Полезные ссылки
   - [Переменные](https://learn.javascript.ru/variables)
