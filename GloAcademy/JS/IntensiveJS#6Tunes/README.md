@@ -1,17 +1,17 @@
-<style>
+<!-- <style>
   div {text-align: center;}
   ul, li {list-style: none;}
-</style>
+</style> -->
 
 ## Интенсив по JS | Пишем "iTunes" на JavaScript
 
 [Исходники](https://github.com/vik-vavilikhin/Courses/raw/master/GloAcademy/JS/IntensiveJS%236Tunes/Tunes.zip)
 
 ### [День 1]()
-[![ALT-ТЕКСТ ИЗОБРАЖЕНИЯ](http://img.youtube.com/vi/7tr_hegKXKI/0.jpg)](http://www.youtube.com/watch?v=7tr_hegKXKI)
-<div>
+[![День 1(видео)](http://img.youtube.com/vi/7tr_hegKXKI/1.jpg)](http://www.youtube.com/watch?v=7tr_hegKXKI)
+<div style="text-align: center;">
   <h2 >Полезные ссылки</h2>
-  <ul>
+  <ul style="list-style: none;">
     <li><a href="https://learn.javascript.ru/variables">Переменные</a></li>
     <li><a href="https://habr.com/ru/company/ruvds/blog/420359/">var, let, const</a></li>
     <li><a href="https://learn.javascript.ru/function-basics">Функции</a></li>
