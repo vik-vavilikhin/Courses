@@ -30,19 +30,19 @@
 [4.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%234Aviasales/             "Демо"
 
 [5.0]: https://study.up-skills.ru/teach/control/stream/view/id/9053832                        "Воркшоп «Свой Instagram на ReactJs»"
-[5.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/React_WorkShop
+[5.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/WorkShop_React
 
 [6.0]: https://study.up-skills.ru/teach/control/stream/view/id/184641829                      "Пишем «Delivery Food» на JavaScript"
-[6.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/delivery-food
-[6.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/delivery-food/                  "Демо"
+[6.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%237delivery-food
+[6.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%237delivery-food/                  "Демо"
 
 [7.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grMtQ5ckqFoRMGUynpuoa3Q               "«Квиз на JS»"
 [7.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/IntensiveJS%235Burger
 [7.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/IntensiveJS%235Burger/          "Демо"
 
 [8.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3gpaNUJr9Bpj1qIcUUjEQUiB "«Netclick на JS»"
-[8.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/netclicks_WorkShop
-[8.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/netclicks_WorkShop/             "Демо"
+[8.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/WorkShop_netclicks
+[8.2]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/WorkShop_netclicks/             "Демо"
 
 [9.0]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grfdU789ifSVBOpGHdg0M4W "Воркшоп по JS «Avito»"
 [9.1]: https://github.com/vik-vavilikhin/Courses/tree/master/GloAcademy/JS/WorkShop_Avito
