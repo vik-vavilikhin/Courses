@@ -769,33 +769,57 @@ button.swiper-pagination-bullet {
 }
 
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Play";
   font-display: swap;
-  src: url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
+  src: url("../fonts/Play Bold.woff") format("woff"), url("../fonts/Play Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
 }
 
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  src: url("../fonts/Roboto Light.woff") format("woff"), url("../fonts/Roboto Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto Regular.woff") format("woff"), url("../fonts/Roboto Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
+  src: url("../fonts/Roboto Medium.woff") format("woff"), url("../fonts/Roboto Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: medium;
 }
 
 @font-face {
-  font-family: "fontello";
+  font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.woff2") format("woff2");
+  src: url("../fonts/Roboto Bold.woff") format("woff"), url("../fonts/Roboto Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto Black.woff") format("woff"), url("../fonts/Roboto Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: black;
+}
+
+@font-face {
+  font-family: "UniSans";
+  font-display: swap;
+  src: url("../fonts/Uni Sans Heavy Caps Rgular.woff") format("woff"), url("../fonts/Uni Sans Heavy Caps Rgular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -803,22 +827,6 @@ button.swiper-pagination-bullet {
 .fluid-font-size {
   /* ==== ОТЗЫВЧИВЫЙ ШРИФТ ==== */
   font-size: 14px;
-}
-
-body {
-  color: #000000;
-  font-size: 14px;
-  font-family: "OpenSans", sans-serif;
-}
-
-body._lock {
-  overflow: hidden;
-}
-
-.container {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 * {
@@ -860,7 +868,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "OpenSans";
+  font-family: "Roboto";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -869,7 +877,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "OpenSans";
+  font-family: "Roboto";
 }
 
 input::-ms-clear {
@@ -910,6 +918,35 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+
+body {
+  color: #000000;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .form-row {
@@ -1659,7 +1696,7 @@ body.ie .ibg img {
 @media (min-width: 320px) {
   .fluid-font-size {
     font-size: 18px;
-    font-size: calc(0.03656 * 100vw + 2.30108px);
+    font-size: calc(0.04146 * 100vw + 0.73171px);
   }
 }
 
@@ -1670,7 +1707,7 @@ body.ie .ibg img {
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1140px) {
   .fluid-font-size {
     font-size: 48px;
   }
@@ -1682,14 +1719,21 @@ body.ie .ibg img {
   }
 }
 
-@media (max-width: 767.98px) {
-  body._lock {
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
-  }
-
+@media (max-width: 1152px) {
   .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
     padding: 0 10px;
   }
 
