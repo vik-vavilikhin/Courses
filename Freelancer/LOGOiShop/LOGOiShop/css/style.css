@@ -945,8 +945,9 @@ body._lock {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
   margin: 0 auto;
+  padding: 0px 15px;
 }
 
 .form-row {
@@ -1696,7 +1697,7 @@ body.ie .ibg img {
 @media (min-width: 320px) {
   .fluid-font-size {
     font-size: 18px;
-    font-size: calc(0.04146 * 100vw + 0.73171px);
+    font-size: calc(0.04 * 100vw + 1.2px);
   }
 }
 
@@ -1707,7 +1708,7 @@ body.ie .ibg img {
   }
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1170px) {
   .fluid-font-size {
     font-size: 48px;
   }
@@ -1719,24 +1720,7 @@ body.ie .ibg img {
   }
 }
 
-@media (max-width: 1152px) {
-  .container {
-    max-width: 970px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .container {
-    max-width: 750px;
-  }
-}
-
 @media (max-width: 767.98px) {
-  .container {
-    max-width: none;
-    padding: 0 10px;
-  }
-
   .form__info {
     width: 50px;
     height: 50px;
