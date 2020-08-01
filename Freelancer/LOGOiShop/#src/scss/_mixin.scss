@@ -1,0 +1,112 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+    url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin anim($time, $delay) {
+  transition: all $time ease $delay;
+}
+
+@mixin anim_cubic($time, $delay) {
+  transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+}
+
+@mixin animate($name, $time, $infinite, $type) {
+  animation: $name $time + s $infinite $type;
+}
+
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin scale($num) {
+  transform: scale($num);
+}
+
+@mixin skew($num) {
+  transform: skewX($num);
+}
+
+@mixin cnt($h) {
+  display: flex;
+  flex-direction: column;
+  height: $h;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+}
+
+@mixin tr($x, $y, $z) {
+  transform: translate3d($x, $y, $z);
+}
+
+@mixin flexbox() {
+  display: flex;
+  font-size: 0;
+}
+
+@mixin flexboxinline() {
+  display: inline-flex;
+}
+
+@mixin flexorder($val) {
+  order: $val;
+}
+
+/*
+  ! ОТЗЫВЧИВЫЙ РАЗМЕР ШРИФТА
+  * https: //habr.com/ru/post/310186/
+
+  font-size: calc((100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+  font-size: calc((100vw - 30rem)/(80 - 30) * (1.5 - 1) + 1rem);
+*/
+
+@function strip-unit($number) {
+  @if type-of($number)=='number'and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
+
+  $k: ($f-max - $f-min)/($w-max - $w-min);
+  $b: $f-min - $k * $w-min;
+
+  $b: $b + $units;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+
+  font-size: $f-min;
+
+  @media (min-width: $w-min) {
+    @if ($fallback) {
+      font-size: $fallback;
+    }
+
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+  }
+
+  @media (min-width: $w-max) {
+    font-size: $f-max;
+  }
+}
+
+.fluid-font-size {
+  @include fluidFontSize(16px, 24px, 480px, 1280px, 18px);
+}
