@@ -18,18 +18,18 @@
 
 //<BUTTONS (a.btn+tab)>=====================
 .btn {
-  display: inline-flex;
+  display: inline-block;
+  padding: 0px 0px;
 
   border-radius: 5px;
   background-color: #FF2D2D;
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  padding: 20px 65px;
+  padding: 20px 63px;
 
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
 
   &:before {
     content: '';

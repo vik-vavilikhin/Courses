@@ -1,0 +1,165 @@
+// =========================================
+@import "../b-menu/menu";
+
+.header {
+  padding: 30px 0px 110px 0px;
+  background-color: #F6F2F2;
+
+  @media (max-width:$md3+px) {
+    padding: 30px 0px 50px 0px;
+  }
+
+  @media (max-width:$md4+px) {
+    padding: 0;
+  }
+
+  // .header__menu
+  &__menu {
+    margin: 0px 0px 108px 0px;
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+
+  // .container__menu
+  &__container {
+    overflow: hidden;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+    flex-wrap: wrap;
+
+    @media (max-width:$md3+px) {
+      margin: 0;
+    }
+  }
+
+  // .header__content
+  &__content {}
+
+  // .header__column
+  &__column {
+    width: 50%;
+    flex: 1 1 50%;
+    padding: 0 20px;
+
+    @media (max-width:$md3+px) {
+      width: 70%;
+      // flex: 1 1 70%;
+      padding: 0 12px/$maxW * 100%;
+      margin: 0px auto 60px;
+    }
+  }
+
+  // .header__title
+  &__title {
+    @include fluidFontSize(24px, 60px, $minwidth, $maxW, 24px);
+    font-weight: 800;
+    line-height: calc(72 / 60);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0px 0px 70px/$maxW * 100% 0px;
+  }
+
+  // .header__text
+  &__text {
+    opacity: 0.7;
+    font-size: 16px;
+    @include fluidFontSize(14px, 16px, $md3*1px, $maxW, 14px);
+    font-weight: 400;
+    line-height: calc(28 / 16);
+    margin: 0px 0px 120px/$maxW * 100% 0px;
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 40px/$maxW * 100% 0px;
+
+    }
+  }
+
+  // .header__btn
+  &__btn {}
+
+  // .header__video
+  &__video {
+
+
+    // padding: 100% 0;
+
+  }
+}
+
+.video {
+  height: 0;
+  // padding-bottom: 56.25%;
+  padding-bottom: 60%;
+  background-color: #C4C0B1;
+  position: relative;
+  box-shadow: 7px 7px 20px 5px rgba(0, 0, 0, 0.2),
+    -7px -7px 20px 5px rgba(0, 0, 0, 0.2);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba($main-color, 1);
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+  }
+
+  &:before {
+    content: '';
+    width: 70px;
+    height: 70px;
+    border: 7px solid #F3F2EF;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:after {
+    content: '';
+    border: 18px solid transparent;
+    border-left: 30px solid #F3F2EF;
+    transform: translate(-25%, -50%);
+  }
+}
+
+
+// =========================================
+/*
+	Стиль иконки бургера
+	.icon-menu{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+*/

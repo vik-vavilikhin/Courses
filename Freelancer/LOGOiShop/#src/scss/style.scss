@@ -1,7 +1,6 @@
 // ====== МИКСИНЫ ==========================
 @import "mixin";
-// ====== ПЛАГИНЫ, БИБЛИОТЕКИ ==============
-@import "../vendor/swiper/css/swiper";
+
 // ====== ШРИФТЫ ===========================
 // &display=swap&subset=cyrillic-ext
 // @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap&subset=cyrillic-ext");
@@ -15,7 +14,7 @@ $fontfamily: "Roboto";
 $minwidth: 320px;
 $maxWidth: 1400;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer+12;
+$md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -42,14 +41,14 @@ body {
   color: #000000;
   font-size: 14px;
   font-family: $fontfamily, sans-serif;
-  font-weight: normal;
 
   &._lock {
     overflow: hidden;
 
     @media (max-width: $md3+px) {
-      // width: 100%;
-      // position: fixed;
+      width: 100%;
+      position: fixed;
+      overflow: hidden;
     }
   }
 }
@@ -62,14 +61,15 @@ body {
   display: flex;
   flex-direction: column;
 
-  &._loaded {}
+  &._loaded {
+  }
 }
 
 // ------ Основная сетка -------------------
 .container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0 15px;
 
   // @media (max-width: $md1 + px) {
   //   max-width: 970px;
@@ -88,18 +88,12 @@ body {
 // ====== UI СТИЛИ, ФОРМЫ, КЛАССЫ ==========
 @import "../layout/#customization/forms/forms";
 @import "ui";
-// @import "./../fonts/fontello/css/fontello";
 
 // ====== СТИЛИ СТРАНИЦ и ЭЛЕМЕНТОВ ========
-// @import "../layout/s-header/s-header";
-// @import "../layout/s-services/s-services";
-// @import "../layout/s-features/s-features";
-// @import "../layout/s-team/s-team";
-// @import "../layout/s-offers/s-offers";
-// @import "../layout/s-contact/s-contact";
+@import "../layout/s-header/s-header";
 
-// @import "../layout/s-footer/s-footer";
-// @import "../layout/popup/popup";
+@import "../layout/s-footer/s-footer";
+@import "../layout/#customization/popup/popup";
 
 .hidden {
   display: none;

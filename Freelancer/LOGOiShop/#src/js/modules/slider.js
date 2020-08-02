@@ -1,5 +1,4 @@
-import Swiper from '../../vendor/swiper/js/swiper';
-
+import '../../vendor/swiper/js/swiper';
 
 // ====== SLIDER SETTINGS ==================
 /*
@@ -10,7 +9,7 @@ import Swiper from '../../vendor/swiper/js/swiper';
  */
 const sliderBuildCallback = () => {};
 
-const sliderInit = () => {
+const sliderSettings = () => {
   // Получить все элементы обертки с классом '._swiper'
   // ...если на странице несколько сладеров
   const sliders = document.querySelectorAll('._swiper');
@@ -61,19 +60,18 @@ const sliderInit = () => {
   /*
     Параметры для слайдера: https://swiperjs.com/
   */
-  const mainSlider = new Swiper('.team-slider', {
-
-    // effect: 'fade',
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-
+  const mainSlider = new Swiper('.main-slider__body', {
+    /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    */
     observer: true,
     observerParents: true,
-    slidesPerView: 'auto',
-    loopedSlides: 2,
-    spaceBetween: 20,
+    slidesPerView: 1,
+    spaceBetween: 0,
     // autoHeight: true,
     speed: 800,
 
@@ -88,22 +86,20 @@ const sliderInit = () => {
       clickable: true,
     },
     // Arrows
-    // navigation: {
-    //   nextEl: '.control-main-slider__arrow_next',
-    //   prevEl: '.control-main-slider__arrow_prev',
-    // },
+    navigation: {
+      nextEl: '.control-main-slider__arrow_next',
+      prevEl: '.control-main-slider__arrow_prev',
+    },
 
     // Responsive breakpoints
-    // breakpoints: {
-    //   320: {
-    //     autoHeight: true,
-    //   },
-    //   768: {
-    //     autoHeight: true,
-    //   },
-    // }
+    breakpoints: {
+      320: {
+        autoHeight: true,
+      },
+      768: {
+        autoHeight: true,
+      },
+    }
   });
 };
-export {
-  sliderInit
-};
+export default sliderSettings;
