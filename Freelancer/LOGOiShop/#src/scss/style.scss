@@ -14,7 +14,7 @@ $fontfamily: "Roboto";
 $minwidth: 320px;
 $maxWidth: 1400;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer+12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -61,8 +61,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  &._loaded {
-  }
+  &._loaded {}
 }
 
 // ------ Основная сетка -------------------

@@ -980,106 +980,6 @@ body.ie .ibg img {
   display: none;
 }
 
-.header {
-  padding: 30px 0px 110px 0px;
-  background-color: #F6F2F2;
-}
-
-.header__menu {
-  margin: 0px 0px 108px 0px;
-}
-
-.header__container {
-  overflow: hidden;
-}
-
-.header__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 -20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.header__column {
-  width: 50%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  padding: 0 20px;
-}
-
-.header__title {
-  font-size: 24px;
-  font-weight: 800;
-  line-height: calc(72 / 60);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin: 0px 0px 5.98291% 0px;
-}
-
-.header__text {
-  opacity: 0.7;
-  font-size: 16px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: calc(28 / 16);
-  margin: 0px 0px 10.25641% 0px;
-}
-
-.video {
-  height: 0;
-  padding-bottom: 60%;
-  background-color: #C4C0B1;
-  position: relative;
-  -webkit-box-shadow: 7px 7px 20px 5px rgba(0, 0, 0, 0.2), -7px -7px 20px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 7px 7px 20px 5px rgba(0, 0, 0, 0.2), -7px -7px 20px 5px rgba(0, 0, 0, 0.2);
-}
-
-.video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border: 2px solid #ff2d2d;
-  border-radius: 3px;
-  z-index: 1;
-}
-
-.video:before,
-.video:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  cursor: pointer;
-}
-
-.video:before {
-  content: '';
-  width: 70px;
-  height: 70px;
-  border: 7px solid #F3F2EF;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.video:after {
-  content: '';
-  border: 18px solid transparent;
-  border-left: 30px solid #F3F2EF;
-  -webkit-transform: translate(-25%, -50%);
-      -ms-transform: translate(-25%, -50%);
-          transform: translate(-25%, -50%);
-}
-
 /*
 	Стиль иконки бургера
 	.icon-menu{
@@ -1184,11 +1084,6 @@ body.ie .ibg img {
     font-size: 18px;
     font-size: calc(0.04 * 100vw + 1.2px);
   }
-
-  .header__title {
-    font-size: 24px;
-    font-size: calc(0.04235 * 100vw + 10.44706px);
-  }
 }
 
 @media (min-width: 480px) {
@@ -1198,24 +1093,9 @@ body.ie .ibg img {
   }
 }
 
-@media (min-width: 767.98px) {
-  .header__text {
-    font-size: 14px;
-    font-size: calc(0.00497 * 100vw + 10.17939px);
-  }
-}
-
 @media (min-width: 1170px) {
   .fluid-font-size {
     font-size: 48px;
-  }
-
-  .header__title {
-    font-size: 60px;
-  }
-
-  .header__text {
-    font-size: 16px;
   }
 }
 
@@ -1339,34 +1219,6 @@ body.ie .ibg img {
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
-  }
-
-  .header {
-    padding: 30px 0px 50px 0px;
-  }
-
-  .header__menu {
-    margin: 0px 0px 30px 0px;
-  }
-
-  .header__row {
-    margin: 0;
-  }
-
-  .header__column {
-    width: 70%;
-    padding: 0 1.02564%;
-    margin: 0px auto 60px;
-  }
-
-  .header__text {
-    margin: 0px 0px 3.4188% 0px;
-  }
-}
-
-@media (max-width: 479.98px) {
-  .header {
-    padding: 0;
   }
 }
 
