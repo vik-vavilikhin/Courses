@@ -13,55 +13,23 @@
 }
 
 @font-face {
-  font-family: "OpenSans-Regular";
-  font-display: swap;
-  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Play Bold";
+  font-family: "Play";
   font-display: swap;
   src: url("../fonts/Play Bold.woff") format("woff"), url("../fonts/Play Bold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 700;
+  font-style: bold;
 }
 
 @font-face {
-  font-family: "Roboto Black";
-  font-display: swap;
-  src: url("../fonts/Roboto Black.woff") format("woff"), url("../fonts/Roboto Black.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto Bold";
-  font-display: swap;
-  src: url("../fonts/Roboto Bold.woff") format("woff"), url("../fonts/Roboto Bold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto Light";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto Light.woff") format("woff"), url("../fonts/Roboto Light.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 300;
+  font-style: light;
 }
 
 @font-face {
-  font-family: "Roboto Medium";
-  font-display: swap;
-  src: url("../fonts/Roboto Medium.woff") format("woff"), url("../fonts/Roboto Medium.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto Regular";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto Regular.woff") format("woff"), url("../fonts/Roboto Regular.woff2") format("woff2");
   font-weight: 400;
@@ -69,7 +37,31 @@
 }
 
 @font-face {
-  font-family: "Uni Sans Heavy Caps Rgular";
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto Medium.woff") format("woff"), url("../fonts/Roboto Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto Bold.woff") format("woff"), url("../fonts/Roboto Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto Black.woff") format("woff"), url("../fonts/Roboto Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: black;
+}
+
+@font-face {
+  font-family: "UniSans";
   font-display: swap;
   src: url("../fonts/Uni Sans Heavy Caps Rgular.woff") format("woff"), url("../fonts/Uni Sans Heavy Caps Rgular.woff2") format("woff2");
   font-weight: 400;
