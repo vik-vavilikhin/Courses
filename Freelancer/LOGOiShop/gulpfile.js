@@ -215,8 +215,8 @@ function cb() {}
 
 function watchFiles() {
   watch([path.watch.html], html);
-  // watch([path.watch.css], css).on('change', browsersync.reload);
-  watch([path.watch.css], css);
+  watch([path.watch.css], css).on('change', browsersync.reload);
+  // watch([path.watch.css], css);
   watch([path.watch.js], js);
   watch([path.watch.img], images);
 }

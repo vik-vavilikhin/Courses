@@ -1,27 +1,196 @@
 // =========================================
-@import "../b-menu/menu";
+// @import "../b-menu/menu";
 
 // =========================================
-/*
-	Стиль иконки бургера
-	.icon-menu{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
-*/
+.header {
+  background: url("../img/bg_header.jpg") top no-repeat;
+
+  // .header__top
+  &__top {
+  }
+
+  // .header__bottom
+  &__bottom {
+  }
+}
+
+.top-header {
+  // .top-header__content
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  // .top-header__column
+  &__column {
+    flex: 0 1 50%;
+
+    // .top-header__column_logo
+    &_logo {
+      align-self: flex-start;
+      padding: 25px 0px 0px 0px;
+      flex: 0 0 190px;
+      text-align: center;
+    }
+  }
+
+  // .top-header__menu
+  &__menu {
+  }
+
+  // .top-header__logo
+  &__logo {
+  }
+
+  // .top-header__contacts
+  &__contacts {
+  }
+}
+
+.menu {
+  // .menu__icon
+  &__icon {
+  }
+
+  // .menu__body
+  &__body {
+  }
+
+  // .menu__list
+  &__list {
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 130px 130px 180px;
+    // grid-template-rows: 1fr 1fr 1fr;
+
+    li {
+      // flex: 0 1 33.333%;
+    }
+  }
+
+  // .menu__link
+  &__link {
+    height: 27px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 22px;
+
+    font-family: Play;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    text-decoration: underline;
+    color: #ffffff;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        background-color: #068292;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.icon-menu {
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: center;
+
+  // .contacts-header__column
+  &__column {
+    border-right: 1px solid #fff;
+    padding: 0px 30px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  // .contacts-header__item
+  &__item {
+    // .contacts-header__item_icon
+    &_icon {
+      background: url("../img/icons/header/phone.png") left no-repeat;
+      padding: 0px 0px 0px 37px;
+    }
+  }
+
+  // .contacts-header__label
+  &__label {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: calc(18 / 12);
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0px 0px 5px 0px;
+  }
+
+  // .contacts-header__phone
+  &__phone {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
+
+.bottom-header {
+  // .bottom-header__container
+  &__container {
+  }
+
+  // .bottom-header__column
+  &__column {
+  }
+
+  // .bottom-header__actions
+  &__actions {
+  }
+
+  // .bottom-header__info
+  &__info {
+  }
+}
+
+.actions-header {
+  // .actions-header__item
+  &__item {
+  }
+
+  // .actions-header__login
+  &__login {
+  }
+
+  // .actions-header__reg
+  &__reg {
+  }
+
+  // .actions-header__email
+  &__email {
+  }
+}
+
+.info-header {
+  // .info-header__column
+  &__column {
+  }
+
+  // .info-header__callback
+  &__callback {
+  }
+
+  // .info-header__schedule
+  &__schedule {
+  }
+
+  // .info-header__cart
+  &__cart {
+  }
+}
+
+// 1:12
