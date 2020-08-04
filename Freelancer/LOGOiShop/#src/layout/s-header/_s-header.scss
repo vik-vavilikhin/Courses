@@ -6,19 +6,19 @@
   background: url("../img/bg_header.jpg") top no-repeat;
 
   // .header__top
-  &__top {
-  }
+  &__top {}
 
   // .header__bottom
-  &__bottom {
-  }
+  &__bottom {}
 }
 
 .top-header {
+
   // .top-header__content
   &__content {
     display: flex;
     align-items: center;
+    height: 90px;
   }
 
   // .top-header__column
@@ -35,47 +35,41 @@
   }
 
   // .top-header__menu
-  &__menu {
-  }
+  &__menu {}
 
   // .top-header__logo
-  &__logo {
-  }
+  &__logo {}
 
   // .top-header__contacts
-  &__contacts {
-  }
+  &__contacts {}
 }
 
 .menu {
+
   // .menu__icon
-  &__icon {
-  }
+  &__icon {}
 
   // .menu__body
-  &__body {
-  }
+  &__body {}
 
   // .menu__list
   &__list {
-    // display: flex;
-    // flex-wrap: wrap;
     display: grid;
     grid-template-columns: 130px 130px 180px;
-    // grid-template-rows: 1fr 1fr 1fr;
 
     li {
-      // flex: 0 1 33.333%;
+      margin: 1px 0px;
     }
   }
 
   // .menu__link
   &__link {
-    height: 27px;
+    min-height: 27px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 22px;
+    padding: 5px 22px;
+    transition: all .5s ease;
 
     font-family: Play;
     font-size: 14px;
@@ -92,8 +86,7 @@
   }
 }
 
-.icon-menu {
-}
+.icon-menu {}
 
 .contacts-header {
   display: flex;
@@ -111,6 +104,7 @@
 
   // .contacts-header__item
   &__item {
+
     // .contacts-header__item_icon
     &_icon {
       background: url("../img/icons/header/phone.png") left no-repeat;
@@ -140,57 +134,66 @@
 }
 
 .bottom-header {
+
   // .bottom-header__container
   &__container {
+    height: 63px;
+    display: flex;
+    align-items: center;
   }
 
   // .bottom-header__column
   &__column {
+    flex: 0 1 50%;
   }
 
   // .bottom-header__actions
-  &__actions {
-  }
+  &__actions {}
 
   // .bottom-header__info
-  &__info {
-  }
+  &__info {}
 }
 
 .actions-header {
+  display: flex;
+  align-items: center;
+
   // .actions-header__item
-  &__item {
-  }
+  &__item {}
 
   // .actions-header__login
   &__login {
+    padding: 0px 0px 0px 36px;
+    background: url('../img/icons/header/login.png') left no-repeat;
+    display: inline-block;
+    line-height: 24px;
+    color: #999999;
+
+    span {
+      border-bottom: 1px dashed;
+    }
   }
 
   // .actions-header__reg
-  &__reg {
-  }
+  &__reg {}
 
   // .actions-header__email
-  &__email {
-  }
+  &__email {}
 }
 
 .info-header {
+
   // .info-header__column
-  &__column {
-  }
+  &__column {}
 
   // .info-header__callback
-  &__callback {
-  }
+  &__callback {}
 
   // .info-header__schedule
-  &__schedule {
-  }
+  &__schedule {}
 
   // .info-header__cart
-  &__cart {
-  }
+  &__cart {}
 }
 
 // 1:12

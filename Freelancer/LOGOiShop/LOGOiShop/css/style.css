@@ -942,6 +942,7 @@ body.ie .ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 90px;
 }
 
 .top-header__column {
@@ -965,8 +966,12 @@ body.ie .ibg img {
   grid-template-columns: 130px 130px 180px;
 }
 
+.menu__list li {
+  margin: 1px 0px;
+}
+
 .menu__link {
-  height: 27px;
+  min-height: 27px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -976,7 +981,10 @@ body.ie .ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 22px;
+  padding: 5px 22px;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
   font-family: Play;
   font-size: 14px;
   line-height: calc(18 / 14);
@@ -1023,6 +1031,43 @@ body.ie .ibg img {
   font-weight: 900;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.bottom-header__container {
+  height: 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom-header__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.actions-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actions-header__login {
+  padding: 0px 0px 0px 36px;
+  background: url("../img/icons/header/login.png") left no-repeat;
+  display: inline-block;
+  line-height: 24px;
+  color: #999999;
+}
+
+.actions-header__login span {
+  border-bottom: 1px dashed;
 }
 
 .popup {
@@ -1154,5 +1199,7 @@ body.ie .ibg img {
 .webp .header{ background: url(../img/bg_header.webp) top no-repeat; }
 
 .webp .contacts-header__item_icon{ background: url(../img/icons/header/phone.webp) left no-repeat; }
+
+.webp .actions-header__login{ background: url(../img/icons/header/login.webp) left no-repeat; }
 
 .webp .popup-close{ background: url(../img/icons/close.webp) 0 0 no-repeat; }
