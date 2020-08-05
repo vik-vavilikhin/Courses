@@ -140,11 +140,12 @@
     height: 63px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   // .bottom-header__column
   &__column {
-    flex: 0 1 50%;
+    flex: 0 1 calc(50% - 95px);
   }
 
   // .bottom-header__actions
@@ -157,6 +158,14 @@
 .actions-header {
   display: flex;
   align-items: center;
+
+  li {
+    margin: 0px 54px 0px 0px;
+
+    @media (max-width: $maxWidthContainer+px) {
+      margin: 0px 54 / $maxWidthContainer * 100vw 0px 0px;
+    }
+  }
 
   // .actions-header__item
   &__item {}
@@ -175,25 +184,101 @@
   }
 
   // .actions-header__reg
-  &__reg {}
+  &__reg {
+    padding: 0px 0px 0px 34px;
+    background: url('../img/icons/header/user.png') left no-repeat;
+    display: inline-block;
+    line-height: 24px;
+    color: #1AB9CE;
+
+    span {
+      border-bottom: 1px dashed;
+    }
+  }
 
   // .actions-header__email
-  &__email {}
+  &__email {
+    padding: 0px 0px 0px 35px;
+    background: url('../img/icons/header/mail.png') left no-repeat;
+    display: inline-block;
+    line-height: 24px;
+    color: #1AB9CE;
+
+    span {
+      border-bottom: 1px solid;
+    }
+  }
 }
 
 .info-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   // .info-header__column
-  &__column {}
+  &__column {
+    padding: 0px 54px 0px 0px;
+
+    @media (max-width: $maxWidthContainer+px) {
+      margin: 0px 54 / $maxWidthContainer * 100vw 0px 0px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
 
   // .info-header__callback
-  &__callback {}
+  &__callback {
+    padding: 0px 0px 0px 32px;
+    background: url('../img/icons/header/callback.png') left no-repeat;
+    display: inline-block;
+    line-height: 24px;
+    color: #1AB9CE;
+
+    span {
+      border-bottom: 1px dashed;
+    }
+  }
 
   // .info-header__schedule
-  &__schedule {}
+  &__schedule {
+    background: url('../img/icons/header/schedule.png') left no-repeat;
+    padding: 0px 0px 0px 37px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #999999;
+
+    span {
+      font-weight: 900;
+    }
+  }
 
   // .info-header__cart
-  &__cart {}
+  &__cart {
+    display: inline-block;
+    background: url('../img/icons/header/cart.png') 0 0 no-repeat;
+    width: 43px;
+    height: 43px;
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(75%, 0px);
+
+      line-height: 25px;
+      padding: 0px 11px;
+      border-radius: 20px;
+      background-color: #f68038;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
 }
 
-// 1:12
+// 1:33
