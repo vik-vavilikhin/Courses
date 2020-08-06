@@ -982,9 +982,9 @@ body.ie .ibg img {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 22px;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   font-family: Play;
   font-size: 14px;
   line-height: calc(18 / 14);
@@ -1082,7 +1082,7 @@ body.ie .ibg img {
   background: url("../img/icons/header/user.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
-  color: #1AB9CE;
+  color: #1ab9ce;
 }
 
 .actions-header__reg span {
@@ -1094,7 +1094,7 @@ body.ie .ibg img {
   background: url("../img/icons/header/mail.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
-  color: #1AB9CE;
+  color: #1ab9ce;
 }
 
 .actions-header__email span {
@@ -1126,7 +1126,7 @@ body.ie .ibg img {
   background: url("../img/icons/header/callback.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
-  color: #1AB9CE;
+  color: #1ab9ce;
 }
 
 .info-header__callback span {
