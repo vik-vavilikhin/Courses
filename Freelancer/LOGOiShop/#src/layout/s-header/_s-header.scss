@@ -6,15 +6,14 @@
   background: url("../img/bg_header.jpg") top no-repeat;
 
   // .header__top
-  &__top {
-  }
+  &__top {}
 
   // .header__bottom
-  &__bottom {
-  }
+  &__bottom {}
 }
 
 .top-header {
+
   // .top-header__content
   &__content {
     display: flex;
@@ -36,26 +35,22 @@
   }
 
   // .top-header__menu
-  &__menu {
-  }
+  &__menu {}
 
   // .top-header__logo
-  &__logo {
-  }
+  &__logo {}
 
   // .top-header__contacts
-  &__contacts {
-  }
+  &__contacts {}
 }
 
 .menu {
+
   // .menu__icon
-  &__icon {
-  }
+  &__icon {}
 
   // .menu__body
-  &__body {
-  }
+  &__body {}
 
   // .menu__list
   &__list {
@@ -91,8 +86,7 @@
   }
 }
 
-.icon-menu {
-}
+.icon-menu {}
 
 .contacts-header {
   display: flex;
@@ -106,10 +100,15 @@
     &:last-child {
       border: none;
     }
+
+    @media (max-width:$md1+px) {
+      padding: 0px 15px;
+    }
   }
 
   // .contacts-header__item
   &__item {
+
     // .contacts-header__item_icon
     &_icon {
       background: url("../img/icons/header/phone.png") left no-repeat;
@@ -135,10 +134,16 @@
     font-weight: 900;
     text-transform: uppercase;
     color: #ffffff;
+    white-space: nowrap;
+
+    @media (max-width:$md1+px) {
+      // @include fluidFontSize(14px, 18px, $md3*1px, $maxWidth, 14px);
+    }
   }
 }
 
 .bottom-header {
+
   // .bottom-header__container
   &__container {
     height: 63px;
@@ -153,12 +158,10 @@
   }
 
   // .bottom-header__actions
-  &__actions {
-  }
+  &__actions {}
 
   // .bottom-header__info
-  &__info {
-  }
+  &__info {}
 }
 
 .actions-header {
@@ -174,8 +177,7 @@
   }
 
   // .actions-header__item
-  &__item {
-  }
+  &__item {}
 
   // .actions-header__login
   &__login {
@@ -221,10 +223,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 
   // .info-header__column
   &__column {
     padding: 0px 54px 0px 0px;
+    // margin: 0px 15px 0px 0px;
 
     @media (max-width: $maxWidthContainer+px) {
       margin: 0px 54 / $maxWidthContainer * 100vw 0px 0px;
@@ -232,6 +236,8 @@
 
     &:last-child {
       padding: 0;
+      // padding: 0px 33px 0px 0px;
+      // margin: 0;
     }
   }
 
@@ -273,9 +279,8 @@
 
     span {
       position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(75%, 0px);
+      top: -5px;
+      right: -20px;
 
       line-height: 25px;
       padding: 0px 11px;
@@ -284,6 +289,10 @@
       font-size: 18px;
       font-weight: 700;
       color: #ffffff;
+
+      @media (max-width:$md1+px) {
+        right: -15px;
+      }
     }
   }
 }

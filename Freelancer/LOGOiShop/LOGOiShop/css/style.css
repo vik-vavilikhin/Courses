@@ -1031,6 +1031,7 @@ body.ie .ibg img {
   font-weight: 900;
   text-transform: uppercase;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .bottom-header__container {
@@ -1111,6 +1112,9 @@ body.ie .ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .info-header__column {
@@ -1157,11 +1161,8 @@ body.ie .ibg img {
 
 .info-header__cart span {
   position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translate(75%, 0px);
-      -ms-transform: translate(75%, 0px);
-          transform: translate(75%, 0px);
+  top: -5px;
+  right: -20px;
   line-height: 25px;
   padding: 0px 11px;
   border-radius: 20px;
@@ -1276,6 +1277,16 @@ body.ie .ibg img {
 @media (min-width: 1280px) {
   .fluid-font-size {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 1182px) {
+  .contacts-header__column {
+    padding: 0px 15px;
+  }
+
+  .info-header__cart span {
+    right: -15px;
   }
 }
 
