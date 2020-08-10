@@ -8,7 +8,8 @@
 @import "fonts";
 
 // ------ Шрифт по умолчанию ---------------
-$fontfamily: "Roboto";
+$fontfamily: "Roboto",
+sans-serif;
 
 // ------ Переменные -----------------------
 $minwidth: 320px;
@@ -40,7 +41,7 @@ $bg-color: #f5f0dd;
 body {
   color: #000000;
   font-size: 14px;
-  font-family: $fontfamily, sans-serif;
+  font-family: $fontfamily;
 
   &._lock {
     overflow: hidden;
