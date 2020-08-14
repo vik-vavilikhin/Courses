@@ -10,5 +10,5 @@
 
 [1]: https://www.youtube.com/playlist?list=PLSoSRmO9N3grno9T8qBIY1DPe80kwf_p5
 [2]: https://github.com/vik-vavilikhin/Courses/raw/master/GloAcademy/JS/WorkShop_React_moneyCalc/moneyCalc.zip
-[3]: #
+[3]: https://vik-vavilikhin.github.io/Courses/GloAcademy/JS/WorkShop_React_moneyCalc/ "Демо"
 
