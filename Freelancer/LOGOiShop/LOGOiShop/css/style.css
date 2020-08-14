@@ -1281,8 +1281,25 @@ body.ie .ibg img {
 }
 
 @media (max-width: 1182px) {
+  .menu__list {
+    grid-template-columns: 90px 110px 160px;
+  }
+
+  .menu__link {
+    padding: 5px 10px;
+  }
+
   .contacts-header__column {
     padding: 0px 15px;
+  }
+
+  .contacts-header__item_icon {
+    padding: 0px 0px 0px 25px;
+    background-size: 15px !important;
+  }
+
+  .contacts-header__phone {
+    font-size: 16px;
   }
 
   .info-header__cart span {
